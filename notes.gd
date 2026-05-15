@@ -1,15 +1,6 @@
 extends Node
 
 #feedback
-	#suspicion feedback
-		#bar shake
-		#red pulse
-		#warning sound
-		#screen vignette at high suspicion
-		#at 4/5 sus
-			#heartbeat
-			#ui turns red
-			#faster tension music
 	#time pressure feedback
 		#ticking under 15s
 		#timer color shift (white-yellow-red)

@@ -5,6 +5,8 @@ extends Node2D
 @onready var suspicion_bar = $SuspicionBar
 @onready var timer_label = $TimerLabel
 
+var suspicion_bar_original_pos = Vector2.ZERO
+
 @onready var game_over_panel = $GameOverUI/Panel
 @onready var final_money_label = $GameOverUI/Panel/FinalMoneyLabel
 @onready var timer = $Timer
@@ -15,6 +17,8 @@ extends Node2D
 @onready var feedback_label = $FeedbackLabel
 @onready var reaction_label = $ReactionLabel
 @onready var feedback_timer = $FeedbackTimer
+
+@onready var vignette = $Vignette
 
 var time_left = 60
 
@@ -58,6 +62,7 @@ func check_answer(selected_drug):
 	else:
 		print("Wrong")
 		suspicion += 1
+		shake_suspicion_bar()
 
 	update_ui()
 
@@ -73,6 +78,8 @@ func _ready():
 
 	update_ui()
 	serve_next_customer()
+	
+	suspicion_bar_original_pos = suspicion_bar.position
 
 func _on_timer_timeout() -> void:
 	time_left -= 1
@@ -124,6 +131,8 @@ func update_ui():
 	suspicion_bar.value = suspicion
 	timer_label.text = "Time: " + str(time_left)
 
+	update_vignette()
+
 func _on_restart_button_pressed() -> void:
 	get_tree().reload_current_scene()
 
@@ -139,7 +148,7 @@ func show_feedback(correct):
 	reaction_label.visible = false
 
 	if correct:
-		flash_rect.color = Color(0, 1, 0, 0.35)
+		play_flash_pulse(Color(0, 1, 0))
 		feedback_label.text = "CORRECT"
 		
 		var reactions = [
@@ -152,7 +161,7 @@ func show_feedback(correct):
 		reaction_label.text = reactions.pick_random()
 
 	else:
-		flash_rect.color = Color(1, 0, 0, 0.35)
+		play_flash_pulse(Color(1, 0, 0))
 		feedback_label.text = "WRONG"
 
 		var reactions = [
@@ -170,3 +179,71 @@ func _on_feedback_timer_timeout():
 	flash_rect.visible = false
 	feedback_label.visible = false
 	reaction_label.visible = false
+
+func shake_suspicion_bar():
+	var shake_amount = 8
+
+	suspicion_bar.position = suspicion_bar_original_pos + Vector2(
+		randf_range(-shake_amount, shake_amount),
+		0
+	)
+
+	await get_tree().create_timer(0.05).timeout
+
+	suspicion_bar.position = suspicion_bar_original_pos
+
+func play_red_pulse():
+	flash_rect.visible = true
+	flash_rect.color = Color(1, 0, 0, 0)
+
+	var tween = create_tween()
+
+	tween.tween_property(
+		flash_rect,
+		"color",
+		Color(1, 0, 0, 0.35),
+		0.08
+	)
+
+	tween.tween_property(
+		flash_rect,
+		"color",
+		Color(1, 0, 0, 0),
+		0.2
+	)
+
+	await tween.finished
+
+	flash_rect.visible = false
+
+func play_flash_pulse(color: Color):
+	flash_rect.visible = true
+	flash_rect.color = Color(color.r, color.g, color.b, 0)
+
+	var tween = create_tween()
+
+	tween.tween_property(
+		flash_rect,
+		"color",
+		Color(color.r, color.g, color.b, 0.35),
+		0.08
+	)
+
+	tween.tween_property(
+		flash_rect,
+		"color",
+		Color(color.r, color.g, color.b, 0),
+		0.2
+	)
+
+	await tween.finished
+
+	flash_rect.visible = false
+
+func update_vignette():
+	var max_alpha = 0.45
+	
+	var alpha = float(suspicion) / 5.0
+	alpha *= max_alpha
+
+	vignette.color = Color(0.4, 0, 0, alpha)

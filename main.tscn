@@ -8,4 +8,28 @@ script = ExtResource("1_ig7tw")
 [node name="Timer" type="Timer" parent="." unique_id=479170890]
 autostart = true
 
+[node name="Button" type="Button" parent="." unique_id=850283024]
+offset_left = 390.0
+offset_top = 500.0
+offset_right = 429.0
+offset_bottom = 531.0
+text = "RED"
+
+[node name="Button2" type="Button" parent="." unique_id=914549573]
+offset_left = 465.0
+offset_top = 500.0
+offset_right = 514.0
+offset_bottom = 531.0
+text = "BLUE"
+
+[node name="Button3" type="Button" parent="." unique_id=838713607]
+offset_left = 563.0
+offset_top = 500.0
+offset_right = 624.0
+offset_bottom = 531.0
+text = "GREEN"
+
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Button2" to="." method="_on_button_2_pressed"]
+[connection signal="pressed" from="Button3" to="." method="_on_button_3_pressed"]

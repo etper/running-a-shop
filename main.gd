@@ -11,6 +11,11 @@ extends Node2D
 
 @onready var customer_name_label = $CustomerPanel/CustomerNameLabel
 
+@onready var flash_rect = $FlashRect
+@onready var feedback_label = $FeedbackLabel
+@onready var reaction_label = $ReactionLabel
+@onready var feedback_timer = $FeedbackTimer
+
 var time_left = 60
 
 var customer_names = [
@@ -43,6 +48,10 @@ var money = 0
 var suspicion = 0
 
 func check_answer(selected_drug):
+	var correct = selected_drug == current_customer["correct_drug"]
+	
+	show_feedback(correct)
+	
 	if selected_drug == current_customer["correct_drug"]:
 		print("Correct")
 		money += 10
@@ -123,3 +132,41 @@ func game_over(reason):
 
 	game_over_panel.visible = true
 	final_money_label.text = reason + "\nMoney Earned: $" + str(money)
+
+func show_feedback(correct):
+	flash_rect.visible = true
+	feedback_label.visible = false
+	reaction_label.visible = false
+
+	if correct:
+		flash_rect.color = Color(0, 1, 0, 0.35)
+		feedback_label.text = "CORRECT"
+		
+		var reactions = [
+			"Finally, relief.",
+			"My spine stopped humming.",
+			"You’re a miracle worker.",
+			"I can feel my teeth again."
+		]
+
+		reaction_label.text = reactions.pick_random()
+
+	else:
+		flash_rect.color = Color(1, 0, 0, 0.35)
+		feedback_label.text = "WRONG"
+
+		var reactions = [
+			"My organs feel backwards.",
+			"I think I'm melting.",
+			"This made it worse.",
+			"I can taste electricity."
+		]
+
+		reaction_label.text = reactions.pick_random()
+
+	feedback_timer.start()
+
+func _on_feedback_timer_timeout():
+	flash_rect.visible = false
+	feedback_label.visible = false
+	reaction_label.visible = false

@@ -29,7 +29,77 @@ offset_right = 624.0
 offset_bottom = 531.0
 text = "GREEN"
 
+[node name="MoneyLabel" type="Label" parent="." unique_id=1027178338]
+offset_left = 785.0
+offset_top = 54.0
+offset_right = 964.0
+offset_bottom = 117.0
+
+[node name="SuspicionBar" type="ProgressBar" parent="." unique_id=335654908]
+offset_left = 732.0
+offset_top = 143.0
+offset_right = 921.0
+offset_bottom = 182.0
+
+[node name="TimerLabel" type="Label" parent="." unique_id=484767092]
+offset_left = 446.0
+offset_top = 21.0
+offset_right = 625.0
+offset_bottom = 84.0
+
+[node name="GameOverUI" type="CanvasLayer" parent="." unique_id=1344264373]
+
+[node name="Panel" type="Panel" parent="GameOverUI" unique_id=865646321]
+visible = false
+offset_right = 1152.0
+offset_bottom = 649.0
+
+[node name="GameOverLabel" type="Label" parent="GameOverUI/Panel" unique_id=475487936]
+layout_mode = 0
+offset_left = 346.0
+offset_top = 125.0
+offset_right = 749.0
+offset_bottom = 243.0
+text = "GAME OVER!"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="FinalMoneyLabel" type="Label" parent="GameOverUI/Panel" unique_id=1309276574]
+layout_mode = 0
+offset_left = 453.0
+offset_top = 229.0
+offset_right = 661.0
+offset_bottom = 282.0
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="RestartButton" type="Button" parent="GameOverUI/Panel" unique_id=997347330]
+layout_mode = 0
+offset_left = 325.0
+offset_top = 295.0
+offset_right = 738.0
+offset_bottom = 458.0
+text = "RESTART"
+
+[node name="CustomerPanel" type="Panel" parent="." unique_id=1546804177]
+offset_left = 359.0
+offset_top = 214.0
+offset_right = 680.0
+offset_bottom = 332.0
+
+[node name="CustomerNameLabel" type="Label" parent="CustomerPanel" unique_id=1103866607]
+layout_mode = 0
+offset_right = 321.0
+offset_bottom = 42.0
+
+[node name="SymptomLabel" type="Label" parent="CustomerPanel" unique_id=60021716]
+layout_mode = 0
+offset_top = 53.0
+offset_right = 321.0
+offset_bottom = 118.0
+
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="Button2" to="." method="_on_button_2_pressed"]
 [connection signal="pressed" from="Button3" to="." method="_on_button_3_pressed"]
+[connection signal="pressed" from="GameOverUI/Panel/RestartButton" to="." method="_on_restart_button_pressed"]

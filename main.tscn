@@ -1,3 +1,11 @@
 [gd_scene format=3 uid="uid://dyv7trsemm0st"]
 
+[ext_resource type="Script" uid="uid://bed5gc53ljpou" path="res://main.gd" id="1_ig7tw"]
+
 [node name="Main" type="Node2D" unique_id=933541298]
+script = ExtResource("1_ig7tw")
+
+[node name="Timer" type="Timer" parent="." unique_id=479170890]
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

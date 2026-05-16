@@ -2,7 +2,7 @@ extends Node2D
 
 var can_input = true
 
-@onready var symptom_label = $CustomerPanel/SymptomLabel
+@onready var symptom_label = $Art/SpeechBubble/CustomerPanel/SymptomLabel
 @onready var money_label = $MoneyLabel
 @onready var suspicion_bar = $SuspicionBar
 @onready var timer_label = $TimerLabel
@@ -13,7 +13,7 @@ var suspicion_bar_original_pos = Vector2.ZERO
 @onready var final_money_label = $GameOverUI/Panel/FinalMoneyLabel
 @onready var timer = $Timer
 
-@onready var customer_name_label = $CustomerPanel/CustomerNameLabel
+@onready var customer_name_label = $Art/SpeechBubble/CustomerPanel/CustomerNameLabel
 
 @onready var flash_rect = $FlashRect
 @onready var feedback_label = $FeedbackLabel
@@ -269,15 +269,44 @@ func hide_customer():
 	can_input = false
 	set_buttons_enabled(false)
 	
-	$CustomerPanel.visible = false
+	$Art/SpeechBubble/CustomerPanel.visible = false
 	$Art/SpeechBubble.visible = false
 	$Art/Customer.visible = false
 
 func show_customer():
-	$CustomerPanel.visible = true
-	$Art/SpeechBubble.visible = true
+	$Art/SpeechBubble/CustomerPanel.visible = true
 	$Art/Customer.visible = true
-	
+
+	var bubble = $Art/SpeechBubble
+
+	bubble.visible = true
+	bubble.scale = Vector2(0.7, 0.7)
+	bubble.modulate.a = 0.0
+
+	var tween = create_tween()
+	tween.set_parallel(true)
+
+	tween.tween_property(
+		bubble,
+		"scale",
+		Vector2(1.08, 1.08),
+		0.12
+	).set_trans(Tween.TRANS_BACK).set_ease(Tween.EASE_OUT)
+
+	tween.tween_property(
+		bubble,
+		"modulate:a",
+		1.0,
+		0.10
+	)
+
+	tween.chain().tween_property(
+		bubble,
+		"scale",
+		Vector2.ONE,
+		0.08
+	)
+
 	can_input = true
 	set_buttons_enabled(true)
 

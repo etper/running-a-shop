@@ -1,5 +1,7 @@
 extends Node2D
 
+var can_input = true
+
 @onready var symptom_label = $CustomerPanel/SymptomLabel
 @onready var money_label = $MoneyLabel
 @onready var suspicion_bar = $SuspicionBar
@@ -52,6 +54,10 @@ var money = 0
 var suspicion = 0
 
 func check_answer(selected_drug):
+	
+	if not can_input:
+		return
+	
 	var correct = selected_drug == current_customer["correct_drug"]
 	
 	show_feedback(correct)
@@ -70,6 +76,8 @@ func check_answer(selected_drug):
 		game_over("Busted!")
 		return
 
+	hide_customer()
+	await get_tree().create_timer(1.0).timeout
 	serve_next_customer()
 
 func _ready():
@@ -101,6 +109,10 @@ func create_customer():
 	}
 
 func serve_next_customer():
+	hide_customer()
+
+	await get_tree().create_timer(0.7).timeout
+
 	if customers.size() == 0:
 		print("No customers left")
 		symptom_label.text = "No customers"
@@ -112,10 +124,10 @@ func serve_next_customer():
 
 	print("Customer symptom: " + symptom_text)
 
-	symptom_label.text = "Symptom: " + symptom_text
-	
 	customer_name_label.text = current_customer["name"]
 	symptom_label.text = current_customer["symptom"]
+
+	show_customer()
 
 func _on_button_pressed() -> void:
 	check_answer("Red")
@@ -251,3 +263,25 @@ func update_vignette():
 	alpha *= max_alpha
 
 	vignette.color = Color(0.4, 0, 0, alpha)
+
+func hide_customer():
+	
+	can_input = false
+	set_buttons_enabled(false)
+	
+	$CustomerPanel.visible = false
+	$Art/SpeechBubble.visible = false
+	$Art/Customer.visible = false
+
+func show_customer():
+	$CustomerPanel.visible = true
+	$Art/SpeechBubble.visible = true
+	$Art/Customer.visible = true
+	
+	can_input = true
+	set_buttons_enabled(true)
+
+func set_buttons_enabled(enabled):
+	$Button.disabled = not enabled
+	$Button2.disabled = not enabled
+	$Button3.disabled = not enabled

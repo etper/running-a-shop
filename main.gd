@@ -7,6 +7,9 @@ var can_input = true
 @onready var suspicion_bar = $SuspicionBar
 @onready var timer_label = $TimerLabel
 
+@export var customer_hidden_position := Vector2(0, 500)
+@export var customer_visible_position := Vector2(0, 0)
+
 var suspicion_bar_original_pos = Vector2.ZERO
 
 @onready var game_over_panel = $GameOverUI/Panel
@@ -265,19 +268,64 @@ func update_vignette():
 	vignette.color = Color(0.4, 0, 0, alpha)
 
 func hide_customer():
-	
+
 	can_input = false
 	set_buttons_enabled(false)
-	
-	$Art/SpeechBubble/CustomerPanel.visible = false
-	$Art/SpeechBubble.visible = false
-	$Art/Customer.visible = false
-
-func show_customer():
-	$Art/SpeechBubble/CustomerPanel.visible = true
-	$Art/Customer.visible = true
 
 	var bubble = $Art/SpeechBubble
+	var panel = $Art/SpeechBubble/CustomerPanel
+	var customer = $Art/Customer
+
+	var tween = create_tween()
+	tween.set_parallel(true)
+
+	# customer slide out
+	tween.tween_property(
+		customer,
+		"position",
+		customer_hidden_position,
+		0.20
+	).set_trans(Tween.TRANS_BACK).set_ease(Tween.EASE_IN)
+
+	tween.tween_property(
+		customer,
+		"modulate:a",
+		0.0,
+		0.10
+	)
+
+	# bubble hide
+	tween.tween_property(
+		bubble,
+		"scale",
+		Vector2(0.7, 0.7),
+		0.12
+	).set_trans(Tween.TRANS_BACK).set_ease(Tween.EASE_IN)
+
+	tween.tween_property(
+		bubble,
+		"modulate:a",
+		0.0,
+		0.10
+	)
+
+	await tween.finished
+
+	panel.visible = false
+	bubble.visible = false
+	customer.visible = false
+
+func show_customer():
+
+	var bubble = $Art/SpeechBubble
+	var customer = $Art/Customer
+
+	$Art/SpeechBubble/CustomerPanel.visible = true
+	customer.visible = true
+
+	# start state
+	customer.position = customer_hidden_position
+	customer.modulate.a = 0.0
 
 	bubble.visible = true
 	bubble.scale = Vector2(0.7, 0.7)
@@ -286,6 +334,22 @@ func show_customer():
 	var tween = create_tween()
 	tween.set_parallel(true)
 
+	# customer slide in
+	tween.tween_property(
+		customer,
+		"position",
+		customer_visible_position,
+		0.25
+	).set_trans(Tween.TRANS_BACK).set_ease(Tween.EASE_OUT)
+
+	tween.tween_property(
+		customer,
+		"modulate:a",
+		1.0,
+		0.18
+	)
+
+	# bubble animation
 	tween.tween_property(
 		bubble,
 		"scale",

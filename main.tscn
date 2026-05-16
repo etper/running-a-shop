@@ -217,6 +217,14 @@ offset_right = 1035.0
 offset_bottom = 284.0
 color = Color(0.3019608, 0.25882354, 0.20392157, 1)
 
+[node name="Customer" type="Node2D" parent="Art" unique_id=181627627]
+
+[node name="ColorRect" type="ColorRect" parent="Art/Customer" unique_id=1014460023]
+offset_left = 353.0
+offset_top = 182.0
+offset_right = 540.0
+offset_bottom = 437.0
+
 [node name="Borders" type="Node2D" parent="Art" unique_id=1555054117]
 
 [node name="bg1" type="ColorRect" parent="Art/Borders" unique_id=997326455]
@@ -1714,14 +1722,6 @@ offset_right = 119.63197
 offset_bottom = 221.30646
 rotation = 3.0119748
 color = Color(0.7882353, 0.29803923, 0.19607843, 1)
-
-[node name="Customer" type="Node2D" parent="Art" unique_id=181627627]
-
-[node name="ColorRect" type="ColorRect" parent="Art/Customer" unique_id=1014460023]
-offset_left = 353.0
-offset_top = 182.0
-offset_right = 540.0
-offset_bottom = 404.0
 
 [node name="Timer" type="Timer" parent="." unique_id=479170890]
 autostart = true

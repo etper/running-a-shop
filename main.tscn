@@ -4,16 +4,35 @@
 [ext_resource type="Texture2D" uid="uid://cdicyyoytgkcl" path="res://uiMockup.png" id="2_0xm2m"]
 [ext_resource type="FontFile" uid="uid://dia843aiqe37u" path="res://VCR_OSD_MONO_1.001.ttf" id="3_h2yge"]
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1bvp3"]
+bg_color = Color(0.24526796, 0.064710386, 0.028254725, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_h2yge"]
+bg_color = Color(0.7882353, 0.29803923, 0.19607843, 1)
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lquwl"]
+bg_color = Color(0.60038817, 0.60038817, 0.60038817, 0)
+
 [node name="Main" type="Node2D" unique_id=933541298]
 script = ExtResource("1_ig7tw")
 
 [node name="UiMockup" type="Sprite2D" parent="." unique_id=1030056684]
+visible = false
 position = Vector2(576, 324)
 scale = Vector2(0.75, 0.6328125)
 texture = ExtResource("2_0xm2m")
 metadata/_edit_lock_ = true
 
-[node name="Art" type="Node" parent="." unique_id=1672055207]
+[node name="Art" type="Node2D" parent="." unique_id=1482988639]
 
 [node name="Wall" type="Node2D" parent="Art" unique_id=969897018]
 
@@ -1246,11 +1265,433 @@ offset_bottom = 221.30646
 rotation = 3.0119748
 color = Color(0, 0, 0, 1)
 
+[node name="Skull" type="Node2D" parent="Art" unique_id=1970819478]
+
+[node name="ColorRect" type="ColorRect" parent="Art/Skull" unique_id=1195212458]
+offset_left = 1077.0
+offset_top = 80.0
+offset_right = 1093.32
+offset_bottom = 83.0
+color = Color(0.7882353, 0.29803923, 0.19607843, 1)
+
+[node name="ColorRect24" type="ColorRect" parent="Art/Skull" unique_id=1618104079]
+offset_left = 1085.2933
+offset_top = 63.93274
+offset_right = 1091.1366
+offset_bottom = 66.03607
+rotation = 0.8926067
+color = Color(0.7882353, 0.29803923, 0.19607843, 1)
+
+[node name="ColorRect25" type="ColorRect" parent="Art/Skull" unique_id=845764001]
+offset_left = 1086.41
+offset_top = 65.602356
+offset_right = 1092.5491
+offset_bottom = 67.70569
+rotation = 2.371459
+color = Color(0.7882353, 0.29803923, 0.19607843, 1)
+
+[node name="ColorRect2" type="ColorRect" parent="Art/Skull" unique_id=54523299]
+offset_left = 1074.0
+offset_top = 77.0
+offset_right = 1080.0
+offset_bottom = 80.33276
+rotation = 0.5916817
+color = Color(0.7882353, 0.29803923, 0.19607843, 1)
+
+[node name="ColorRect3" type="ColorRect" parent="Art/Skull" unique_id=1921461393]
+offset_left = 1074.0348
+offset_top = 72.86717
+offset_right = 1080.7924
+offset_bottom = 75.6245
+rotation = 1.4431407
+color = Color(0.7882353, 0.29803923, 0.19607843, 1)
+
+[node name="ColorRect4" type="ColorRect" parent="Art/Skull" unique_id=215216427]
+offset_left = 1073.7048
+offset_top = 70.29598
+offset_right = 1076.4006
+offset_bottom = 73.05331
+rotation = 1.4431407
+color = Color(0.7882353, 0.29803923, 0.19607843, 1)
+
+[node name="ColorRect5" type="ColorRect" parent="Art/Skull" unique_id=540521975]
+offset_left = 1068.6599
+offset_top = 67.23017
+offset_right = 1074.5637
+offset_bottom = 70.309395
+rotation = 0.600001
+color = Color(0.7882353, 0.29803923, 0.19607843, 1)
+
+[node name="ColorRect6" type="ColorRect" parent="Art/Skull" unique_id=671821019]
+offset_left = 1068.433
+offset_top = 65.075745
+offset_right = 1072.5975
+offset_bottom = 67.851746
+rotation = 1.2896128
+color = Color(0.7882353, 0.29803923, 0.19607843, 1)
+
+[node name="ColorRect7" type="ColorRect" parent="Art/Skull" unique_id=942633327]
+offset_left = 1068.4147
+offset_top = 53.94367
+offset_right = 1080.552
+offset_bottom = 56.630314
+rotation = 1.566636
+color = Color(0.7882353, 0.29803923, 0.19607843, 1)
+
+[node name="ColorRect8" type="ColorRect" parent="Art/Skull" unique_id=243409189]
+offset_left = 1069.8185
+offset_top = 50.800648
+offset_right = 1074.6781
+offset_bottom = 53.10906
+rotation = 1.9966552
+color = Color(0.7882353, 0.29803923, 0.19607843, 1)
+
+[node name="ColorRect9" type="ColorRect" parent="Art/Skull" unique_id=733713881]
+offset_left = 1071.8572
+offset_top = 48.0016
+offset_right = 1075.7438
+offset_bottom = 50.309093
+rotation = 2.1862705
+color = Color(0.7882353, 0.29803923, 0.19607843, 1)
+
+[node name="ColorRect10" type="ColorRect" parent="Art/Skull" unique_id=2036226400]
+offset_left = 1074.9124
+offset_top = 45.487587
+offset_right = 1079.5518
+offset_bottom = 47.784462
+rotation = 2.433425
+color = Color(0.7882353, 0.29803923, 0.19607843, 1)
+
+[node name="ColorRect11" type="ColorRect" parent="Art/Skull" unique_id=1498132528]
+offset_left = 1078.642
+offset_top = 44.129333
+offset_right = 1083.3975
+offset_bottom = 46.263916
+rotation = 2.7940905
+color = Color(0.7882353, 0.29803923, 0.19607843, 1)
+
+[node name="ColorRect12" type="ColorRect" parent="Art/Skull" unique_id=368647199]
+offset_left = 1082.5938
+offset_top = 43.08788
+offset_right = 1086.9652
+offset_bottom = 45.021076
+rotation = 2.9326582
+color = Color(0.7882353, 0.29803923, 0.19607843, 1)
+
+[node name="ColorRect13" type="ColorRect" parent="Art/Skull" unique_id=1782579624]
+offset_left = 1089.6212
+offset_top = 43.26007
+offset_right = 1097.1074
+offset_bottom = 45.122635
+rotation = 3.1693985
+color = Color(0.7882353, 0.29803923, 0.19607843, 1)
+
+[node name="ColorRect14" type="ColorRect" parent="Art/Skull" unique_id=1692878254]
+offset_left = 1089.5145
+offset_top = 41.362904
+offset_right = 1095.6927
+offset_bottom = 43.172962
+rotation = 6.5734415
+color = Color(0.7882353, 0.29803923, 0.19607843, 1)
+
+[node name="ColorRect15" type="ColorRect" parent="Art/Skull" unique_id=452461263]
+offset_left = 1095.3566
+offset_top = 43.078888
+offset_right = 1100.8525
+offset_bottom = 45.03354
+rotation = 6.83166
+color = Color(0.7882353, 0.29803923, 0.19607843, 1)
+
+[node name="ColorRect16" type="ColorRect" parent="Art/Skull" unique_id=1557144901]
+offset_left = 1099.9233
+offset_top = 45.77443
+offset_right = 1105.3907
+offset_bottom = 47.814957
+rotation = 7.173652
+color = Color(0.7882353, 0.29803923, 0.19607843, 1)
+
+[node name="ColorRect17" type="ColorRect" parent="Art/Skull" unique_id=807838979]
+offset_left = 1103.4183
+offset_top = 50.069424
+offset_right = 1107.789
+offset_bottom = 52.240383
+rotation = 7.4449425
+color = Color(0.7882353, 0.29803923, 0.19607843, 1)
+
+[node name="ColorRect18" type="ColorRect" parent="Art/Skull" unique_id=835755044]
+offset_left = 1105.1422
+offset_top = 54.090195
+offset_right = 1108.8246
+offset_bottom = 56.214035
+rotation = 7.699443
+color = Color(0.7882353, 0.29803923, 0.19607843, 1)
+
+[node name="ColorRect19" type="ColorRect" parent="Art/Skull" unique_id=1528372475]
+offset_left = 1105.7438
+offset_top = 57.6548
+offset_right = 1113.8956
+offset_bottom = 59.792007
+rotation = 7.8540254
+color = Color(0.7882353, 0.29803923, 0.19607843, 1)
+
+[node name="ColorRect20" type="ColorRect" parent="Art/Skull" unique_id=735972179]
+offset_left = 1105.7723
+offset_top = 65.8723
+offset_right = 1112.5983
+offset_bottom = 67.64574
+rotation = 8.545766
+color = Color(0.7882353, 0.29803923, 0.19607843, 1)
+
+[node name="ColorRect21" type="ColorRect" parent="Art/Skull" unique_id=1192561349]
+offset_left = 1101.5104
+offset_top = 71.24635
+offset_right = 1106.737
+offset_bottom = 73.173355
+rotation = 8.860396
+color = Color(0.7882353, 0.29803923, 0.19607843, 1)
+
+[node name="ColorRect22" type="ColorRect" parent="Art/Skull" unique_id=41946896]
+offset_left = 1098.1936
+offset_top = 72.58567
+offset_right = 1103.0292
+offset_bottom = 74.77683
+rotation = 7.9375577
+color = Color(0.7882353, 0.29803923, 0.19607843, 1)
+
+[node name="ColorRect23" type="ColorRect" parent="Art/Skull" unique_id=1735053330]
+offset_left = 1097.8038
+offset_top = 77.378
+offset_right = 1104.9634
+offset_bottom = 79.75001
+rotation = 8.512356
+color = Color(0.7882353, 0.29803923, 0.19607843, 1)
+
+[node name="eye" type="Node2D" parent="Art/Skull" unique_id=565204293]
+position = Vector2(995, -133)
+scale = Vector2(0.739566, 0.87367463)
+
+[node name="ColorRect" type="ColorRect" parent="Art/Skull/eye" unique_id=1355322792]
+offset_left = 104.0
+offset_top = 219.0
+offset_right = 117.695
+offset_bottom = 223.0
+color = Color(0.7882353, 0.29803923, 0.19607843, 1)
+
+[node name="Node2D" type="Node2D" parent="Art/Skull/eye" unique_id=480380525]
+
+[node name="ColorRect7" type="ColorRect" parent="Art/Skull/eye/Node2D" unique_id=1920841301]
+offset_left = 107.0
+offset_top = 217.0
+offset_right = 116.0
+offset_bottom = 219.0
+color = Color(0.788, 0.298, 0.196, 1)
+
+[node name="ColorRect2" type="ColorRect" parent="Art/Skull/eye/Node2D" unique_id=992115870]
+offset_left = 106.10655
+offset_top = 215.82976
+offset_right = 109.10655
+offset_bottom = 219.75674
+rotation = 0.5591973
+color = Color(0.788, 0.298, 0.196, 1)
+
+[node name="ColorRect3" type="ColorRect" parent="Art/Skull/eye/Node2D" unique_id=1383963497]
+offset_left = 110.94382
+offset_top = 214.02747
+offset_right = 113.94382
+offset_bottom = 219.27408
+rotation = 1.2141461
+color = Color(0.788, 0.298, 0.196, 1)
+
+[node name="ColorRect4" type="ColorRect" parent="Art/Skull/eye/Node2D" unique_id=737889202]
+offset_left = 115.7796
+offset_top = 215.21664
+offset_right = 118.636215
+offset_bottom = 220.16988
+rotation = 1.8015293
+color = Color(0.788, 0.298, 0.196, 1)
+
+[node name="ColorRect5" type="ColorRect" parent="Art/Skull/eye/Node2D" unique_id=1212974303]
+offset_left = 117.537
+offset_top = 217.05106
+offset_right = 119.286674
+offset_bottom = 219.83826
+rotation = 2.339965
+color = Color(0.788, 0.298, 0.196, 1)
+
+[node name="ColorRect6" type="ColorRect" parent="Art/Skull/eye/Node2D" unique_id=2126787553]
+offset_left = 117.79682
+offset_top = 219.1227
+offset_right = 119.63197
+offset_bottom = 221.30646
+rotation = 3.0119748
+color = Color(0.788, 0.298, 0.196, 1)
+
+[node name="Node2D2" type="Node2D" parent="Art/Skull/eye" unique_id=446662005]
+position = Vector2(221.715, 441.91)
+rotation = 3.1415927
+
+[node name="ColorRect7" type="ColorRect" parent="Art/Skull/eye/Node2D2" unique_id=1976930789]
+offset_left = 107.0
+offset_top = 217.0
+offset_right = 116.0
+offset_bottom = 219.0
+color = Color(0.7882353, 0.29803923, 0.19607843, 1)
+
+[node name="ColorRect2" type="ColorRect" parent="Art/Skull/eye/Node2D2" unique_id=1105013354]
+offset_left = 106.10655
+offset_top = 215.82976
+offset_right = 109.10655
+offset_bottom = 219.75674
+rotation = 0.5591973
+color = Color(0.7882353, 0.29803923, 0.19607843, 1)
+
+[node name="ColorRect3" type="ColorRect" parent="Art/Skull/eye/Node2D2" unique_id=229021349]
+offset_left = 110.94382
+offset_top = 214.02747
+offset_right = 113.94382
+offset_bottom = 219.27408
+rotation = 1.2141461
+color = Color(0.7882353, 0.29803923, 0.19607843, 1)
+
+[node name="ColorRect4" type="ColorRect" parent="Art/Skull/eye/Node2D2" unique_id=310563603]
+offset_left = 115.7796
+offset_top = 215.21664
+offset_right = 118.636215
+offset_bottom = 220.16988
+rotation = 1.8015293
+color = Color(0.7882353, 0.29803923, 0.19607843, 1)
+
+[node name="ColorRect5" type="ColorRect" parent="Art/Skull/eye/Node2D2" unique_id=1693164238]
+offset_left = 117.537
+offset_top = 217.05106
+offset_right = 119.286674
+offset_bottom = 219.83826
+rotation = 2.339965
+color = Color(0.7882353, 0.29803923, 0.19607843, 1)
+
+[node name="ColorRect6" type="ColorRect" parent="Art/Skull/eye/Node2D2" unique_id=16432756]
+offset_left = 117.79682
+offset_top = 219.1227
+offset_right = 119.63197
+offset_bottom = 221.30646
+rotation = 3.0119748
+color = Color(0.7882353, 0.29803923, 0.19607843, 1)
+
+[node name="eye2" type="Node2D" parent="Art/Skull" unique_id=243827728]
+position = Vector2(1012, -134)
+scale = Vector2(0.739566, 0.87367463)
+
+[node name="ColorRect" type="ColorRect" parent="Art/Skull/eye2" unique_id=1934878948]
+offset_left = 104.0
+offset_top = 219.0
+offset_right = 117.695
+offset_bottom = 223.0
+color = Color(0.7882353, 0.29803923, 0.19607843, 1)
+
+[node name="Node2D" type="Node2D" parent="Art/Skull/eye2" unique_id=223281577]
+
+[node name="ColorRect7" type="ColorRect" parent="Art/Skull/eye2/Node2D" unique_id=818414728]
+offset_left = 107.0
+offset_top = 217.0
+offset_right = 116.0
+offset_bottom = 219.0
+color = Color(0.788, 0.298, 0.196, 1)
+
+[node name="ColorRect2" type="ColorRect" parent="Art/Skull/eye2/Node2D" unique_id=357729308]
+offset_left = 106.10655
+offset_top = 215.82976
+offset_right = 109.10655
+offset_bottom = 219.75674
+rotation = 0.5591973
+color = Color(0.788, 0.298, 0.196, 1)
+
+[node name="ColorRect3" type="ColorRect" parent="Art/Skull/eye2/Node2D" unique_id=545630746]
+offset_left = 110.94382
+offset_top = 214.02747
+offset_right = 113.94382
+offset_bottom = 219.27408
+rotation = 1.2141461
+color = Color(0.788, 0.298, 0.196, 1)
+
+[node name="ColorRect4" type="ColorRect" parent="Art/Skull/eye2/Node2D" unique_id=1161953369]
+offset_left = 115.7796
+offset_top = 215.21664
+offset_right = 118.636215
+offset_bottom = 220.16988
+rotation = 1.8015293
+color = Color(0.788, 0.298, 0.196, 1)
+
+[node name="ColorRect5" type="ColorRect" parent="Art/Skull/eye2/Node2D" unique_id=155286124]
+offset_left = 117.537
+offset_top = 217.05106
+offset_right = 119.286674
+offset_bottom = 219.83826
+rotation = 2.339965
+color = Color(0.788, 0.298, 0.196, 1)
+
+[node name="ColorRect6" type="ColorRect" parent="Art/Skull/eye2/Node2D" unique_id=1515942397]
+offset_left = 117.79682
+offset_top = 219.1227
+offset_right = 119.63197
+offset_bottom = 221.30646
+rotation = 3.0119748
+color = Color(0.788, 0.298, 0.196, 1)
+
+[node name="Node2D2" type="Node2D" parent="Art/Skull/eye2" unique_id=852590496]
+position = Vector2(221.715, 441.91)
+rotation = 3.1415927
+
+[node name="ColorRect7" type="ColorRect" parent="Art/Skull/eye2/Node2D2" unique_id=1138179200]
+offset_left = 107.0
+offset_top = 217.0
+offset_right = 116.0
+offset_bottom = 219.0
+color = Color(0.7882353, 0.29803923, 0.19607843, 1)
+
+[node name="ColorRect2" type="ColorRect" parent="Art/Skull/eye2/Node2D2" unique_id=1085465156]
+offset_left = 106.10655
+offset_top = 215.82976
+offset_right = 109.10655
+offset_bottom = 219.75674
+rotation = 0.5591973
+color = Color(0.7882353, 0.29803923, 0.19607843, 1)
+
+[node name="ColorRect3" type="ColorRect" parent="Art/Skull/eye2/Node2D2" unique_id=204443760]
+offset_left = 110.94382
+offset_top = 214.02747
+offset_right = 113.94382
+offset_bottom = 219.27408
+rotation = 1.2141461
+color = Color(0.7882353, 0.29803923, 0.19607843, 1)
+
+[node name="ColorRect4" type="ColorRect" parent="Art/Skull/eye2/Node2D2" unique_id=1981984470]
+offset_left = 115.7796
+offset_top = 215.21664
+offset_right = 118.636215
+offset_bottom = 220.16988
+rotation = 1.8015293
+color = Color(0.7882353, 0.29803923, 0.19607843, 1)
+
+[node name="ColorRect5" type="ColorRect" parent="Art/Skull/eye2/Node2D2" unique_id=408122188]
+offset_left = 117.537
+offset_top = 217.05106
+offset_right = 119.286674
+offset_bottom = 219.83826
+rotation = 2.339965
+color = Color(0.7882353, 0.29803923, 0.19607843, 1)
+
+[node name="ColorRect6" type="ColorRect" parent="Art/Skull/eye2/Node2D2" unique_id=1743035]
+offset_left = 117.79682
+offset_top = 219.1227
+offset_right = 119.63197
+offset_bottom = 221.30646
+rotation = 3.0119748
+color = Color(0.7882353, 0.29803923, 0.19607843, 1)
+
 [node name="Timer" type="Timer" parent="." unique_id=479170890]
 autostart = true
 
 [node name="Button" type="Button" parent="." unique_id=850283024]
-visible = false
 offset_left = 390.0
 offset_top = 500.0
 offset_right = 429.0
@@ -1258,7 +1699,6 @@ offset_bottom = 531.0
 text = "RED"
 
 [node name="Button2" type="Button" parent="." unique_id=914549573]
-visible = false
 offset_left = 465.0
 offset_top = 500.0
 offset_right = 514.0
@@ -1266,7 +1706,6 @@ offset_bottom = 531.0
 text = "BLUE"
 
 [node name="Button3" type="Button" parent="." unique_id=838713607]
-visible = false
 offset_left = 563.0
 offset_top = 500.0
 offset_right = 624.0
@@ -1274,28 +1713,41 @@ offset_bottom = 531.0
 text = "GREEN"
 
 [node name="MoneyLabel" type="Label" parent="." unique_id=1027178338]
-visible = false
-offset_left = 785.0
-offset_top = 54.0
-offset_right = 964.0
-offset_bottom = 117.0
+offset_left = 56.0
+offset_top = 7.0
+offset_right = 400.0
+offset_bottom = 106.0
+theme_override_colors/font_color = Color(0.39607844, 0.5882353, 0.34901962, 1)
+theme_override_fonts/font = ExtResource("3_h2yge")
+theme_override_font_sizes/font_size = 32
+text = "MONEY
+$120"
+vertical_alignment = 1
 
 [node name="SuspicionBar" type="ProgressBar" parent="." unique_id=335654908]
-visible = false
-offset_left = 732.0
-offset_top = 143.0
-offset_right = 921.0
-offset_bottom = 182.0
+offset_left = 716.0
+offset_top = 40.0
+offset_right = 1043.0
+offset_bottom = 83.0
+theme_override_styles/background = SubResource("StyleBoxFlat_1bvp3")
+theme_override_styles/fill = SubResource("StyleBoxFlat_h2yge")
+max_value = 5.0
+show_percentage = false
 
 [node name="TimerLabel" type="Label" parent="." unique_id=484767092]
-visible = false
-offset_left = 446.0
-offset_top = 21.0
-offset_right = 625.0
-offset_bottom = 84.0
+offset_left = 404.0
+offset_top = 2.0
+offset_right = 662.0
+offset_bottom = 106.0
+theme_override_colors/font_color = Color(0.85882354, 0.67058825, 0.23921569, 1)
+theme_override_fonts/font = ExtResource("3_h2yge")
+theme_override_font_sizes/font_size = 39
+text = "TIME
+00:42"
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="GameOverUI" type="CanvasLayer" parent="." unique_id=1344264373]
-visible = false
 
 [node name="Panel" type="Panel" parent="GameOverUI" unique_id=865646321]
 visible = false
@@ -1330,22 +1782,31 @@ offset_bottom = 512.0
 text = "RESTART"
 
 [node name="CustomerPanel" type="Panel" parent="." unique_id=1546804177]
-visible = false
-offset_left = 359.0
-offset_top = 214.0
-offset_right = 680.0
-offset_bottom = 332.0
+offset_left = 558.0
+offset_top = 165.0
+offset_right = 805.0
+offset_bottom = 243.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_lquwl")
 
 [node name="CustomerNameLabel" type="Label" parent="CustomerPanel" unique_id=1103866607]
 layout_mode = 0
-offset_right = 321.0
-offset_bottom = 42.0
+offset_top = -13.0
+offset_right = 247.0
+offset_bottom = 17.0
+theme_override_colors/font_color = Color(0.08627451, 0.09411765, 0.105882354, 1)
+theme_override_fonts/font = ExtResource("3_h2yge")
+text = "GARY"
+horizontal_alignment = 1
 
 [node name="SymptomLabel" type="Label" parent="CustomerPanel" unique_id=60021716]
 layout_mode = 0
-offset_top = 53.0
-offset_right = 321.0
-offset_bottom = 118.0
+offset_left = 9.0
+offset_top = 18.0
+offset_right = 247.0
+offset_bottom = 78.0
+theme_override_colors/font_color = Color(0.09411765, 0.101960786, 0.09803922, 1)
+theme_override_fonts/font = ExtResource("3_h2yge")
+text = "HEADACHE"
 
 [node name="FlashRect" type="ColorRect" parent="." unique_id=1038790194]
 visible = false

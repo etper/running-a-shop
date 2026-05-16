@@ -23,11 +23,11 @@ var suspicion_bar_original_pos = Vector2.ZERO
 var time_left = 60
 
 var customer_names = [
-	"Bob",
-	"Sarah",
-	"Mike",
-	"Linda",
-	"Gary"
+	"BOB",
+	"SARAH",
+	"MIKE",
+	"LINDA",
+	"GARY"
 ]
 
 var customers = []
@@ -35,15 +35,15 @@ var current_customer = null
 
 var symptom_pool = [
 	{
-		"symptom": "Headache",
+		"symptom": "HEADACHE",
 		"correct_drug": "Red"
 	},
 	{
-		"symptom": "Cough",
+		"symptom": "COUGH",
 		"correct_drug": "Blue"
 	},
 	{
-		"symptom": "Fever",
+		"symptom": "FEVER",
 		"correct_drug": "Green"
 	}
 ]
@@ -127,9 +127,13 @@ func _on_button_3_pressed() -> void:
 	check_answer("Green")
 
 func update_ui():
-	money_label.text = "Money: $" + str(money)
+	money_label.text = "Money" +  "\n $" + str(money)
 	suspicion_bar.value = suspicion
-	timer_label.text = "Time: " + str(time_left)
+	
+	var minutes = time_left / 60
+	var seconds = time_left % 60
+
+	timer_label.text = "TIME\n%02d:%02d" % [minutes, seconds]
 
 	update_vignette()
 

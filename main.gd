@@ -40,15 +40,39 @@ var current_customer = null
 
 var symptom_pool = [
 	{
-		"symptom": "HEADACHE",
+		"symptom": "My teeth keep humming.",
 		"correct_drug": "Red"
 	},
 	{
-		"symptom": "COUGH",
+		"symptom": "Colors sound too loud.",
 		"correct_drug": "Blue"
 	},
 	{
-		"symptom": "FEVER",
+		"symptom": "My legs feel unplugged.",
+		"correct_drug": "Green"
+	},
+	{
+		"symptom": "I can feel my heartbeat in my fingertips.",
+		"correct_drug": "Red"
+	},
+	{
+		"symptom": "The walls blink when I talk.",
+		"correct_drug": "Blue"
+	},
+	{
+		"symptom": "I woke up tired after sleeping all day.",
+		"correct_drug": "Green"
+	},
+	{
+		"symptom": "My bones itch.",
+		"correct_drug": "Red"
+	},
+	{
+		"symptom": "I forgot which thoughts are mine.",
+		"correct_drug": "Blue"
+	},
+	{
+		"symptom": "My blood feels slow.",
 		"correct_drug": "Green"
 	}
 ]
@@ -340,7 +364,7 @@ func show_customer():
 		"position",
 		customer_visible_position,
 		0.25
-	).set_trans(Tween.TRANS_BACK).set_ease(Tween.EASE_OUT)
+	).set_trans(Tween.TRANS_CUBIC).set_ease(Tween.EASE_OUT)
 
 	tween.tween_property(
 		customer,
@@ -355,7 +379,7 @@ func show_customer():
 		"scale",
 		Vector2(1.08, 1.08),
 		0.12
-	).set_trans(Tween.TRANS_BACK).set_ease(Tween.EASE_OUT)
+	).set_trans(Tween.TRANS_QUINT).set_ease(Tween.EASE_OUT)
 
 	tween.tween_property(
 		bubble,

@@ -4,6 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://cdicyyoytgkcl" path="res://uiMockup.png" id="2_0xm2m"]
 [ext_resource type="FontFile" uid="uid://dia843aiqe37u" path="res://VCR_OSD_MONO_1.001.ttf" id="3_h2yge"]
 [ext_resource type="Texture2D" uid="uid://cp1or4ym2ev3y" path="res://uiGameOverMockup.png" id="4_1bvp3"]
+[ext_resource type="Texture2D" uid="uid://cebrmn6o88pwr" path="res://retry.png" id="5_lquwl"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lquwl"]
 bg_color = Color(0.60038817, 0.60038817, 0.60038817, 0)
@@ -1825,6 +1826,12 @@ metadata/_edit_lock_ = true
 
 [node name="Art" type="Node2D" parent="GameOverUI/Panel" unique_id=236020889]
 
+[node name="bg" type="ColorRect" parent="GameOverUI/Panel/Art" unique_id=1406989297]
+visible = false
+offset_right = 1153.0
+offset_bottom = 648.0
+color = Color(0.08627451, 0.09411765, 0.105882354, 1)
+
 [node name="Photo" type="Node2D" parent="GameOverUI/Panel/Art" unique_id=1445699881]
 
 [node name="ColorRect2" type="ColorRect" parent="GameOverUI/Panel/Art/Photo" unique_id=2044146439]
@@ -2001,29 +2008,578 @@ text = "Another \"cure\" gone wrong"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="gameover" type="Label" parent="GameOverUI/Panel/Art" unique_id=116254745]
-offset_left = 353.0
-offset_top = 20.0
-offset_right = 809.0
-offset_bottom = 105.0
-theme_override_colors/font_color = Color(0.6, 0.19607843, 0.16078432, 1)
+[node name="finalStats" type="Node2D" parent="GameOverUI/Panel/Art" unique_id=954943508]
+
+[node name="ColorRect" type="ColorRect" parent="GameOverUI/Panel/Art/finalStats" unique_id=1868575570]
+offset_left = 395.0
+offset_top = 151.0
+offset_right = 827.0
+offset_bottom = 506.0
+color = Color(0.078431375, 0.08235294, 0.08627451, 1)
+
+[node name="final money" type="Label" parent="GameOverUI/Panel/Art/finalStats" unique_id=2016067994]
+offset_left = 492.0
+offset_top = 216.0
+offset_right = 640.0
+offset_bottom = 268.0
+theme_override_colors/font_color = Color(0.31764707, 0.48235294, 0.27058825, 1)
 theme_override_fonts/font = ExtResource("3_h2yge")
-theme_override_font_sizes/font_size = 85
-text = "GAME OVER"
+theme_override_font_sizes/font_size = 30
+text = "$340"
+horizontal_alignment = 1
+vertical_alignment = 2
+
+[node name="final money2" type="Label" parent="GameOverUI/Panel/Art/finalStats" unique_id=140879724]
+offset_left = 492.0
+offset_top = 218.0
+offset_right = 640.0
+offset_bottom = 246.0
+theme_override_colors/font_color = Color(0.31764707, 0.48235294, 0.27058825, 1)
+theme_override_fonts/font = ExtResource("3_h2yge")
+theme_override_font_sizes/font_size = 21
+text = "MONEY EARNED"
+horizontal_alignment = 1
+
+[node name="final money3" type="Label" parent="GameOverUI/Panel/Art/finalStats" unique_id=523909189]
+offset_left = 492.0
+offset_top = 263.0
+offset_right = 677.0
+offset_bottom = 347.0
+theme_override_colors/font_color = Color(0.61960787, 0.20392157, 0.16862746, 1)
+theme_override_fonts/font = ExtResource("3_h2yge")
+theme_override_font_sizes/font_size = 21
+text = "SUSPICION LEVEL"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="gameover2" type="Label" parent="GameOverUI/Panel/Art" unique_id=1105909412]
-offset_left = 353.0
-offset_top = 106.0
-offset_right = 809.0
-offset_bottom = 142.0
-theme_override_colors/font_color = Color(0.5647059, 0.50980395, 0.44313726, 1)
+[node name="final money4" type="Label" parent="GameOverUI/Panel/Art/finalStats" unique_id=7956096]
+offset_left = 396.0
+offset_top = 136.0
+offset_right = 826.0
+offset_bottom = 220.0
+theme_override_colors/font_color = Color(0.6862745, 0.6156863, 0.5176471, 1)
 theme_override_fonts/font = ExtResource("3_h2yge")
 theme_override_font_sizes/font_size = 21
-text = "The authorities have shut you down."
+text = "FINAL RESULT"
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="SuspicionBar2" type="ProgressBar" parent="GameOverUI/Panel/Art/finalStats" unique_id=1927725488]
+offset_left = 491.0
+offset_top = 320.0
+offset_right = 677.0
+offset_bottom = 341.0
+theme_override_styles/background = SubResource("StyleBoxFlat_1bvp3")
+theme_override_styles/fill = SubResource("StyleBoxFlat_h2yge")
+max_value = 5.0
+show_percentage = false
+
+[node name="Skull3" type="Node2D" parent="GameOverUI/Panel/Art/finalStats" unique_id=1798593702]
+position = Vector2(-788.00006, 248.00002)
+scale = Vector2(1.1398562, 1.1398562)
+
+[node name="ColorRect" type="ColorRect" parent="GameOverUI/Panel/Art/finalStats/Skull3" unique_id=508176726]
+offset_left = 1077.0
+offset_top = 80.0
+offset_right = 1093.32
+offset_bottom = 83.0
+color = Color(0.7882353, 0.29803923, 0.19607843, 1)
+
+[node name="ColorRect24" type="ColorRect" parent="GameOverUI/Panel/Art/finalStats/Skull3" unique_id=1807138156]
+offset_left = 1085.2933
+offset_top = 63.93274
+offset_right = 1091.1366
+offset_bottom = 66.03607
+rotation = 0.8926067
+color = Color(0.7882353, 0.29803923, 0.19607843, 1)
+
+[node name="ColorRect25" type="ColorRect" parent="GameOverUI/Panel/Art/finalStats/Skull3" unique_id=1857613917]
+offset_left = 1086.41
+offset_top = 65.602356
+offset_right = 1092.5491
+offset_bottom = 67.70569
+rotation = 2.371459
+color = Color(0.7882353, 0.29803923, 0.19607843, 1)
+
+[node name="ColorRect2" type="ColorRect" parent="GameOverUI/Panel/Art/finalStats/Skull3" unique_id=125820775]
+offset_left = 1074.0
+offset_top = 77.0
+offset_right = 1080.0
+offset_bottom = 80.33276
+rotation = 0.5916817
+color = Color(0.7882353, 0.29803923, 0.19607843, 1)
+
+[node name="ColorRect3" type="ColorRect" parent="GameOverUI/Panel/Art/finalStats/Skull3" unique_id=1133759330]
+offset_left = 1074.0348
+offset_top = 72.86717
+offset_right = 1080.7924
+offset_bottom = 75.6245
+rotation = 1.4431407
+color = Color(0.7882353, 0.29803923, 0.19607843, 1)
+
+[node name="ColorRect4" type="ColorRect" parent="GameOverUI/Panel/Art/finalStats/Skull3" unique_id=1380700796]
+offset_left = 1073.7048
+offset_top = 70.29598
+offset_right = 1076.4006
+offset_bottom = 73.05331
+rotation = 1.4431407
+color = Color(0.7882353, 0.29803923, 0.19607843, 1)
+
+[node name="ColorRect5" type="ColorRect" parent="GameOverUI/Panel/Art/finalStats/Skull3" unique_id=1047070735]
+offset_left = 1068.6599
+offset_top = 67.23017
+offset_right = 1074.5637
+offset_bottom = 70.309395
+rotation = 0.600001
+color = Color(0.7882353, 0.29803923, 0.19607843, 1)
+
+[node name="ColorRect6" type="ColorRect" parent="GameOverUI/Panel/Art/finalStats/Skull3" unique_id=2068410880]
+offset_left = 1068.433
+offset_top = 65.075745
+offset_right = 1072.5975
+offset_bottom = 67.851746
+rotation = 1.2896128
+color = Color(0.7882353, 0.29803923, 0.19607843, 1)
+
+[node name="ColorRect7" type="ColorRect" parent="GameOverUI/Panel/Art/finalStats/Skull3" unique_id=177432260]
+offset_left = 1068.4147
+offset_top = 53.94367
+offset_right = 1080.552
+offset_bottom = 56.630314
+rotation = 1.566636
+color = Color(0.7882353, 0.29803923, 0.19607843, 1)
+
+[node name="ColorRect8" type="ColorRect" parent="GameOverUI/Panel/Art/finalStats/Skull3" unique_id=1312205206]
+offset_left = 1069.8185
+offset_top = 50.800648
+offset_right = 1074.6781
+offset_bottom = 53.10906
+rotation = 1.9966552
+color = Color(0.7882353, 0.29803923, 0.19607843, 1)
+
+[node name="ColorRect9" type="ColorRect" parent="GameOverUI/Panel/Art/finalStats/Skull3" unique_id=1571097653]
+offset_left = 1071.8572
+offset_top = 48.0016
+offset_right = 1075.7438
+offset_bottom = 50.309093
+rotation = 2.1862705
+color = Color(0.7882353, 0.29803923, 0.19607843, 1)
+
+[node name="ColorRect10" type="ColorRect" parent="GameOverUI/Panel/Art/finalStats/Skull3" unique_id=826168460]
+offset_left = 1074.9124
+offset_top = 45.487587
+offset_right = 1079.5518
+offset_bottom = 47.784462
+rotation = 2.433425
+color = Color(0.7882353, 0.29803923, 0.19607843, 1)
+
+[node name="ColorRect11" type="ColorRect" parent="GameOverUI/Panel/Art/finalStats/Skull3" unique_id=2019116185]
+offset_left = 1078.642
+offset_top = 44.129333
+offset_right = 1083.3975
+offset_bottom = 46.263916
+rotation = 2.7940905
+color = Color(0.7882353, 0.29803923, 0.19607843, 1)
+
+[node name="ColorRect12" type="ColorRect" parent="GameOverUI/Panel/Art/finalStats/Skull3" unique_id=2123964323]
+offset_left = 1082.5938
+offset_top = 43.08788
+offset_right = 1086.9652
+offset_bottom = 45.021076
+rotation = 2.9326582
+color = Color(0.7882353, 0.29803923, 0.19607843, 1)
+
+[node name="ColorRect13" type="ColorRect" parent="GameOverUI/Panel/Art/finalStats/Skull3" unique_id=493172568]
+offset_left = 1089.6212
+offset_top = 43.26007
+offset_right = 1097.1074
+offset_bottom = 45.122635
+rotation = 3.1693985
+color = Color(0.7882353, 0.29803923, 0.19607843, 1)
+
+[node name="ColorRect14" type="ColorRect" parent="GameOverUI/Panel/Art/finalStats/Skull3" unique_id=2052132836]
+offset_left = 1089.5145
+offset_top = 41.362904
+offset_right = 1095.6927
+offset_bottom = 43.172962
+rotation = 6.5734415
+color = Color(0.7882353, 0.29803923, 0.19607843, 1)
+
+[node name="ColorRect15" type="ColorRect" parent="GameOverUI/Panel/Art/finalStats/Skull3" unique_id=1454670025]
+offset_left = 1095.3566
+offset_top = 43.078888
+offset_right = 1100.8525
+offset_bottom = 45.03354
+rotation = 6.83166
+color = Color(0.7882353, 0.29803923, 0.19607843, 1)
+
+[node name="ColorRect16" type="ColorRect" parent="GameOverUI/Panel/Art/finalStats/Skull3" unique_id=1362719418]
+offset_left = 1099.9233
+offset_top = 45.77443
+offset_right = 1105.3907
+offset_bottom = 47.814957
+rotation = 7.173652
+color = Color(0.7882353, 0.29803923, 0.19607843, 1)
+
+[node name="ColorRect17" type="ColorRect" parent="GameOverUI/Panel/Art/finalStats/Skull3" unique_id=1488727410]
+offset_left = 1103.4183
+offset_top = 50.069424
+offset_right = 1107.789
+offset_bottom = 52.240383
+rotation = 7.4449425
+color = Color(0.7882353, 0.29803923, 0.19607843, 1)
+
+[node name="ColorRect18" type="ColorRect" parent="GameOverUI/Panel/Art/finalStats/Skull3" unique_id=2075592957]
+offset_left = 1105.1422
+offset_top = 54.090195
+offset_right = 1108.8246
+offset_bottom = 56.214035
+rotation = 7.699443
+color = Color(0.7882353, 0.29803923, 0.19607843, 1)
+
+[node name="ColorRect19" type="ColorRect" parent="GameOverUI/Panel/Art/finalStats/Skull3" unique_id=477407886]
+offset_left = 1105.7438
+offset_top = 57.6548
+offset_right = 1113.8956
+offset_bottom = 59.792007
+rotation = 7.8540254
+color = Color(0.7882353, 0.29803923, 0.19607843, 1)
+
+[node name="ColorRect20" type="ColorRect" parent="GameOverUI/Panel/Art/finalStats/Skull3" unique_id=1802911028]
+offset_left = 1105.7723
+offset_top = 65.8723
+offset_right = 1112.5983
+offset_bottom = 67.64574
+rotation = 8.545766
+color = Color(0.7882353, 0.29803923, 0.19607843, 1)
+
+[node name="ColorRect21" type="ColorRect" parent="GameOverUI/Panel/Art/finalStats/Skull3" unique_id=129812685]
+offset_left = 1101.5104
+offset_top = 71.24635
+offset_right = 1106.737
+offset_bottom = 73.173355
+rotation = 8.860396
+color = Color(0.7882353, 0.29803923, 0.19607843, 1)
+
+[node name="ColorRect22" type="ColorRect" parent="GameOverUI/Panel/Art/finalStats/Skull3" unique_id=814036031]
+offset_left = 1098.1936
+offset_top = 72.58567
+offset_right = 1103.0292
+offset_bottom = 74.77683
+rotation = 7.9375577
+color = Color(0.7882353, 0.29803923, 0.19607843, 1)
+
+[node name="ColorRect23" type="ColorRect" parent="GameOverUI/Panel/Art/finalStats/Skull3" unique_id=1414091703]
+offset_left = 1097.8038
+offset_top = 77.378
+offset_right = 1104.9634
+offset_bottom = 79.75001
+rotation = 8.512356
+color = Color(0.7882353, 0.29803923, 0.19607843, 1)
+
+[node name="eye" type="Node2D" parent="GameOverUI/Panel/Art/finalStats/Skull3" unique_id=2100120474]
+position = Vector2(995, -133)
+scale = Vector2(0.739566, 0.87367463)
+
+[node name="ColorRect" type="ColorRect" parent="GameOverUI/Panel/Art/finalStats/Skull3/eye" unique_id=795528648]
+offset_left = 104.0
+offset_top = 219.0
+offset_right = 117.695
+offset_bottom = 223.0
+color = Color(0.7882353, 0.29803923, 0.19607843, 1)
+
+[node name="Node2D" type="Node2D" parent="GameOverUI/Panel/Art/finalStats/Skull3/eye" unique_id=623856983]
+
+[node name="ColorRect7" type="ColorRect" parent="GameOverUI/Panel/Art/finalStats/Skull3/eye/Node2D" unique_id=1462147378]
+offset_left = 107.0
+offset_top = 217.0
+offset_right = 116.0
+offset_bottom = 219.0
+color = Color(0.788, 0.298, 0.196, 1)
+
+[node name="ColorRect2" type="ColorRect" parent="GameOverUI/Panel/Art/finalStats/Skull3/eye/Node2D" unique_id=1884339382]
+offset_left = 106.10655
+offset_top = 215.82976
+offset_right = 109.10655
+offset_bottom = 219.75674
+rotation = 0.5591973
+color = Color(0.788, 0.298, 0.196, 1)
+
+[node name="ColorRect3" type="ColorRect" parent="GameOverUI/Panel/Art/finalStats/Skull3/eye/Node2D" unique_id=370226903]
+offset_left = 110.94382
+offset_top = 214.02747
+offset_right = 113.94382
+offset_bottom = 219.27408
+rotation = 1.2141461
+color = Color(0.788, 0.298, 0.196, 1)
+
+[node name="ColorRect4" type="ColorRect" parent="GameOverUI/Panel/Art/finalStats/Skull3/eye/Node2D" unique_id=1650985744]
+offset_left = 115.7796
+offset_top = 215.21664
+offset_right = 118.636215
+offset_bottom = 220.16988
+rotation = 1.8015293
+color = Color(0.788, 0.298, 0.196, 1)
+
+[node name="ColorRect5" type="ColorRect" parent="GameOverUI/Panel/Art/finalStats/Skull3/eye/Node2D" unique_id=1835087315]
+offset_left = 117.537
+offset_top = 217.05106
+offset_right = 119.286674
+offset_bottom = 219.83826
+rotation = 2.339965
+color = Color(0.788, 0.298, 0.196, 1)
+
+[node name="ColorRect6" type="ColorRect" parent="GameOverUI/Panel/Art/finalStats/Skull3/eye/Node2D" unique_id=504196142]
+offset_left = 117.79682
+offset_top = 219.1227
+offset_right = 119.63197
+offset_bottom = 221.30646
+rotation = 3.0119748
+color = Color(0.788, 0.298, 0.196, 1)
+
+[node name="Node2D2" type="Node2D" parent="GameOverUI/Panel/Art/finalStats/Skull3/eye" unique_id=1544118584]
+position = Vector2(221.715, 441.91)
+rotation = 3.1415927
+
+[node name="ColorRect7" type="ColorRect" parent="GameOverUI/Panel/Art/finalStats/Skull3/eye/Node2D2" unique_id=1671105365]
+offset_left = 107.0
+offset_top = 217.0
+offset_right = 116.0
+offset_bottom = 219.0
+color = Color(0.7882353, 0.29803923, 0.19607843, 1)
+
+[node name="ColorRect2" type="ColorRect" parent="GameOverUI/Panel/Art/finalStats/Skull3/eye/Node2D2" unique_id=2111319048]
+offset_left = 106.10655
+offset_top = 215.82976
+offset_right = 109.10655
+offset_bottom = 219.75674
+rotation = 0.5591973
+color = Color(0.7882353, 0.29803923, 0.19607843, 1)
+
+[node name="ColorRect3" type="ColorRect" parent="GameOverUI/Panel/Art/finalStats/Skull3/eye/Node2D2" unique_id=1589424529]
+offset_left = 110.94382
+offset_top = 214.02747
+offset_right = 113.94382
+offset_bottom = 219.27408
+rotation = 1.2141461
+color = Color(0.7882353, 0.29803923, 0.19607843, 1)
+
+[node name="ColorRect4" type="ColorRect" parent="GameOverUI/Panel/Art/finalStats/Skull3/eye/Node2D2" unique_id=956836304]
+offset_left = 115.7796
+offset_top = 215.21664
+offset_right = 118.636215
+offset_bottom = 220.16988
+rotation = 1.8015293
+color = Color(0.7882353, 0.29803923, 0.19607843, 1)
+
+[node name="ColorRect5" type="ColorRect" parent="GameOverUI/Panel/Art/finalStats/Skull3/eye/Node2D2" unique_id=892697711]
+offset_left = 117.537
+offset_top = 217.05106
+offset_right = 119.286674
+offset_bottom = 219.83826
+rotation = 2.339965
+color = Color(0.7882353, 0.29803923, 0.19607843, 1)
+
+[node name="ColorRect6" type="ColorRect" parent="GameOverUI/Panel/Art/finalStats/Skull3/eye/Node2D2" unique_id=1359477801]
+offset_left = 117.79682
+offset_top = 219.1227
+offset_right = 119.63197
+offset_bottom = 221.30646
+rotation = 3.0119748
+color = Color(0.7882353, 0.29803923, 0.19607843, 1)
+
+[node name="eye2" type="Node2D" parent="GameOverUI/Panel/Art/finalStats/Skull3" unique_id=1635906333]
+position = Vector2(1012, -134)
+scale = Vector2(0.739566, 0.87367463)
+
+[node name="ColorRect" type="ColorRect" parent="GameOverUI/Panel/Art/finalStats/Skull3/eye2" unique_id=1526825001]
+offset_left = 104.0
+offset_top = 219.0
+offset_right = 117.695
+offset_bottom = 223.0
+color = Color(0.7882353, 0.29803923, 0.19607843, 1)
+
+[node name="Node2D" type="Node2D" parent="GameOverUI/Panel/Art/finalStats/Skull3/eye2" unique_id=16732733]
+
+[node name="ColorRect7" type="ColorRect" parent="GameOverUI/Panel/Art/finalStats/Skull3/eye2/Node2D" unique_id=350772817]
+offset_left = 107.0
+offset_top = 217.0
+offset_right = 116.0
+offset_bottom = 219.0
+color = Color(0.788, 0.298, 0.196, 1)
+
+[node name="ColorRect2" type="ColorRect" parent="GameOverUI/Panel/Art/finalStats/Skull3/eye2/Node2D" unique_id=1624457714]
+offset_left = 106.10655
+offset_top = 215.82976
+offset_right = 109.10655
+offset_bottom = 219.75674
+rotation = 0.5591973
+color = Color(0.788, 0.298, 0.196, 1)
+
+[node name="ColorRect3" type="ColorRect" parent="GameOverUI/Panel/Art/finalStats/Skull3/eye2/Node2D" unique_id=164406830]
+offset_left = 110.94382
+offset_top = 214.02747
+offset_right = 113.94382
+offset_bottom = 219.27408
+rotation = 1.2141461
+color = Color(0.788, 0.298, 0.196, 1)
+
+[node name="ColorRect4" type="ColorRect" parent="GameOverUI/Panel/Art/finalStats/Skull3/eye2/Node2D" unique_id=305243141]
+offset_left = 115.7796
+offset_top = 215.21664
+offset_right = 118.636215
+offset_bottom = 220.16988
+rotation = 1.8015293
+color = Color(0.788, 0.298, 0.196, 1)
+
+[node name="ColorRect5" type="ColorRect" parent="GameOverUI/Panel/Art/finalStats/Skull3/eye2/Node2D" unique_id=345861293]
+offset_left = 117.537
+offset_top = 217.05106
+offset_right = 119.286674
+offset_bottom = 219.83826
+rotation = 2.339965
+color = Color(0.788, 0.298, 0.196, 1)
+
+[node name="ColorRect6" type="ColorRect" parent="GameOverUI/Panel/Art/finalStats/Skull3/eye2/Node2D" unique_id=461544005]
+offset_left = 117.79682
+offset_top = 219.1227
+offset_right = 119.63197
+offset_bottom = 221.30646
+rotation = 3.0119748
+color = Color(0.788, 0.298, 0.196, 1)
+
+[node name="Node2D2" type="Node2D" parent="GameOverUI/Panel/Art/finalStats/Skull3/eye2" unique_id=268762369]
+position = Vector2(221.715, 441.91)
+rotation = 3.1415927
+
+[node name="ColorRect7" type="ColorRect" parent="GameOverUI/Panel/Art/finalStats/Skull3/eye2/Node2D2" unique_id=1967782136]
+offset_left = 107.0
+offset_top = 217.0
+offset_right = 116.0
+offset_bottom = 219.0
+color = Color(0.7882353, 0.29803923, 0.19607843, 1)
+
+[node name="ColorRect2" type="ColorRect" parent="GameOverUI/Panel/Art/finalStats/Skull3/eye2/Node2D2" unique_id=1685170554]
+offset_left = 106.10655
+offset_top = 215.82976
+offset_right = 109.10655
+offset_bottom = 219.75674
+rotation = 0.5591973
+color = Color(0.7882353, 0.29803923, 0.19607843, 1)
+
+[node name="ColorRect3" type="ColorRect" parent="GameOverUI/Panel/Art/finalStats/Skull3/eye2/Node2D2" unique_id=607251137]
+offset_left = 110.94382
+offset_top = 214.02747
+offset_right = 113.94382
+offset_bottom = 219.27408
+rotation = 1.2141461
+color = Color(0.7882353, 0.29803923, 0.19607843, 1)
+
+[node name="ColorRect4" type="ColorRect" parent="GameOverUI/Panel/Art/finalStats/Skull3/eye2/Node2D2" unique_id=1173223898]
+offset_left = 115.7796
+offset_top = 215.21664
+offset_right = 118.636215
+offset_bottom = 220.16988
+rotation = 1.8015293
+color = Color(0.7882353, 0.29803923, 0.19607843, 1)
+
+[node name="ColorRect5" type="ColorRect" parent="GameOverUI/Panel/Art/finalStats/Skull3/eye2/Node2D2" unique_id=1763551671]
+offset_left = 117.537
+offset_top = 217.05106
+offset_right = 119.286674
+offset_bottom = 219.83826
+rotation = 2.339965
+color = Color(0.7882353, 0.29803923, 0.19607843, 1)
+
+[node name="ColorRect6" type="ColorRect" parent="GameOverUI/Panel/Art/finalStats/Skull3/eye2/Node2D2" unique_id=423561973]
+offset_left = 117.79682
+offset_top = 219.1227
+offset_right = 119.63197
+offset_bottom = 221.30646
+rotation = 3.0119748
+color = Color(0.7882353, 0.29803923, 0.19607843, 1)
+
+[node name="moneyIcon" type="Node2D" parent="GameOverUI/Panel/Art/finalStats" unique_id=1332759622]
+position = Vector2(0, 8)
+
+[node name="ColorRect" type="ColorRect" parent="GameOverUI/Panel/Art/finalStats/moneyIcon" unique_id=932506384]
+offset_left = 423.0
+offset_top = 247.0
+offset_right = 475.0
+offset_bottom = 253.0
+color = Color(0.21960784, 0.31764707, 0.1764706, 1)
+
+[node name="ColorRect4" type="ColorRect" parent="GameOverUI/Panel/Art/finalStats/moneyIcon" unique_id=187977237]
+offset_left = 444.0
+offset_top = 247.0
+offset_right = 454.0
+offset_bottom = 253.0
+color = Color(0.14292666, 0.21431261, 0.11146966, 1)
+
+[node name="ColorRect2" type="ColorRect" parent="GameOverUI/Panel/Art/finalStats/moneyIcon" unique_id=1958123674]
+offset_left = 423.0
+offset_top = 218.0
+offset_right = 475.0
+offset_bottom = 247.0
+color = Color(0.31764707, 0.44705883, 0.25882354, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="ColorRect3" type="ColorRect" parent="GameOverUI/Panel/Art/finalStats/moneyIcon" unique_id=611670358]
+offset_left = 444.0
+offset_top = 218.0
+offset_right = 454.0
+offset_bottom = 247.0
+color = Color(0.13725491, 0.1882353, 0.1254902, 1)
+
+[node name="cityCondition" type="Node2D" parent="GameOverUI/Panel/Art/finalStats" unique_id=1507497180]
+
+[node name="ColorRect" type="ColorRect" parent="GameOverUI/Panel/Art/finalStats/cityCondition" unique_id=724886514]
+offset_left = 418.0
+offset_top = 365.0
+offset_right = 803.0
+offset_bottom = 488.0
+color = Color(0.11372549, 0.08235294, 0.078431375, 1)
+
+[node name="cityConditionIcon" type="ColorRect" parent="GameOverUI/Panel/Art/finalStats/cityCondition" unique_id=1356618574]
+offset_left = 430.0
+offset_top = 378.0
+offset_right = 538.0
+offset_bottom = 475.0
+color = Color(0.29891083, 0.2346076, 0.22655001, 1)
+
+[node name="cityConditionFlavor" type="Label" parent="GameOverUI/Panel/Art/finalStats/cityCondition" unique_id=18678154]
+offset_left = 556.0
+offset_top = 376.0
+offset_right = 767.0
+offset_bottom = 396.0
+theme_override_colors/font_color = Color(0.61960787, 0.20392157, 0.16862746, 1)
+theme_override_fonts/font = ExtResource("3_h2yge")
+theme_override_font_sizes/font_size = 21
+text = "CITY CONDITION"
+vertical_alignment = 2
+
+[node name="cityCondition" type="Label" parent="GameOverUI/Panel/Art/finalStats/cityCondition" unique_id=1708835427]
+offset_left = 557.0
+offset_top = 406.0
+offset_right = 731.0
+offset_bottom = 434.0
+theme_override_colors/font_color = Color(0.61960787, 0.20392157, 0.16862746, 1)
+theme_override_fonts/font = ExtResource("3_h2yge")
+theme_override_font_sizes/font_size = 31
+text = "IN CRISIS"
+vertical_alignment = 1
+
+[node name="cityConditionDesc" type="Label" parent="GameOverUI/Panel/Art/finalStats/cityCondition" unique_id=767880139]
+offset_left = 555.0
+offset_top = 443.0
+offset_right = 740.0
+offset_bottom = 478.0
+theme_override_colors/font_color = Color(0.61960787, 0.20392157, 0.16862746, 1)
+theme_override_fonts/font = ExtResource("3_h2yge")
+theme_override_font_sizes/font_size = 12
+text = "Your treatments have left the city in worse shape"
+vertical_alignment = 1
+autowrap_mode = 2
 
 [node name="flavor bottom text" type="Label" parent="GameOverUI/Panel/Art" unique_id=518213106]
 offset_left = 18.0
@@ -2036,1293 +2592,6 @@ theme_override_font_sizes/font_size = 21
 text = "flavor bottom text - funny quote name"
 horizontal_alignment = 1
 vertical_alignment = 1
-
-[node name="final money" type="Label" parent="GameOverUI/Panel/Art" unique_id=2016067994]
-offset_left = 704.0
-offset_top = 190.0
-offset_right = 797.0
-offset_bottom = 274.0
-theme_override_colors/font_color = Color(0.31764707, 0.48235294, 0.27058825, 1)
-theme_override_fonts/font = ExtResource("3_h2yge")
-theme_override_font_sizes/font_size = 30
-text = "$340"
-horizontal_alignment = 2
-vertical_alignment = 1
-
-[node name="Skull" type="Node2D" parent="GameOverUI/Panel/Art" unique_id=2007512388]
-position = Vector2(-384, 4.7683716e-07)
-scale = Vector2(1.1398562, 1.1398562)
-
-[node name="ColorRect" type="ColorRect" parent="GameOverUI/Panel/Art/Skull" unique_id=1279087160]
-offset_left = 1077.0
-offset_top = 80.0
-offset_right = 1093.32
-offset_bottom = 83.0
-color = Color(0.7882353, 0.29803923, 0.19607843, 1)
-
-[node name="ColorRect24" type="ColorRect" parent="GameOverUI/Panel/Art/Skull" unique_id=1891650811]
-offset_left = 1085.2933
-offset_top = 63.93274
-offset_right = 1091.1366
-offset_bottom = 66.03607
-rotation = 0.8926067
-color = Color(0.7882353, 0.29803923, 0.19607843, 1)
-
-[node name="ColorRect25" type="ColorRect" parent="GameOverUI/Panel/Art/Skull" unique_id=1278247603]
-offset_left = 1086.41
-offset_top = 65.602356
-offset_right = 1092.5491
-offset_bottom = 67.70569
-rotation = 2.371459
-color = Color(0.7882353, 0.29803923, 0.19607843, 1)
-
-[node name="ColorRect2" type="ColorRect" parent="GameOverUI/Panel/Art/Skull" unique_id=770162227]
-offset_left = 1074.0
-offset_top = 77.0
-offset_right = 1080.0
-offset_bottom = 80.33276
-rotation = 0.5916817
-color = Color(0.7882353, 0.29803923, 0.19607843, 1)
-
-[node name="ColorRect3" type="ColorRect" parent="GameOverUI/Panel/Art/Skull" unique_id=1945241948]
-offset_left = 1074.0348
-offset_top = 72.86717
-offset_right = 1080.7924
-offset_bottom = 75.6245
-rotation = 1.4431407
-color = Color(0.7882353, 0.29803923, 0.19607843, 1)
-
-[node name="ColorRect4" type="ColorRect" parent="GameOverUI/Panel/Art/Skull" unique_id=1052176184]
-offset_left = 1073.7048
-offset_top = 70.29598
-offset_right = 1076.4006
-offset_bottom = 73.05331
-rotation = 1.4431407
-color = Color(0.7882353, 0.29803923, 0.19607843, 1)
-
-[node name="ColorRect5" type="ColorRect" parent="GameOverUI/Panel/Art/Skull" unique_id=1785181117]
-offset_left = 1068.6599
-offset_top = 67.23017
-offset_right = 1074.5637
-offset_bottom = 70.309395
-rotation = 0.600001
-color = Color(0.7882353, 0.29803923, 0.19607843, 1)
-
-[node name="ColorRect6" type="ColorRect" parent="GameOverUI/Panel/Art/Skull" unique_id=1063756015]
-offset_left = 1068.433
-offset_top = 65.075745
-offset_right = 1072.5975
-offset_bottom = 67.851746
-rotation = 1.2896128
-color = Color(0.7882353, 0.29803923, 0.19607843, 1)
-
-[node name="ColorRect7" type="ColorRect" parent="GameOverUI/Panel/Art/Skull" unique_id=303207076]
-offset_left = 1068.4147
-offset_top = 53.94367
-offset_right = 1080.552
-offset_bottom = 56.630314
-rotation = 1.566636
-color = Color(0.7882353, 0.29803923, 0.19607843, 1)
-
-[node name="ColorRect8" type="ColorRect" parent="GameOverUI/Panel/Art/Skull" unique_id=1730560825]
-offset_left = 1069.8185
-offset_top = 50.800648
-offset_right = 1074.6781
-offset_bottom = 53.10906
-rotation = 1.9966552
-color = Color(0.7882353, 0.29803923, 0.19607843, 1)
-
-[node name="ColorRect9" type="ColorRect" parent="GameOverUI/Panel/Art/Skull" unique_id=520709515]
-offset_left = 1071.8572
-offset_top = 48.0016
-offset_right = 1075.7438
-offset_bottom = 50.309093
-rotation = 2.1862705
-color = Color(0.7882353, 0.29803923, 0.19607843, 1)
-
-[node name="ColorRect10" type="ColorRect" parent="GameOverUI/Panel/Art/Skull" unique_id=1011887238]
-offset_left = 1074.9124
-offset_top = 45.487587
-offset_right = 1079.5518
-offset_bottom = 47.784462
-rotation = 2.433425
-color = Color(0.7882353, 0.29803923, 0.19607843, 1)
-
-[node name="ColorRect11" type="ColorRect" parent="GameOverUI/Panel/Art/Skull" unique_id=1278984729]
-offset_left = 1078.642
-offset_top = 44.129333
-offset_right = 1083.3975
-offset_bottom = 46.263916
-rotation = 2.7940905
-color = Color(0.7882353, 0.29803923, 0.19607843, 1)
-
-[node name="ColorRect12" type="ColorRect" parent="GameOverUI/Panel/Art/Skull" unique_id=512798032]
-offset_left = 1082.5938
-offset_top = 43.08788
-offset_right = 1086.9652
-offset_bottom = 45.021076
-rotation = 2.9326582
-color = Color(0.7882353, 0.29803923, 0.19607843, 1)
-
-[node name="ColorRect13" type="ColorRect" parent="GameOverUI/Panel/Art/Skull" unique_id=499085037]
-offset_left = 1089.6212
-offset_top = 43.26007
-offset_right = 1097.1074
-offset_bottom = 45.122635
-rotation = 3.1693985
-color = Color(0.7882353, 0.29803923, 0.19607843, 1)
-
-[node name="ColorRect14" type="ColorRect" parent="GameOverUI/Panel/Art/Skull" unique_id=2117237316]
-offset_left = 1089.5145
-offset_top = 41.362904
-offset_right = 1095.6927
-offset_bottom = 43.172962
-rotation = 6.5734415
-color = Color(0.7882353, 0.29803923, 0.19607843, 1)
-
-[node name="ColorRect15" type="ColorRect" parent="GameOverUI/Panel/Art/Skull" unique_id=840348733]
-offset_left = 1095.3566
-offset_top = 43.078888
-offset_right = 1100.8525
-offset_bottom = 45.03354
-rotation = 6.83166
-color = Color(0.7882353, 0.29803923, 0.19607843, 1)
-
-[node name="ColorRect16" type="ColorRect" parent="GameOverUI/Panel/Art/Skull" unique_id=1378246032]
-offset_left = 1099.9233
-offset_top = 45.77443
-offset_right = 1105.3907
-offset_bottom = 47.814957
-rotation = 7.173652
-color = Color(0.7882353, 0.29803923, 0.19607843, 1)
-
-[node name="ColorRect17" type="ColorRect" parent="GameOverUI/Panel/Art/Skull" unique_id=1277674944]
-offset_left = 1103.4183
-offset_top = 50.069424
-offset_right = 1107.789
-offset_bottom = 52.240383
-rotation = 7.4449425
-color = Color(0.7882353, 0.29803923, 0.19607843, 1)
-
-[node name="ColorRect18" type="ColorRect" parent="GameOverUI/Panel/Art/Skull" unique_id=551230304]
-offset_left = 1105.1422
-offset_top = 54.090195
-offset_right = 1108.8246
-offset_bottom = 56.214035
-rotation = 7.699443
-color = Color(0.7882353, 0.29803923, 0.19607843, 1)
-
-[node name="ColorRect19" type="ColorRect" parent="GameOverUI/Panel/Art/Skull" unique_id=933697293]
-offset_left = 1105.7438
-offset_top = 57.6548
-offset_right = 1113.8956
-offset_bottom = 59.792007
-rotation = 7.8540254
-color = Color(0.7882353, 0.29803923, 0.19607843, 1)
-
-[node name="ColorRect20" type="ColorRect" parent="GameOverUI/Panel/Art/Skull" unique_id=931095794]
-offset_left = 1105.7723
-offset_top = 65.8723
-offset_right = 1112.5983
-offset_bottom = 67.64574
-rotation = 8.545766
-color = Color(0.7882353, 0.29803923, 0.19607843, 1)
-
-[node name="ColorRect21" type="ColorRect" parent="GameOverUI/Panel/Art/Skull" unique_id=1482320929]
-offset_left = 1101.5104
-offset_top = 71.24635
-offset_right = 1106.737
-offset_bottom = 73.173355
-rotation = 8.860396
-color = Color(0.7882353, 0.29803923, 0.19607843, 1)
-
-[node name="ColorRect22" type="ColorRect" parent="GameOverUI/Panel/Art/Skull" unique_id=831526501]
-offset_left = 1098.1936
-offset_top = 72.58567
-offset_right = 1103.0292
-offset_bottom = 74.77683
-rotation = 7.9375577
-color = Color(0.7882353, 0.29803923, 0.19607843, 1)
-
-[node name="ColorRect23" type="ColorRect" parent="GameOverUI/Panel/Art/Skull" unique_id=1434736608]
-offset_left = 1097.8038
-offset_top = 77.378
-offset_right = 1104.9634
-offset_bottom = 79.75001
-rotation = 8.512356
-color = Color(0.7882353, 0.29803923, 0.19607843, 1)
-
-[node name="eye" type="Node2D" parent="GameOverUI/Panel/Art/Skull" unique_id=1110942549]
-position = Vector2(995, -133)
-scale = Vector2(0.739566, 0.87367463)
-
-[node name="ColorRect" type="ColorRect" parent="GameOverUI/Panel/Art/Skull/eye" unique_id=328757816]
-offset_left = 104.0
-offset_top = 219.0
-offset_right = 117.695
-offset_bottom = 223.0
-color = Color(0.7882353, 0.29803923, 0.19607843, 1)
-
-[node name="Node2D" type="Node2D" parent="GameOverUI/Panel/Art/Skull/eye" unique_id=1131006689]
-
-[node name="ColorRect7" type="ColorRect" parent="GameOverUI/Panel/Art/Skull/eye/Node2D" unique_id=831085819]
-offset_left = 107.0
-offset_top = 217.0
-offset_right = 116.0
-offset_bottom = 219.0
-color = Color(0.788, 0.298, 0.196, 1)
-
-[node name="ColorRect2" type="ColorRect" parent="GameOverUI/Panel/Art/Skull/eye/Node2D" unique_id=1029175454]
-offset_left = 106.10655
-offset_top = 215.82976
-offset_right = 109.10655
-offset_bottom = 219.75674
-rotation = 0.5591973
-color = Color(0.788, 0.298, 0.196, 1)
-
-[node name="ColorRect3" type="ColorRect" parent="GameOverUI/Panel/Art/Skull/eye/Node2D" unique_id=185956927]
-offset_left = 110.94382
-offset_top = 214.02747
-offset_right = 113.94382
-offset_bottom = 219.27408
-rotation = 1.2141461
-color = Color(0.788, 0.298, 0.196, 1)
-
-[node name="ColorRect4" type="ColorRect" parent="GameOverUI/Panel/Art/Skull/eye/Node2D" unique_id=2122526164]
-offset_left = 115.7796
-offset_top = 215.21664
-offset_right = 118.636215
-offset_bottom = 220.16988
-rotation = 1.8015293
-color = Color(0.788, 0.298, 0.196, 1)
-
-[node name="ColorRect5" type="ColorRect" parent="GameOverUI/Panel/Art/Skull/eye/Node2D" unique_id=534700290]
-offset_left = 117.537
-offset_top = 217.05106
-offset_right = 119.286674
-offset_bottom = 219.83826
-rotation = 2.339965
-color = Color(0.788, 0.298, 0.196, 1)
-
-[node name="ColorRect6" type="ColorRect" parent="GameOverUI/Panel/Art/Skull/eye/Node2D" unique_id=858619761]
-offset_left = 117.79682
-offset_top = 219.1227
-offset_right = 119.63197
-offset_bottom = 221.30646
-rotation = 3.0119748
-color = Color(0.788, 0.298, 0.196, 1)
-
-[node name="Node2D2" type="Node2D" parent="GameOverUI/Panel/Art/Skull/eye" unique_id=847886244]
-position = Vector2(221.715, 441.91)
-rotation = 3.1415927
-
-[node name="ColorRect7" type="ColorRect" parent="GameOverUI/Panel/Art/Skull/eye/Node2D2" unique_id=2032371546]
-offset_left = 107.0
-offset_top = 217.0
-offset_right = 116.0
-offset_bottom = 219.0
-color = Color(0.7882353, 0.29803923, 0.19607843, 1)
-
-[node name="ColorRect2" type="ColorRect" parent="GameOverUI/Panel/Art/Skull/eye/Node2D2" unique_id=604005162]
-offset_left = 106.10655
-offset_top = 215.82976
-offset_right = 109.10655
-offset_bottom = 219.75674
-rotation = 0.5591973
-color = Color(0.7882353, 0.29803923, 0.19607843, 1)
-
-[node name="ColorRect3" type="ColorRect" parent="GameOverUI/Panel/Art/Skull/eye/Node2D2" unique_id=1498274207]
-offset_left = 110.94382
-offset_top = 214.02747
-offset_right = 113.94382
-offset_bottom = 219.27408
-rotation = 1.2141461
-color = Color(0.7882353, 0.29803923, 0.19607843, 1)
-
-[node name="ColorRect4" type="ColorRect" parent="GameOverUI/Panel/Art/Skull/eye/Node2D2" unique_id=1981104525]
-offset_left = 115.7796
-offset_top = 215.21664
-offset_right = 118.636215
-offset_bottom = 220.16988
-rotation = 1.8015293
-color = Color(0.7882353, 0.29803923, 0.19607843, 1)
-
-[node name="ColorRect5" type="ColorRect" parent="GameOverUI/Panel/Art/Skull/eye/Node2D2" unique_id=543308593]
-offset_left = 117.537
-offset_top = 217.05106
-offset_right = 119.286674
-offset_bottom = 219.83826
-rotation = 2.339965
-color = Color(0.7882353, 0.29803923, 0.19607843, 1)
-
-[node name="ColorRect6" type="ColorRect" parent="GameOverUI/Panel/Art/Skull/eye/Node2D2" unique_id=265324511]
-offset_left = 117.79682
-offset_top = 219.1227
-offset_right = 119.63197
-offset_bottom = 221.30646
-rotation = 3.0119748
-color = Color(0.7882353, 0.29803923, 0.19607843, 1)
-
-[node name="eye2" type="Node2D" parent="GameOverUI/Panel/Art/Skull" unique_id=478336754]
-position = Vector2(1012, -134)
-scale = Vector2(0.739566, 0.87367463)
-
-[node name="ColorRect" type="ColorRect" parent="GameOverUI/Panel/Art/Skull/eye2" unique_id=1670021420]
-offset_left = 104.0
-offset_top = 219.0
-offset_right = 117.695
-offset_bottom = 223.0
-color = Color(0.7882353, 0.29803923, 0.19607843, 1)
-
-[node name="Node2D" type="Node2D" parent="GameOverUI/Panel/Art/Skull/eye2" unique_id=1434053022]
-
-[node name="ColorRect7" type="ColorRect" parent="GameOverUI/Panel/Art/Skull/eye2/Node2D" unique_id=167668815]
-offset_left = 107.0
-offset_top = 217.0
-offset_right = 116.0
-offset_bottom = 219.0
-color = Color(0.788, 0.298, 0.196, 1)
-
-[node name="ColorRect2" type="ColorRect" parent="GameOverUI/Panel/Art/Skull/eye2/Node2D" unique_id=2086651543]
-offset_left = 106.10655
-offset_top = 215.82976
-offset_right = 109.10655
-offset_bottom = 219.75674
-rotation = 0.5591973
-color = Color(0.788, 0.298, 0.196, 1)
-
-[node name="ColorRect3" type="ColorRect" parent="GameOverUI/Panel/Art/Skull/eye2/Node2D" unique_id=1565096728]
-offset_left = 110.94382
-offset_top = 214.02747
-offset_right = 113.94382
-offset_bottom = 219.27408
-rotation = 1.2141461
-color = Color(0.788, 0.298, 0.196, 1)
-
-[node name="ColorRect4" type="ColorRect" parent="GameOverUI/Panel/Art/Skull/eye2/Node2D" unique_id=1934877053]
-offset_left = 115.7796
-offset_top = 215.21664
-offset_right = 118.636215
-offset_bottom = 220.16988
-rotation = 1.8015293
-color = Color(0.788, 0.298, 0.196, 1)
-
-[node name="ColorRect5" type="ColorRect" parent="GameOverUI/Panel/Art/Skull/eye2/Node2D" unique_id=597740824]
-offset_left = 117.537
-offset_top = 217.05106
-offset_right = 119.286674
-offset_bottom = 219.83826
-rotation = 2.339965
-color = Color(0.788, 0.298, 0.196, 1)
-
-[node name="ColorRect6" type="ColorRect" parent="GameOverUI/Panel/Art/Skull/eye2/Node2D" unique_id=1830572511]
-offset_left = 117.79682
-offset_top = 219.1227
-offset_right = 119.63197
-offset_bottom = 221.30646
-rotation = 3.0119748
-color = Color(0.788, 0.298, 0.196, 1)
-
-[node name="Node2D2" type="Node2D" parent="GameOverUI/Panel/Art/Skull/eye2" unique_id=396868375]
-position = Vector2(221.715, 441.91)
-rotation = 3.1415927
-
-[node name="ColorRect7" type="ColorRect" parent="GameOverUI/Panel/Art/Skull/eye2/Node2D2" unique_id=684151780]
-offset_left = 107.0
-offset_top = 217.0
-offset_right = 116.0
-offset_bottom = 219.0
-color = Color(0.7882353, 0.29803923, 0.19607843, 1)
-
-[node name="ColorRect2" type="ColorRect" parent="GameOverUI/Panel/Art/Skull/eye2/Node2D2" unique_id=304050376]
-offset_left = 106.10655
-offset_top = 215.82976
-offset_right = 109.10655
-offset_bottom = 219.75674
-rotation = 0.5591973
-color = Color(0.7882353, 0.29803923, 0.19607843, 1)
-
-[node name="ColorRect3" type="ColorRect" parent="GameOverUI/Panel/Art/Skull/eye2/Node2D2" unique_id=1094951444]
-offset_left = 110.94382
-offset_top = 214.02747
-offset_right = 113.94382
-offset_bottom = 219.27408
-rotation = 1.2141461
-color = Color(0.7882353, 0.29803923, 0.19607843, 1)
-
-[node name="ColorRect4" type="ColorRect" parent="GameOverUI/Panel/Art/Skull/eye2/Node2D2" unique_id=1884582611]
-offset_left = 115.7796
-offset_top = 215.21664
-offset_right = 118.636215
-offset_bottom = 220.16988
-rotation = 1.8015293
-color = Color(0.7882353, 0.29803923, 0.19607843, 1)
-
-[node name="ColorRect5" type="ColorRect" parent="GameOverUI/Panel/Art/Skull/eye2/Node2D2" unique_id=1205175617]
-offset_left = 117.537
-offset_top = 217.05106
-offset_right = 119.286674
-offset_bottom = 219.83826
-rotation = 2.339965
-color = Color(0.7882353, 0.29803923, 0.19607843, 1)
-
-[node name="ColorRect6" type="ColorRect" parent="GameOverUI/Panel/Art/Skull/eye2/Node2D2" unique_id=765294177]
-offset_left = 117.79682
-offset_top = 219.1227
-offset_right = 119.63197
-offset_bottom = 221.30646
-rotation = 3.0119748
-color = Color(0.7882353, 0.29803923, 0.19607843, 1)
-
-[node name="Skull2" type="Node2D" parent="GameOverUI/Panel/Art" unique_id=187054850]
-position = Vector2(-935, -1)
-scale = Vector2(1.1398562, 1.1398562)
-
-[node name="ColorRect" type="ColorRect" parent="GameOverUI/Panel/Art/Skull2" unique_id=1754734324]
-offset_left = 1077.0
-offset_top = 80.0
-offset_right = 1093.32
-offset_bottom = 83.0
-color = Color(0.7882353, 0.29803923, 0.19607843, 1)
-
-[node name="ColorRect24" type="ColorRect" parent="GameOverUI/Panel/Art/Skull2" unique_id=1496662134]
-offset_left = 1085.2933
-offset_top = 63.93274
-offset_right = 1091.1366
-offset_bottom = 66.03607
-rotation = 0.8926067
-color = Color(0.7882353, 0.29803923, 0.19607843, 1)
-
-[node name="ColorRect25" type="ColorRect" parent="GameOverUI/Panel/Art/Skull2" unique_id=1088848645]
-offset_left = 1086.41
-offset_top = 65.602356
-offset_right = 1092.5491
-offset_bottom = 67.70569
-rotation = 2.371459
-color = Color(0.7882353, 0.29803923, 0.19607843, 1)
-
-[node name="ColorRect2" type="ColorRect" parent="GameOverUI/Panel/Art/Skull2" unique_id=2074139080]
-offset_left = 1074.0
-offset_top = 77.0
-offset_right = 1080.0
-offset_bottom = 80.33276
-rotation = 0.5916817
-color = Color(0.7882353, 0.29803923, 0.19607843, 1)
-
-[node name="ColorRect3" type="ColorRect" parent="GameOverUI/Panel/Art/Skull2" unique_id=909609860]
-offset_left = 1074.0348
-offset_top = 72.86717
-offset_right = 1080.7924
-offset_bottom = 75.6245
-rotation = 1.4431407
-color = Color(0.7882353, 0.29803923, 0.19607843, 1)
-
-[node name="ColorRect4" type="ColorRect" parent="GameOverUI/Panel/Art/Skull2" unique_id=400393422]
-offset_left = 1073.7048
-offset_top = 70.29598
-offset_right = 1076.4006
-offset_bottom = 73.05331
-rotation = 1.4431407
-color = Color(0.7882353, 0.29803923, 0.19607843, 1)
-
-[node name="ColorRect5" type="ColorRect" parent="GameOverUI/Panel/Art/Skull2" unique_id=1451774368]
-offset_left = 1068.6599
-offset_top = 67.23017
-offset_right = 1074.5637
-offset_bottom = 70.309395
-rotation = 0.600001
-color = Color(0.7882353, 0.29803923, 0.19607843, 1)
-
-[node name="ColorRect6" type="ColorRect" parent="GameOverUI/Panel/Art/Skull2" unique_id=990395781]
-offset_left = 1068.433
-offset_top = 65.075745
-offset_right = 1072.5975
-offset_bottom = 67.851746
-rotation = 1.2896128
-color = Color(0.7882353, 0.29803923, 0.19607843, 1)
-
-[node name="ColorRect7" type="ColorRect" parent="GameOverUI/Panel/Art/Skull2" unique_id=163366461]
-offset_left = 1068.4147
-offset_top = 53.94367
-offset_right = 1080.552
-offset_bottom = 56.630314
-rotation = 1.566636
-color = Color(0.7882353, 0.29803923, 0.19607843, 1)
-
-[node name="ColorRect8" type="ColorRect" parent="GameOverUI/Panel/Art/Skull2" unique_id=653199680]
-offset_left = 1069.8185
-offset_top = 50.800648
-offset_right = 1074.6781
-offset_bottom = 53.10906
-rotation = 1.9966552
-color = Color(0.7882353, 0.29803923, 0.19607843, 1)
-
-[node name="ColorRect9" type="ColorRect" parent="GameOverUI/Panel/Art/Skull2" unique_id=1506617705]
-offset_left = 1071.8572
-offset_top = 48.0016
-offset_right = 1075.7438
-offset_bottom = 50.309093
-rotation = 2.1862705
-color = Color(0.7882353, 0.29803923, 0.19607843, 1)
-
-[node name="ColorRect10" type="ColorRect" parent="GameOverUI/Panel/Art/Skull2" unique_id=1274062347]
-offset_left = 1074.9124
-offset_top = 45.487587
-offset_right = 1079.5518
-offset_bottom = 47.784462
-rotation = 2.433425
-color = Color(0.7882353, 0.29803923, 0.19607843, 1)
-
-[node name="ColorRect11" type="ColorRect" parent="GameOverUI/Panel/Art/Skull2" unique_id=1277554578]
-offset_left = 1078.642
-offset_top = 44.129333
-offset_right = 1083.3975
-offset_bottom = 46.263916
-rotation = 2.7940905
-color = Color(0.7882353, 0.29803923, 0.19607843, 1)
-
-[node name="ColorRect12" type="ColorRect" parent="GameOverUI/Panel/Art/Skull2" unique_id=1781334715]
-offset_left = 1082.5938
-offset_top = 43.08788
-offset_right = 1086.9652
-offset_bottom = 45.021076
-rotation = 2.9326582
-color = Color(0.7882353, 0.29803923, 0.19607843, 1)
-
-[node name="ColorRect13" type="ColorRect" parent="GameOverUI/Panel/Art/Skull2" unique_id=853581741]
-offset_left = 1089.6212
-offset_top = 43.26007
-offset_right = 1097.1074
-offset_bottom = 45.122635
-rotation = 3.1693985
-color = Color(0.7882353, 0.29803923, 0.19607843, 1)
-
-[node name="ColorRect14" type="ColorRect" parent="GameOverUI/Panel/Art/Skull2" unique_id=736468523]
-offset_left = 1089.5145
-offset_top = 41.362904
-offset_right = 1095.6927
-offset_bottom = 43.172962
-rotation = 6.5734415
-color = Color(0.7882353, 0.29803923, 0.19607843, 1)
-
-[node name="ColorRect15" type="ColorRect" parent="GameOverUI/Panel/Art/Skull2" unique_id=1295792663]
-offset_left = 1095.3566
-offset_top = 43.078888
-offset_right = 1100.8525
-offset_bottom = 45.03354
-rotation = 6.83166
-color = Color(0.7882353, 0.29803923, 0.19607843, 1)
-
-[node name="ColorRect16" type="ColorRect" parent="GameOverUI/Panel/Art/Skull2" unique_id=151197378]
-offset_left = 1099.9233
-offset_top = 45.77443
-offset_right = 1105.3907
-offset_bottom = 47.814957
-rotation = 7.173652
-color = Color(0.7882353, 0.29803923, 0.19607843, 1)
-
-[node name="ColorRect17" type="ColorRect" parent="GameOverUI/Panel/Art/Skull2" unique_id=1091748615]
-offset_left = 1103.4183
-offset_top = 50.069424
-offset_right = 1107.789
-offset_bottom = 52.240383
-rotation = 7.4449425
-color = Color(0.7882353, 0.29803923, 0.19607843, 1)
-
-[node name="ColorRect18" type="ColorRect" parent="GameOverUI/Panel/Art/Skull2" unique_id=969537418]
-offset_left = 1105.1422
-offset_top = 54.090195
-offset_right = 1108.8246
-offset_bottom = 56.214035
-rotation = 7.699443
-color = Color(0.7882353, 0.29803923, 0.19607843, 1)
-
-[node name="ColorRect19" type="ColorRect" parent="GameOverUI/Panel/Art/Skull2" unique_id=1144809850]
-offset_left = 1105.7438
-offset_top = 57.6548
-offset_right = 1113.8956
-offset_bottom = 59.792007
-rotation = 7.8540254
-color = Color(0.7882353, 0.29803923, 0.19607843, 1)
-
-[node name="ColorRect20" type="ColorRect" parent="GameOverUI/Panel/Art/Skull2" unique_id=1556153105]
-offset_left = 1105.7723
-offset_top = 65.8723
-offset_right = 1112.5983
-offset_bottom = 67.64574
-rotation = 8.545766
-color = Color(0.7882353, 0.29803923, 0.19607843, 1)
-
-[node name="ColorRect21" type="ColorRect" parent="GameOverUI/Panel/Art/Skull2" unique_id=837243577]
-offset_left = 1101.5104
-offset_top = 71.24635
-offset_right = 1106.737
-offset_bottom = 73.173355
-rotation = 8.860396
-color = Color(0.7882353, 0.29803923, 0.19607843, 1)
-
-[node name="ColorRect22" type="ColorRect" parent="GameOverUI/Panel/Art/Skull2" unique_id=1935637909]
-offset_left = 1098.1936
-offset_top = 72.58567
-offset_right = 1103.0292
-offset_bottom = 74.77683
-rotation = 7.9375577
-color = Color(0.7882353, 0.29803923, 0.19607843, 1)
-
-[node name="ColorRect23" type="ColorRect" parent="GameOverUI/Panel/Art/Skull2" unique_id=984045653]
-offset_left = 1097.8038
-offset_top = 77.378
-offset_right = 1104.9634
-offset_bottom = 79.75001
-rotation = 8.512356
-color = Color(0.7882353, 0.29803923, 0.19607843, 1)
-
-[node name="eye" type="Node2D" parent="GameOverUI/Panel/Art/Skull2" unique_id=461597569]
-position = Vector2(995, -133)
-scale = Vector2(0.739566, 0.87367463)
-
-[node name="ColorRect" type="ColorRect" parent="GameOverUI/Panel/Art/Skull2/eye" unique_id=2002112512]
-offset_left = 104.0
-offset_top = 219.0
-offset_right = 117.695
-offset_bottom = 223.0
-color = Color(0.7882353, 0.29803923, 0.19607843, 1)
-
-[node name="Node2D" type="Node2D" parent="GameOverUI/Panel/Art/Skull2/eye" unique_id=401358904]
-
-[node name="ColorRect7" type="ColorRect" parent="GameOverUI/Panel/Art/Skull2/eye/Node2D" unique_id=977613197]
-offset_left = 107.0
-offset_top = 217.0
-offset_right = 116.0
-offset_bottom = 219.0
-color = Color(0.788, 0.298, 0.196, 1)
-
-[node name="ColorRect2" type="ColorRect" parent="GameOverUI/Panel/Art/Skull2/eye/Node2D" unique_id=1523432501]
-offset_left = 106.10655
-offset_top = 215.82976
-offset_right = 109.10655
-offset_bottom = 219.75674
-rotation = 0.5591973
-color = Color(0.788, 0.298, 0.196, 1)
-
-[node name="ColorRect3" type="ColorRect" parent="GameOverUI/Panel/Art/Skull2/eye/Node2D" unique_id=197210032]
-offset_left = 110.94382
-offset_top = 214.02747
-offset_right = 113.94382
-offset_bottom = 219.27408
-rotation = 1.2141461
-color = Color(0.788, 0.298, 0.196, 1)
-
-[node name="ColorRect4" type="ColorRect" parent="GameOverUI/Panel/Art/Skull2/eye/Node2D" unique_id=515392525]
-offset_left = 115.7796
-offset_top = 215.21664
-offset_right = 118.636215
-offset_bottom = 220.16988
-rotation = 1.8015293
-color = Color(0.788, 0.298, 0.196, 1)
-
-[node name="ColorRect5" type="ColorRect" parent="GameOverUI/Panel/Art/Skull2/eye/Node2D" unique_id=1930983965]
-offset_left = 117.537
-offset_top = 217.05106
-offset_right = 119.286674
-offset_bottom = 219.83826
-rotation = 2.339965
-color = Color(0.788, 0.298, 0.196, 1)
-
-[node name="ColorRect6" type="ColorRect" parent="GameOverUI/Panel/Art/Skull2/eye/Node2D" unique_id=370313259]
-offset_left = 117.79682
-offset_top = 219.1227
-offset_right = 119.63197
-offset_bottom = 221.30646
-rotation = 3.0119748
-color = Color(0.788, 0.298, 0.196, 1)
-
-[node name="Node2D2" type="Node2D" parent="GameOverUI/Panel/Art/Skull2/eye" unique_id=1767027266]
-position = Vector2(221.715, 441.91)
-rotation = 3.1415927
-
-[node name="ColorRect7" type="ColorRect" parent="GameOverUI/Panel/Art/Skull2/eye/Node2D2" unique_id=526663818]
-offset_left = 107.0
-offset_top = 217.0
-offset_right = 116.0
-offset_bottom = 219.0
-color = Color(0.7882353, 0.29803923, 0.19607843, 1)
-
-[node name="ColorRect2" type="ColorRect" parent="GameOverUI/Panel/Art/Skull2/eye/Node2D2" unique_id=680367310]
-offset_left = 106.10655
-offset_top = 215.82976
-offset_right = 109.10655
-offset_bottom = 219.75674
-rotation = 0.5591973
-color = Color(0.7882353, 0.29803923, 0.19607843, 1)
-
-[node name="ColorRect3" type="ColorRect" parent="GameOverUI/Panel/Art/Skull2/eye/Node2D2" unique_id=233662980]
-offset_left = 110.94382
-offset_top = 214.02747
-offset_right = 113.94382
-offset_bottom = 219.27408
-rotation = 1.2141461
-color = Color(0.7882353, 0.29803923, 0.19607843, 1)
-
-[node name="ColorRect4" type="ColorRect" parent="GameOverUI/Panel/Art/Skull2/eye/Node2D2" unique_id=323394088]
-offset_left = 115.7796
-offset_top = 215.21664
-offset_right = 118.636215
-offset_bottom = 220.16988
-rotation = 1.8015293
-color = Color(0.7882353, 0.29803923, 0.19607843, 1)
-
-[node name="ColorRect5" type="ColorRect" parent="GameOverUI/Panel/Art/Skull2/eye/Node2D2" unique_id=1045546822]
-offset_left = 117.537
-offset_top = 217.05106
-offset_right = 119.286674
-offset_bottom = 219.83826
-rotation = 2.339965
-color = Color(0.7882353, 0.29803923, 0.19607843, 1)
-
-[node name="ColorRect6" type="ColorRect" parent="GameOverUI/Panel/Art/Skull2/eye/Node2D2" unique_id=1701587438]
-offset_left = 117.79682
-offset_top = 219.1227
-offset_right = 119.63197
-offset_bottom = 221.30646
-rotation = 3.0119748
-color = Color(0.7882353, 0.29803923, 0.19607843, 1)
-
-[node name="eye2" type="Node2D" parent="GameOverUI/Panel/Art/Skull2" unique_id=1160030351]
-position = Vector2(1012, -134)
-scale = Vector2(0.739566, 0.87367463)
-
-[node name="ColorRect" type="ColorRect" parent="GameOverUI/Panel/Art/Skull2/eye2" unique_id=654716768]
-offset_left = 104.0
-offset_top = 219.0
-offset_right = 117.695
-offset_bottom = 223.0
-color = Color(0.7882353, 0.29803923, 0.19607843, 1)
-
-[node name="Node2D" type="Node2D" parent="GameOverUI/Panel/Art/Skull2/eye2" unique_id=1479347908]
-
-[node name="ColorRect7" type="ColorRect" parent="GameOverUI/Panel/Art/Skull2/eye2/Node2D" unique_id=204364578]
-offset_left = 107.0
-offset_top = 217.0
-offset_right = 116.0
-offset_bottom = 219.0
-color = Color(0.788, 0.298, 0.196, 1)
-
-[node name="ColorRect2" type="ColorRect" parent="GameOverUI/Panel/Art/Skull2/eye2/Node2D" unique_id=1416071891]
-offset_left = 106.10655
-offset_top = 215.82976
-offset_right = 109.10655
-offset_bottom = 219.75674
-rotation = 0.5591973
-color = Color(0.788, 0.298, 0.196, 1)
-
-[node name="ColorRect3" type="ColorRect" parent="GameOverUI/Panel/Art/Skull2/eye2/Node2D" unique_id=894450299]
-offset_left = 110.94382
-offset_top = 214.02747
-offset_right = 113.94382
-offset_bottom = 219.27408
-rotation = 1.2141461
-color = Color(0.788, 0.298, 0.196, 1)
-
-[node name="ColorRect4" type="ColorRect" parent="GameOverUI/Panel/Art/Skull2/eye2/Node2D" unique_id=1279668872]
-offset_left = 115.7796
-offset_top = 215.21664
-offset_right = 118.636215
-offset_bottom = 220.16988
-rotation = 1.8015293
-color = Color(0.788, 0.298, 0.196, 1)
-
-[node name="ColorRect5" type="ColorRect" parent="GameOverUI/Panel/Art/Skull2/eye2/Node2D" unique_id=1821178288]
-offset_left = 117.537
-offset_top = 217.05106
-offset_right = 119.286674
-offset_bottom = 219.83826
-rotation = 2.339965
-color = Color(0.788, 0.298, 0.196, 1)
-
-[node name="ColorRect6" type="ColorRect" parent="GameOverUI/Panel/Art/Skull2/eye2/Node2D" unique_id=1748614802]
-offset_left = 117.79682
-offset_top = 219.1227
-offset_right = 119.63197
-offset_bottom = 221.30646
-rotation = 3.0119748
-color = Color(0.788, 0.298, 0.196, 1)
-
-[node name="Node2D2" type="Node2D" parent="GameOverUI/Panel/Art/Skull2/eye2" unique_id=538984011]
-position = Vector2(221.715, 441.91)
-rotation = 3.1415927
-
-[node name="ColorRect7" type="ColorRect" parent="GameOverUI/Panel/Art/Skull2/eye2/Node2D2" unique_id=109275889]
-offset_left = 107.0
-offset_top = 217.0
-offset_right = 116.0
-offset_bottom = 219.0
-color = Color(0.7882353, 0.29803923, 0.19607843, 1)
-
-[node name="ColorRect2" type="ColorRect" parent="GameOverUI/Panel/Art/Skull2/eye2/Node2D2" unique_id=621368344]
-offset_left = 106.10655
-offset_top = 215.82976
-offset_right = 109.10655
-offset_bottom = 219.75674
-rotation = 0.5591973
-color = Color(0.7882353, 0.29803923, 0.19607843, 1)
-
-[node name="ColorRect3" type="ColorRect" parent="GameOverUI/Panel/Art/Skull2/eye2/Node2D2" unique_id=1015328688]
-offset_left = 110.94382
-offset_top = 214.02747
-offset_right = 113.94382
-offset_bottom = 219.27408
-rotation = 1.2141461
-color = Color(0.7882353, 0.29803923, 0.19607843, 1)
-
-[node name="ColorRect4" type="ColorRect" parent="GameOverUI/Panel/Art/Skull2/eye2/Node2D2" unique_id=466110415]
-offset_left = 115.7796
-offset_top = 215.21664
-offset_right = 118.636215
-offset_bottom = 220.16988
-rotation = 1.8015293
-color = Color(0.7882353, 0.29803923, 0.19607843, 1)
-
-[node name="ColorRect5" type="ColorRect" parent="GameOverUI/Panel/Art/Skull2/eye2/Node2D2" unique_id=1637023415]
-offset_left = 117.537
-offset_top = 217.05106
-offset_right = 119.286674
-offset_bottom = 219.83826
-rotation = 2.339965
-color = Color(0.7882353, 0.29803923, 0.19607843, 1)
-
-[node name="ColorRect6" type="ColorRect" parent="GameOverUI/Panel/Art/Skull2/eye2/Node2D2" unique_id=1229014215]
-offset_left = 117.79682
-offset_top = 219.1227
-offset_right = 119.63197
-offset_bottom = 221.30646
-rotation = 3.0119748
-color = Color(0.7882353, 0.29803923, 0.19607843, 1)
-
-[node name="Skull3" type="Node2D" parent="GameOverUI/Panel/Art" unique_id=1798593702]
-position = Vector2(-788.00006, 228)
-scale = Vector2(1.1398562, 1.1398562)
-
-[node name="ColorRect" type="ColorRect" parent="GameOverUI/Panel/Art/Skull3" unique_id=508176726]
-offset_left = 1077.0
-offset_top = 80.0
-offset_right = 1093.32
-offset_bottom = 83.0
-color = Color(0.7882353, 0.29803923, 0.19607843, 1)
-
-[node name="ColorRect24" type="ColorRect" parent="GameOverUI/Panel/Art/Skull3" unique_id=1807138156]
-offset_left = 1085.2933
-offset_top = 63.93274
-offset_right = 1091.1366
-offset_bottom = 66.03607
-rotation = 0.8926067
-color = Color(0.7882353, 0.29803923, 0.19607843, 1)
-
-[node name="ColorRect25" type="ColorRect" parent="GameOverUI/Panel/Art/Skull3" unique_id=1857613917]
-offset_left = 1086.41
-offset_top = 65.602356
-offset_right = 1092.5491
-offset_bottom = 67.70569
-rotation = 2.371459
-color = Color(0.7882353, 0.29803923, 0.19607843, 1)
-
-[node name="ColorRect2" type="ColorRect" parent="GameOverUI/Panel/Art/Skull3" unique_id=125820775]
-offset_left = 1074.0
-offset_top = 77.0
-offset_right = 1080.0
-offset_bottom = 80.33276
-rotation = 0.5916817
-color = Color(0.7882353, 0.29803923, 0.19607843, 1)
-
-[node name="ColorRect3" type="ColorRect" parent="GameOverUI/Panel/Art/Skull3" unique_id=1133759330]
-offset_left = 1074.0348
-offset_top = 72.86717
-offset_right = 1080.7924
-offset_bottom = 75.6245
-rotation = 1.4431407
-color = Color(0.7882353, 0.29803923, 0.19607843, 1)
-
-[node name="ColorRect4" type="ColorRect" parent="GameOverUI/Panel/Art/Skull3" unique_id=1380700796]
-offset_left = 1073.7048
-offset_top = 70.29598
-offset_right = 1076.4006
-offset_bottom = 73.05331
-rotation = 1.4431407
-color = Color(0.7882353, 0.29803923, 0.19607843, 1)
-
-[node name="ColorRect5" type="ColorRect" parent="GameOverUI/Panel/Art/Skull3" unique_id=1047070735]
-offset_left = 1068.6599
-offset_top = 67.23017
-offset_right = 1074.5637
-offset_bottom = 70.309395
-rotation = 0.600001
-color = Color(0.7882353, 0.29803923, 0.19607843, 1)
-
-[node name="ColorRect6" type="ColorRect" parent="GameOverUI/Panel/Art/Skull3" unique_id=2068410880]
-offset_left = 1068.433
-offset_top = 65.075745
-offset_right = 1072.5975
-offset_bottom = 67.851746
-rotation = 1.2896128
-color = Color(0.7882353, 0.29803923, 0.19607843, 1)
-
-[node name="ColorRect7" type="ColorRect" parent="GameOverUI/Panel/Art/Skull3" unique_id=177432260]
-offset_left = 1068.4147
-offset_top = 53.94367
-offset_right = 1080.552
-offset_bottom = 56.630314
-rotation = 1.566636
-color = Color(0.7882353, 0.29803923, 0.19607843, 1)
-
-[node name="ColorRect8" type="ColorRect" parent="GameOverUI/Panel/Art/Skull3" unique_id=1312205206]
-offset_left = 1069.8185
-offset_top = 50.800648
-offset_right = 1074.6781
-offset_bottom = 53.10906
-rotation = 1.9966552
-color = Color(0.7882353, 0.29803923, 0.19607843, 1)
-
-[node name="ColorRect9" type="ColorRect" parent="GameOverUI/Panel/Art/Skull3" unique_id=1571097653]
-offset_left = 1071.8572
-offset_top = 48.0016
-offset_right = 1075.7438
-offset_bottom = 50.309093
-rotation = 2.1862705
-color = Color(0.7882353, 0.29803923, 0.19607843, 1)
-
-[node name="ColorRect10" type="ColorRect" parent="GameOverUI/Panel/Art/Skull3" unique_id=826168460]
-offset_left = 1074.9124
-offset_top = 45.487587
-offset_right = 1079.5518
-offset_bottom = 47.784462
-rotation = 2.433425
-color = Color(0.7882353, 0.29803923, 0.19607843, 1)
-
-[node name="ColorRect11" type="ColorRect" parent="GameOverUI/Panel/Art/Skull3" unique_id=2019116185]
-offset_left = 1078.642
-offset_top = 44.129333
-offset_right = 1083.3975
-offset_bottom = 46.263916
-rotation = 2.7940905
-color = Color(0.7882353, 0.29803923, 0.19607843, 1)
-
-[node name="ColorRect12" type="ColorRect" parent="GameOverUI/Panel/Art/Skull3" unique_id=2123964323]
-offset_left = 1082.5938
-offset_top = 43.08788
-offset_right = 1086.9652
-offset_bottom = 45.021076
-rotation = 2.9326582
-color = Color(0.7882353, 0.29803923, 0.19607843, 1)
-
-[node name="ColorRect13" type="ColorRect" parent="GameOverUI/Panel/Art/Skull3" unique_id=493172568]
-offset_left = 1089.6212
-offset_top = 43.26007
-offset_right = 1097.1074
-offset_bottom = 45.122635
-rotation = 3.1693985
-color = Color(0.7882353, 0.29803923, 0.19607843, 1)
-
-[node name="ColorRect14" type="ColorRect" parent="GameOverUI/Panel/Art/Skull3" unique_id=2052132836]
-offset_left = 1089.5145
-offset_top = 41.362904
-offset_right = 1095.6927
-offset_bottom = 43.172962
-rotation = 6.5734415
-color = Color(0.7882353, 0.29803923, 0.19607843, 1)
-
-[node name="ColorRect15" type="ColorRect" parent="GameOverUI/Panel/Art/Skull3" unique_id=1454670025]
-offset_left = 1095.3566
-offset_top = 43.078888
-offset_right = 1100.8525
-offset_bottom = 45.03354
-rotation = 6.83166
-color = Color(0.7882353, 0.29803923, 0.19607843, 1)
-
-[node name="ColorRect16" type="ColorRect" parent="GameOverUI/Panel/Art/Skull3" unique_id=1362719418]
-offset_left = 1099.9233
-offset_top = 45.77443
-offset_right = 1105.3907
-offset_bottom = 47.814957
-rotation = 7.173652
-color = Color(0.7882353, 0.29803923, 0.19607843, 1)
-
-[node name="ColorRect17" type="ColorRect" parent="GameOverUI/Panel/Art/Skull3" unique_id=1488727410]
-offset_left = 1103.4183
-offset_top = 50.069424
-offset_right = 1107.789
-offset_bottom = 52.240383
-rotation = 7.4449425
-color = Color(0.7882353, 0.29803923, 0.19607843, 1)
-
-[node name="ColorRect18" type="ColorRect" parent="GameOverUI/Panel/Art/Skull3" unique_id=2075592957]
-offset_left = 1105.1422
-offset_top = 54.090195
-offset_right = 1108.8246
-offset_bottom = 56.214035
-rotation = 7.699443
-color = Color(0.7882353, 0.29803923, 0.19607843, 1)
-
-[node name="ColorRect19" type="ColorRect" parent="GameOverUI/Panel/Art/Skull3" unique_id=477407886]
-offset_left = 1105.7438
-offset_top = 57.6548
-offset_right = 1113.8956
-offset_bottom = 59.792007
-rotation = 7.8540254
-color = Color(0.7882353, 0.29803923, 0.19607843, 1)
-
-[node name="ColorRect20" type="ColorRect" parent="GameOverUI/Panel/Art/Skull3" unique_id=1802911028]
-offset_left = 1105.7723
-offset_top = 65.8723
-offset_right = 1112.5983
-offset_bottom = 67.64574
-rotation = 8.545766
-color = Color(0.7882353, 0.29803923, 0.19607843, 1)
-
-[node name="ColorRect21" type="ColorRect" parent="GameOverUI/Panel/Art/Skull3" unique_id=129812685]
-offset_left = 1101.5104
-offset_top = 71.24635
-offset_right = 1106.737
-offset_bottom = 73.173355
-rotation = 8.860396
-color = Color(0.7882353, 0.29803923, 0.19607843, 1)
-
-[node name="ColorRect22" type="ColorRect" parent="GameOverUI/Panel/Art/Skull3" unique_id=814036031]
-offset_left = 1098.1936
-offset_top = 72.58567
-offset_right = 1103.0292
-offset_bottom = 74.77683
-rotation = 7.9375577
-color = Color(0.7882353, 0.29803923, 0.19607843, 1)
-
-[node name="ColorRect23" type="ColorRect" parent="GameOverUI/Panel/Art/Skull3" unique_id=1414091703]
-offset_left = 1097.8038
-offset_top = 77.378
-offset_right = 1104.9634
-offset_bottom = 79.75001
-rotation = 8.512356
-color = Color(0.7882353, 0.29803923, 0.19607843, 1)
-
-[node name="eye" type="Node2D" parent="GameOverUI/Panel/Art/Skull3" unique_id=2100120474]
-position = Vector2(995, -133)
-scale = Vector2(0.739566, 0.87367463)
-
-[node name="ColorRect" type="ColorRect" parent="GameOverUI/Panel/Art/Skull3/eye" unique_id=795528648]
-offset_left = 104.0
-offset_top = 219.0
-offset_right = 117.695
-offset_bottom = 223.0
-color = Color(0.7882353, 0.29803923, 0.19607843, 1)
-
-[node name="Node2D" type="Node2D" parent="GameOverUI/Panel/Art/Skull3/eye" unique_id=623856983]
-
-[node name="ColorRect7" type="ColorRect" parent="GameOverUI/Panel/Art/Skull3/eye/Node2D" unique_id=1462147378]
-offset_left = 107.0
-offset_top = 217.0
-offset_right = 116.0
-offset_bottom = 219.0
-color = Color(0.788, 0.298, 0.196, 1)
-
-[node name="ColorRect2" type="ColorRect" parent="GameOverUI/Panel/Art/Skull3/eye/Node2D" unique_id=1884339382]
-offset_left = 106.10655
-offset_top = 215.82976
-offset_right = 109.10655
-offset_bottom = 219.75674
-rotation = 0.5591973
-color = Color(0.788, 0.298, 0.196, 1)
-
-[node name="ColorRect3" type="ColorRect" parent="GameOverUI/Panel/Art/Skull3/eye/Node2D" unique_id=370226903]
-offset_left = 110.94382
-offset_top = 214.02747
-offset_right = 113.94382
-offset_bottom = 219.27408
-rotation = 1.2141461
-color = Color(0.788, 0.298, 0.196, 1)
-
-[node name="ColorRect4" type="ColorRect" parent="GameOverUI/Panel/Art/Skull3/eye/Node2D" unique_id=1650985744]
-offset_left = 115.7796
-offset_top = 215.21664
-offset_right = 118.636215
-offset_bottom = 220.16988
-rotation = 1.8015293
-color = Color(0.788, 0.298, 0.196, 1)
-
-[node name="ColorRect5" type="ColorRect" parent="GameOverUI/Panel/Art/Skull3/eye/Node2D" unique_id=1835087315]
-offset_left = 117.537
-offset_top = 217.05106
-offset_right = 119.286674
-offset_bottom = 219.83826
-rotation = 2.339965
-color = Color(0.788, 0.298, 0.196, 1)
-
-[node name="ColorRect6" type="ColorRect" parent="GameOverUI/Panel/Art/Skull3/eye/Node2D" unique_id=504196142]
-offset_left = 117.79682
-offset_top = 219.1227
-offset_right = 119.63197
-offset_bottom = 221.30646
-rotation = 3.0119748
-color = Color(0.788, 0.298, 0.196, 1)
-
-[node name="Node2D2" type="Node2D" parent="GameOverUI/Panel/Art/Skull3/eye" unique_id=1544118584]
-position = Vector2(221.715, 441.91)
-rotation = 3.1415927
-
-[node name="ColorRect7" type="ColorRect" parent="GameOverUI/Panel/Art/Skull3/eye/Node2D2" unique_id=1671105365]
-offset_left = 107.0
-offset_top = 217.0
-offset_right = 116.0
-offset_bottom = 219.0
-color = Color(0.7882353, 0.29803923, 0.19607843, 1)
-
-[node name="ColorRect2" type="ColorRect" parent="GameOverUI/Panel/Art/Skull3/eye/Node2D2" unique_id=2111319048]
-offset_left = 106.10655
-offset_top = 215.82976
-offset_right = 109.10655
-offset_bottom = 219.75674
-rotation = 0.5591973
-color = Color(0.7882353, 0.29803923, 0.19607843, 1)
-
-[node name="ColorRect3" type="ColorRect" parent="GameOverUI/Panel/Art/Skull3/eye/Node2D2" unique_id=1589424529]
-offset_left = 110.94382
-offset_top = 214.02747
-offset_right = 113.94382
-offset_bottom = 219.27408
-rotation = 1.2141461
-color = Color(0.7882353, 0.29803923, 0.19607843, 1)
-
-[node name="ColorRect4" type="ColorRect" parent="GameOverUI/Panel/Art/Skull3/eye/Node2D2" unique_id=956836304]
-offset_left = 115.7796
-offset_top = 215.21664
-offset_right = 118.636215
-offset_bottom = 220.16988
-rotation = 1.8015293
-color = Color(0.7882353, 0.29803923, 0.19607843, 1)
-
-[node name="ColorRect5" type="ColorRect" parent="GameOverUI/Panel/Art/Skull3/eye/Node2D2" unique_id=892697711]
-offset_left = 117.537
-offset_top = 217.05106
-offset_right = 119.286674
-offset_bottom = 219.83826
-rotation = 2.339965
-color = Color(0.7882353, 0.29803923, 0.19607843, 1)
-
-[node name="ColorRect6" type="ColorRect" parent="GameOverUI/Panel/Art/Skull3/eye/Node2D2" unique_id=1359477801]
-offset_left = 117.79682
-offset_top = 219.1227
-offset_right = 119.63197
-offset_bottom = 221.30646
-rotation = 3.0119748
-color = Color(0.7882353, 0.29803923, 0.19607843, 1)
-
-[node name="eye2" type="Node2D" parent="GameOverUI/Panel/Art/Skull3" unique_id=1635906333]
-position = Vector2(1012, -134)
-scale = Vector2(0.739566, 0.87367463)
-
-[node name="ColorRect" type="ColorRect" parent="GameOverUI/Panel/Art/Skull3/eye2" unique_id=1526825001]
-offset_left = 104.0
-offset_top = 219.0
-offset_right = 117.695
-offset_bottom = 223.0
-color = Color(0.7882353, 0.29803923, 0.19607843, 1)
-
-[node name="Node2D" type="Node2D" parent="GameOverUI/Panel/Art/Skull3/eye2" unique_id=16732733]
-
-[node name="ColorRect7" type="ColorRect" parent="GameOverUI/Panel/Art/Skull3/eye2/Node2D" unique_id=350772817]
-offset_left = 107.0
-offset_top = 217.0
-offset_right = 116.0
-offset_bottom = 219.0
-color = Color(0.788, 0.298, 0.196, 1)
-
-[node name="ColorRect2" type="ColorRect" parent="GameOverUI/Panel/Art/Skull3/eye2/Node2D" unique_id=1624457714]
-offset_left = 106.10655
-offset_top = 215.82976
-offset_right = 109.10655
-offset_bottom = 219.75674
-rotation = 0.5591973
-color = Color(0.788, 0.298, 0.196, 1)
-
-[node name="ColorRect3" type="ColorRect" parent="GameOverUI/Panel/Art/Skull3/eye2/Node2D" unique_id=164406830]
-offset_left = 110.94382
-offset_top = 214.02747
-offset_right = 113.94382
-offset_bottom = 219.27408
-rotation = 1.2141461
-color = Color(0.788, 0.298, 0.196, 1)
-
-[node name="ColorRect4" type="ColorRect" parent="GameOverUI/Panel/Art/Skull3/eye2/Node2D" unique_id=305243141]
-offset_left = 115.7796
-offset_top = 215.21664
-offset_right = 118.636215
-offset_bottom = 220.16988
-rotation = 1.8015293
-color = Color(0.788, 0.298, 0.196, 1)
-
-[node name="ColorRect5" type="ColorRect" parent="GameOverUI/Panel/Art/Skull3/eye2/Node2D" unique_id=345861293]
-offset_left = 117.537
-offset_top = 217.05106
-offset_right = 119.286674
-offset_bottom = 219.83826
-rotation = 2.339965
-color = Color(0.788, 0.298, 0.196, 1)
-
-[node name="ColorRect6" type="ColorRect" parent="GameOverUI/Panel/Art/Skull3/eye2/Node2D" unique_id=461544005]
-offset_left = 117.79682
-offset_top = 219.1227
-offset_right = 119.63197
-offset_bottom = 221.30646
-rotation = 3.0119748
-color = Color(0.788, 0.298, 0.196, 1)
-
-[node name="Node2D2" type="Node2D" parent="GameOverUI/Panel/Art/Skull3/eye2" unique_id=268762369]
-position = Vector2(221.715, 441.91)
-rotation = 3.1415927
-
-[node name="ColorRect7" type="ColorRect" parent="GameOverUI/Panel/Art/Skull3/eye2/Node2D2" unique_id=1967782136]
-offset_left = 107.0
-offset_top = 217.0
-offset_right = 116.0
-offset_bottom = 219.0
-color = Color(0.7882353, 0.29803923, 0.19607843, 1)
-
-[node name="ColorRect2" type="ColorRect" parent="GameOverUI/Panel/Art/Skull3/eye2/Node2D2" unique_id=1685170554]
-offset_left = 106.10655
-offset_top = 215.82976
-offset_right = 109.10655
-offset_bottom = 219.75674
-rotation = 0.5591973
-color = Color(0.7882353, 0.29803923, 0.19607843, 1)
-
-[node name="ColorRect3" type="ColorRect" parent="GameOverUI/Panel/Art/Skull3/eye2/Node2D2" unique_id=607251137]
-offset_left = 110.94382
-offset_top = 214.02747
-offset_right = 113.94382
-offset_bottom = 219.27408
-rotation = 1.2141461
-color = Color(0.7882353, 0.29803923, 0.19607843, 1)
-
-[node name="ColorRect4" type="ColorRect" parent="GameOverUI/Panel/Art/Skull3/eye2/Node2D2" unique_id=1173223898]
-offset_left = 115.7796
-offset_top = 215.21664
-offset_right = 118.636215
-offset_bottom = 220.16988
-rotation = 1.8015293
-color = Color(0.7882353, 0.29803923, 0.19607843, 1)
-
-[node name="ColorRect5" type="ColorRect" parent="GameOverUI/Panel/Art/Skull3/eye2/Node2D2" unique_id=1763551671]
-offset_left = 117.537
-offset_top = 217.05106
-offset_right = 119.286674
-offset_bottom = 219.83826
-rotation = 2.339965
-color = Color(0.7882353, 0.29803923, 0.19607843, 1)
-
-[node name="ColorRect6" type="ColorRect" parent="GameOverUI/Panel/Art/Skull3/eye2/Node2D2" unique_id=423561973]
-offset_left = 117.79682
-offset_top = 219.1227
-offset_right = 119.63197
-offset_bottom = 221.30646
-rotation = 3.0119748
-color = Color(0.7882353, 0.29803923, 0.19607843, 1)
 
 [node name="MoneyDisplay" type="Node2D" parent="GameOverUI/Panel/Art" unique_id=38117694]
 
@@ -3345,6 +2614,1147 @@ text = "MONEY
 $340"
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="gameOverTitle" type="Node2D" parent="GameOverUI/Panel/Art" unique_id=1313451899]
+
+[node name="Skull2" type="Node2D" parent="GameOverUI/Panel/Art/gameOverTitle" unique_id=187054850]
+position = Vector2(-935, -1)
+scale = Vector2(1.1398562, 1.1398562)
+
+[node name="ColorRect" type="ColorRect" parent="GameOverUI/Panel/Art/gameOverTitle/Skull2" unique_id=1754734324]
+offset_left = 1077.0
+offset_top = 80.0
+offset_right = 1093.32
+offset_bottom = 83.0
+color = Color(0.7882353, 0.29803923, 0.19607843, 1)
+
+[node name="ColorRect24" type="ColorRect" parent="GameOverUI/Panel/Art/gameOverTitle/Skull2" unique_id=1496662134]
+offset_left = 1085.2933
+offset_top = 63.93274
+offset_right = 1091.1366
+offset_bottom = 66.03607
+rotation = 0.8926067
+color = Color(0.7882353, 0.29803923, 0.19607843, 1)
+
+[node name="ColorRect25" type="ColorRect" parent="GameOverUI/Panel/Art/gameOverTitle/Skull2" unique_id=1088848645]
+offset_left = 1086.41
+offset_top = 65.602356
+offset_right = 1092.5491
+offset_bottom = 67.70569
+rotation = 2.371459
+color = Color(0.7882353, 0.29803923, 0.19607843, 1)
+
+[node name="ColorRect2" type="ColorRect" parent="GameOverUI/Panel/Art/gameOverTitle/Skull2" unique_id=2074139080]
+offset_left = 1074.0
+offset_top = 77.0
+offset_right = 1080.0
+offset_bottom = 80.33276
+rotation = 0.5916817
+color = Color(0.7882353, 0.29803923, 0.19607843, 1)
+
+[node name="ColorRect3" type="ColorRect" parent="GameOverUI/Panel/Art/gameOverTitle/Skull2" unique_id=909609860]
+offset_left = 1074.0348
+offset_top = 72.86717
+offset_right = 1080.7924
+offset_bottom = 75.6245
+rotation = 1.4431407
+color = Color(0.7882353, 0.29803923, 0.19607843, 1)
+
+[node name="ColorRect4" type="ColorRect" parent="GameOverUI/Panel/Art/gameOverTitle/Skull2" unique_id=400393422]
+offset_left = 1073.7048
+offset_top = 70.29598
+offset_right = 1076.4006
+offset_bottom = 73.05331
+rotation = 1.4431407
+color = Color(0.7882353, 0.29803923, 0.19607843, 1)
+
+[node name="ColorRect5" type="ColorRect" parent="GameOverUI/Panel/Art/gameOverTitle/Skull2" unique_id=1451774368]
+offset_left = 1068.6599
+offset_top = 67.23017
+offset_right = 1074.5637
+offset_bottom = 70.309395
+rotation = 0.600001
+color = Color(0.7882353, 0.29803923, 0.19607843, 1)
+
+[node name="ColorRect6" type="ColorRect" parent="GameOverUI/Panel/Art/gameOverTitle/Skull2" unique_id=990395781]
+offset_left = 1068.433
+offset_top = 65.075745
+offset_right = 1072.5975
+offset_bottom = 67.851746
+rotation = 1.2896128
+color = Color(0.7882353, 0.29803923, 0.19607843, 1)
+
+[node name="ColorRect7" type="ColorRect" parent="GameOverUI/Panel/Art/gameOverTitle/Skull2" unique_id=163366461]
+offset_left = 1068.4147
+offset_top = 53.94367
+offset_right = 1080.552
+offset_bottom = 56.630314
+rotation = 1.566636
+color = Color(0.7882353, 0.29803923, 0.19607843, 1)
+
+[node name="ColorRect8" type="ColorRect" parent="GameOverUI/Panel/Art/gameOverTitle/Skull2" unique_id=653199680]
+offset_left = 1069.8185
+offset_top = 50.800648
+offset_right = 1074.6781
+offset_bottom = 53.10906
+rotation = 1.9966552
+color = Color(0.7882353, 0.29803923, 0.19607843, 1)
+
+[node name="ColorRect9" type="ColorRect" parent="GameOverUI/Panel/Art/gameOverTitle/Skull2" unique_id=1506617705]
+offset_left = 1071.8572
+offset_top = 48.0016
+offset_right = 1075.7438
+offset_bottom = 50.309093
+rotation = 2.1862705
+color = Color(0.7882353, 0.29803923, 0.19607843, 1)
+
+[node name="ColorRect10" type="ColorRect" parent="GameOverUI/Panel/Art/gameOverTitle/Skull2" unique_id=1274062347]
+offset_left = 1074.9124
+offset_top = 45.487587
+offset_right = 1079.5518
+offset_bottom = 47.784462
+rotation = 2.433425
+color = Color(0.7882353, 0.29803923, 0.19607843, 1)
+
+[node name="ColorRect11" type="ColorRect" parent="GameOverUI/Panel/Art/gameOverTitle/Skull2" unique_id=1277554578]
+offset_left = 1078.642
+offset_top = 44.129333
+offset_right = 1083.3975
+offset_bottom = 46.263916
+rotation = 2.7940905
+color = Color(0.7882353, 0.29803923, 0.19607843, 1)
+
+[node name="ColorRect12" type="ColorRect" parent="GameOverUI/Panel/Art/gameOverTitle/Skull2" unique_id=1781334715]
+offset_left = 1082.5938
+offset_top = 43.08788
+offset_right = 1086.9652
+offset_bottom = 45.021076
+rotation = 2.9326582
+color = Color(0.7882353, 0.29803923, 0.19607843, 1)
+
+[node name="ColorRect13" type="ColorRect" parent="GameOverUI/Panel/Art/gameOverTitle/Skull2" unique_id=853581741]
+offset_left = 1089.6212
+offset_top = 43.26007
+offset_right = 1097.1074
+offset_bottom = 45.122635
+rotation = 3.1693985
+color = Color(0.7882353, 0.29803923, 0.19607843, 1)
+
+[node name="ColorRect14" type="ColorRect" parent="GameOverUI/Panel/Art/gameOverTitle/Skull2" unique_id=736468523]
+offset_left = 1089.5145
+offset_top = 41.362904
+offset_right = 1095.6927
+offset_bottom = 43.172962
+rotation = 6.5734415
+color = Color(0.7882353, 0.29803923, 0.19607843, 1)
+
+[node name="ColorRect15" type="ColorRect" parent="GameOverUI/Panel/Art/gameOverTitle/Skull2" unique_id=1295792663]
+offset_left = 1095.3566
+offset_top = 43.078888
+offset_right = 1100.8525
+offset_bottom = 45.03354
+rotation = 6.83166
+color = Color(0.7882353, 0.29803923, 0.19607843, 1)
+
+[node name="ColorRect16" type="ColorRect" parent="GameOverUI/Panel/Art/gameOverTitle/Skull2" unique_id=151197378]
+offset_left = 1099.9233
+offset_top = 45.77443
+offset_right = 1105.3907
+offset_bottom = 47.814957
+rotation = 7.173652
+color = Color(0.7882353, 0.29803923, 0.19607843, 1)
+
+[node name="ColorRect17" type="ColorRect" parent="GameOverUI/Panel/Art/gameOverTitle/Skull2" unique_id=1091748615]
+offset_left = 1103.4183
+offset_top = 50.069424
+offset_right = 1107.789
+offset_bottom = 52.240383
+rotation = 7.4449425
+color = Color(0.7882353, 0.29803923, 0.19607843, 1)
+
+[node name="ColorRect18" type="ColorRect" parent="GameOverUI/Panel/Art/gameOverTitle/Skull2" unique_id=969537418]
+offset_left = 1105.1422
+offset_top = 54.090195
+offset_right = 1108.8246
+offset_bottom = 56.214035
+rotation = 7.699443
+color = Color(0.7882353, 0.29803923, 0.19607843, 1)
+
+[node name="ColorRect19" type="ColorRect" parent="GameOverUI/Panel/Art/gameOverTitle/Skull2" unique_id=1144809850]
+offset_left = 1105.7438
+offset_top = 57.6548
+offset_right = 1113.8956
+offset_bottom = 59.792007
+rotation = 7.8540254
+color = Color(0.7882353, 0.29803923, 0.19607843, 1)
+
+[node name="ColorRect20" type="ColorRect" parent="GameOverUI/Panel/Art/gameOverTitle/Skull2" unique_id=1556153105]
+offset_left = 1105.7723
+offset_top = 65.8723
+offset_right = 1112.5983
+offset_bottom = 67.64574
+rotation = 8.545766
+color = Color(0.7882353, 0.29803923, 0.19607843, 1)
+
+[node name="ColorRect21" type="ColorRect" parent="GameOverUI/Panel/Art/gameOverTitle/Skull2" unique_id=837243577]
+offset_left = 1101.5104
+offset_top = 71.24635
+offset_right = 1106.737
+offset_bottom = 73.173355
+rotation = 8.860396
+color = Color(0.7882353, 0.29803923, 0.19607843, 1)
+
+[node name="ColorRect22" type="ColorRect" parent="GameOverUI/Panel/Art/gameOverTitle/Skull2" unique_id=1935637909]
+offset_left = 1098.1936
+offset_top = 72.58567
+offset_right = 1103.0292
+offset_bottom = 74.77683
+rotation = 7.9375577
+color = Color(0.7882353, 0.29803923, 0.19607843, 1)
+
+[node name="ColorRect23" type="ColorRect" parent="GameOverUI/Panel/Art/gameOverTitle/Skull2" unique_id=984045653]
+offset_left = 1097.8038
+offset_top = 77.378
+offset_right = 1104.9634
+offset_bottom = 79.75001
+rotation = 8.512356
+color = Color(0.7882353, 0.29803923, 0.19607843, 1)
+
+[node name="eye" type="Node2D" parent="GameOverUI/Panel/Art/gameOverTitle/Skull2" unique_id=461597569]
+position = Vector2(995, -133)
+scale = Vector2(0.739566, 0.87367463)
+
+[node name="ColorRect" type="ColorRect" parent="GameOverUI/Panel/Art/gameOverTitle/Skull2/eye" unique_id=2002112512]
+offset_left = 104.0
+offset_top = 219.0
+offset_right = 117.695
+offset_bottom = 223.0
+color = Color(0.7882353, 0.29803923, 0.19607843, 1)
+
+[node name="Node2D" type="Node2D" parent="GameOverUI/Panel/Art/gameOverTitle/Skull2/eye" unique_id=401358904]
+
+[node name="ColorRect7" type="ColorRect" parent="GameOverUI/Panel/Art/gameOverTitle/Skull2/eye/Node2D" unique_id=977613197]
+offset_left = 107.0
+offset_top = 217.0
+offset_right = 116.0
+offset_bottom = 219.0
+color = Color(0.788, 0.298, 0.196, 1)
+
+[node name="ColorRect2" type="ColorRect" parent="GameOverUI/Panel/Art/gameOverTitle/Skull2/eye/Node2D" unique_id=1523432501]
+offset_left = 106.10655
+offset_top = 215.82976
+offset_right = 109.10655
+offset_bottom = 219.75674
+rotation = 0.5591973
+color = Color(0.788, 0.298, 0.196, 1)
+
+[node name="ColorRect3" type="ColorRect" parent="GameOverUI/Panel/Art/gameOverTitle/Skull2/eye/Node2D" unique_id=197210032]
+offset_left = 110.94382
+offset_top = 214.02747
+offset_right = 113.94382
+offset_bottom = 219.27408
+rotation = 1.2141461
+color = Color(0.788, 0.298, 0.196, 1)
+
+[node name="ColorRect4" type="ColorRect" parent="GameOverUI/Panel/Art/gameOverTitle/Skull2/eye/Node2D" unique_id=515392525]
+offset_left = 115.7796
+offset_top = 215.21664
+offset_right = 118.636215
+offset_bottom = 220.16988
+rotation = 1.8015293
+color = Color(0.788, 0.298, 0.196, 1)
+
+[node name="ColorRect5" type="ColorRect" parent="GameOverUI/Panel/Art/gameOverTitle/Skull2/eye/Node2D" unique_id=1930983965]
+offset_left = 117.537
+offset_top = 217.05106
+offset_right = 119.286674
+offset_bottom = 219.83826
+rotation = 2.339965
+color = Color(0.788, 0.298, 0.196, 1)
+
+[node name="ColorRect6" type="ColorRect" parent="GameOverUI/Panel/Art/gameOverTitle/Skull2/eye/Node2D" unique_id=370313259]
+offset_left = 117.79682
+offset_top = 219.1227
+offset_right = 119.63197
+offset_bottom = 221.30646
+rotation = 3.0119748
+color = Color(0.788, 0.298, 0.196, 1)
+
+[node name="Node2D2" type="Node2D" parent="GameOverUI/Panel/Art/gameOverTitle/Skull2/eye" unique_id=1767027266]
+position = Vector2(221.715, 441.91)
+rotation = 3.1415927
+
+[node name="ColorRect7" type="ColorRect" parent="GameOverUI/Panel/Art/gameOverTitle/Skull2/eye/Node2D2" unique_id=526663818]
+offset_left = 107.0
+offset_top = 217.0
+offset_right = 116.0
+offset_bottom = 219.0
+color = Color(0.7882353, 0.29803923, 0.19607843, 1)
+
+[node name="ColorRect2" type="ColorRect" parent="GameOverUI/Panel/Art/gameOverTitle/Skull2/eye/Node2D2" unique_id=680367310]
+offset_left = 106.10655
+offset_top = 215.82976
+offset_right = 109.10655
+offset_bottom = 219.75674
+rotation = 0.5591973
+color = Color(0.7882353, 0.29803923, 0.19607843, 1)
+
+[node name="ColorRect3" type="ColorRect" parent="GameOverUI/Panel/Art/gameOverTitle/Skull2/eye/Node2D2" unique_id=233662980]
+offset_left = 110.94382
+offset_top = 214.02747
+offset_right = 113.94382
+offset_bottom = 219.27408
+rotation = 1.2141461
+color = Color(0.7882353, 0.29803923, 0.19607843, 1)
+
+[node name="ColorRect4" type="ColorRect" parent="GameOverUI/Panel/Art/gameOverTitle/Skull2/eye/Node2D2" unique_id=323394088]
+offset_left = 115.7796
+offset_top = 215.21664
+offset_right = 118.636215
+offset_bottom = 220.16988
+rotation = 1.8015293
+color = Color(0.7882353, 0.29803923, 0.19607843, 1)
+
+[node name="ColorRect5" type="ColorRect" parent="GameOverUI/Panel/Art/gameOverTitle/Skull2/eye/Node2D2" unique_id=1045546822]
+offset_left = 117.537
+offset_top = 217.05106
+offset_right = 119.286674
+offset_bottom = 219.83826
+rotation = 2.339965
+color = Color(0.7882353, 0.29803923, 0.19607843, 1)
+
+[node name="ColorRect6" type="ColorRect" parent="GameOverUI/Panel/Art/gameOverTitle/Skull2/eye/Node2D2" unique_id=1701587438]
+offset_left = 117.79682
+offset_top = 219.1227
+offset_right = 119.63197
+offset_bottom = 221.30646
+rotation = 3.0119748
+color = Color(0.7882353, 0.29803923, 0.19607843, 1)
+
+[node name="eye2" type="Node2D" parent="GameOverUI/Panel/Art/gameOverTitle/Skull2" unique_id=1160030351]
+position = Vector2(1012, -134)
+scale = Vector2(0.739566, 0.87367463)
+
+[node name="ColorRect" type="ColorRect" parent="GameOverUI/Panel/Art/gameOverTitle/Skull2/eye2" unique_id=654716768]
+offset_left = 104.0
+offset_top = 219.0
+offset_right = 117.695
+offset_bottom = 223.0
+color = Color(0.7882353, 0.29803923, 0.19607843, 1)
+
+[node name="Node2D" type="Node2D" parent="GameOverUI/Panel/Art/gameOverTitle/Skull2/eye2" unique_id=1479347908]
+
+[node name="ColorRect7" type="ColorRect" parent="GameOverUI/Panel/Art/gameOverTitle/Skull2/eye2/Node2D" unique_id=204364578]
+offset_left = 107.0
+offset_top = 217.0
+offset_right = 116.0
+offset_bottom = 219.0
+color = Color(0.788, 0.298, 0.196, 1)
+
+[node name="ColorRect2" type="ColorRect" parent="GameOverUI/Panel/Art/gameOverTitle/Skull2/eye2/Node2D" unique_id=1416071891]
+offset_left = 106.10655
+offset_top = 215.82976
+offset_right = 109.10655
+offset_bottom = 219.75674
+rotation = 0.5591973
+color = Color(0.788, 0.298, 0.196, 1)
+
+[node name="ColorRect3" type="ColorRect" parent="GameOverUI/Panel/Art/gameOverTitle/Skull2/eye2/Node2D" unique_id=894450299]
+offset_left = 110.94382
+offset_top = 214.02747
+offset_right = 113.94382
+offset_bottom = 219.27408
+rotation = 1.2141461
+color = Color(0.788, 0.298, 0.196, 1)
+
+[node name="ColorRect4" type="ColorRect" parent="GameOverUI/Panel/Art/gameOverTitle/Skull2/eye2/Node2D" unique_id=1279668872]
+offset_left = 115.7796
+offset_top = 215.21664
+offset_right = 118.636215
+offset_bottom = 220.16988
+rotation = 1.8015293
+color = Color(0.788, 0.298, 0.196, 1)
+
+[node name="ColorRect5" type="ColorRect" parent="GameOverUI/Panel/Art/gameOverTitle/Skull2/eye2/Node2D" unique_id=1821178288]
+offset_left = 117.537
+offset_top = 217.05106
+offset_right = 119.286674
+offset_bottom = 219.83826
+rotation = 2.339965
+color = Color(0.788, 0.298, 0.196, 1)
+
+[node name="ColorRect6" type="ColorRect" parent="GameOverUI/Panel/Art/gameOverTitle/Skull2/eye2/Node2D" unique_id=1748614802]
+offset_left = 117.79682
+offset_top = 219.1227
+offset_right = 119.63197
+offset_bottom = 221.30646
+rotation = 3.0119748
+color = Color(0.788, 0.298, 0.196, 1)
+
+[node name="Node2D2" type="Node2D" parent="GameOverUI/Panel/Art/gameOverTitle/Skull2/eye2" unique_id=538984011]
+position = Vector2(221.715, 441.91)
+rotation = 3.1415927
+
+[node name="ColorRect7" type="ColorRect" parent="GameOverUI/Panel/Art/gameOverTitle/Skull2/eye2/Node2D2" unique_id=109275889]
+offset_left = 107.0
+offset_top = 217.0
+offset_right = 116.0
+offset_bottom = 219.0
+color = Color(0.7882353, 0.29803923, 0.19607843, 1)
+
+[node name="ColorRect2" type="ColorRect" parent="GameOverUI/Panel/Art/gameOverTitle/Skull2/eye2/Node2D2" unique_id=621368344]
+offset_left = 106.10655
+offset_top = 215.82976
+offset_right = 109.10655
+offset_bottom = 219.75674
+rotation = 0.5591973
+color = Color(0.7882353, 0.29803923, 0.19607843, 1)
+
+[node name="ColorRect3" type="ColorRect" parent="GameOverUI/Panel/Art/gameOverTitle/Skull2/eye2/Node2D2" unique_id=1015328688]
+offset_left = 110.94382
+offset_top = 214.02747
+offset_right = 113.94382
+offset_bottom = 219.27408
+rotation = 1.2141461
+color = Color(0.7882353, 0.29803923, 0.19607843, 1)
+
+[node name="ColorRect4" type="ColorRect" parent="GameOverUI/Panel/Art/gameOverTitle/Skull2/eye2/Node2D2" unique_id=466110415]
+offset_left = 115.7796
+offset_top = 215.21664
+offset_right = 118.636215
+offset_bottom = 220.16988
+rotation = 1.8015293
+color = Color(0.7882353, 0.29803923, 0.19607843, 1)
+
+[node name="ColorRect5" type="ColorRect" parent="GameOverUI/Panel/Art/gameOverTitle/Skull2/eye2/Node2D2" unique_id=1637023415]
+offset_left = 117.537
+offset_top = 217.05106
+offset_right = 119.286674
+offset_bottom = 219.83826
+rotation = 2.339965
+color = Color(0.7882353, 0.29803923, 0.19607843, 1)
+
+[node name="ColorRect6" type="ColorRect" parent="GameOverUI/Panel/Art/gameOverTitle/Skull2/eye2/Node2D2" unique_id=1229014215]
+offset_left = 117.79682
+offset_top = 219.1227
+offset_right = 119.63197
+offset_bottom = 221.30646
+rotation = 3.0119748
+color = Color(0.7882353, 0.29803923, 0.19607843, 1)
+
+[node name="Skull" type="Node2D" parent="GameOverUI/Panel/Art/gameOverTitle" unique_id=2007512388]
+position = Vector2(-384, 4.7683716e-07)
+scale = Vector2(1.1398562, 1.1398562)
+
+[node name="ColorRect" type="ColorRect" parent="GameOverUI/Panel/Art/gameOverTitle/Skull" unique_id=1279087160]
+offset_left = 1077.0
+offset_top = 80.0
+offset_right = 1093.32
+offset_bottom = 83.0
+color = Color(0.7882353, 0.29803923, 0.19607843, 1)
+
+[node name="ColorRect24" type="ColorRect" parent="GameOverUI/Panel/Art/gameOverTitle/Skull" unique_id=1891650811]
+offset_left = 1085.2933
+offset_top = 63.93274
+offset_right = 1091.1366
+offset_bottom = 66.03607
+rotation = 0.8926067
+color = Color(0.7882353, 0.29803923, 0.19607843, 1)
+
+[node name="ColorRect25" type="ColorRect" parent="GameOverUI/Panel/Art/gameOverTitle/Skull" unique_id=1278247603]
+offset_left = 1086.41
+offset_top = 65.602356
+offset_right = 1092.5491
+offset_bottom = 67.70569
+rotation = 2.371459
+color = Color(0.7882353, 0.29803923, 0.19607843, 1)
+
+[node name="ColorRect2" type="ColorRect" parent="GameOverUI/Panel/Art/gameOverTitle/Skull" unique_id=770162227]
+offset_left = 1074.0
+offset_top = 77.0
+offset_right = 1080.0
+offset_bottom = 80.33276
+rotation = 0.5916817
+color = Color(0.7882353, 0.29803923, 0.19607843, 1)
+
+[node name="ColorRect3" type="ColorRect" parent="GameOverUI/Panel/Art/gameOverTitle/Skull" unique_id=1945241948]
+offset_left = 1074.0348
+offset_top = 72.86717
+offset_right = 1080.7924
+offset_bottom = 75.6245
+rotation = 1.4431407
+color = Color(0.7882353, 0.29803923, 0.19607843, 1)
+
+[node name="ColorRect4" type="ColorRect" parent="GameOverUI/Panel/Art/gameOverTitle/Skull" unique_id=1052176184]
+offset_left = 1073.7048
+offset_top = 70.29598
+offset_right = 1076.4006
+offset_bottom = 73.05331
+rotation = 1.4431407
+color = Color(0.7882353, 0.29803923, 0.19607843, 1)
+
+[node name="ColorRect5" type="ColorRect" parent="GameOverUI/Panel/Art/gameOverTitle/Skull" unique_id=1785181117]
+offset_left = 1068.6599
+offset_top = 67.23017
+offset_right = 1074.5637
+offset_bottom = 70.309395
+rotation = 0.600001
+color = Color(0.7882353, 0.29803923, 0.19607843, 1)
+
+[node name="ColorRect6" type="ColorRect" parent="GameOverUI/Panel/Art/gameOverTitle/Skull" unique_id=1063756015]
+offset_left = 1068.433
+offset_top = 65.075745
+offset_right = 1072.5975
+offset_bottom = 67.851746
+rotation = 1.2896128
+color = Color(0.7882353, 0.29803923, 0.19607843, 1)
+
+[node name="ColorRect7" type="ColorRect" parent="GameOverUI/Panel/Art/gameOverTitle/Skull" unique_id=303207076]
+offset_left = 1068.4147
+offset_top = 53.94367
+offset_right = 1080.552
+offset_bottom = 56.630314
+rotation = 1.566636
+color = Color(0.7882353, 0.29803923, 0.19607843, 1)
+
+[node name="ColorRect8" type="ColorRect" parent="GameOverUI/Panel/Art/gameOverTitle/Skull" unique_id=1730560825]
+offset_left = 1069.8185
+offset_top = 50.800648
+offset_right = 1074.6781
+offset_bottom = 53.10906
+rotation = 1.9966552
+color = Color(0.7882353, 0.29803923, 0.19607843, 1)
+
+[node name="ColorRect9" type="ColorRect" parent="GameOverUI/Panel/Art/gameOverTitle/Skull" unique_id=520709515]
+offset_left = 1071.8572
+offset_top = 48.0016
+offset_right = 1075.7438
+offset_bottom = 50.309093
+rotation = 2.1862705
+color = Color(0.7882353, 0.29803923, 0.19607843, 1)
+
+[node name="ColorRect10" type="ColorRect" parent="GameOverUI/Panel/Art/gameOverTitle/Skull" unique_id=1011887238]
+offset_left = 1074.9124
+offset_top = 45.487587
+offset_right = 1079.5518
+offset_bottom = 47.784462
+rotation = 2.433425
+color = Color(0.7882353, 0.29803923, 0.19607843, 1)
+
+[node name="ColorRect11" type="ColorRect" parent="GameOverUI/Panel/Art/gameOverTitle/Skull" unique_id=1278984729]
+offset_left = 1078.642
+offset_top = 44.129333
+offset_right = 1083.3975
+offset_bottom = 46.263916
+rotation = 2.7940905
+color = Color(0.7882353, 0.29803923, 0.19607843, 1)
+
+[node name="ColorRect12" type="ColorRect" parent="GameOverUI/Panel/Art/gameOverTitle/Skull" unique_id=512798032]
+offset_left = 1082.5938
+offset_top = 43.08788
+offset_right = 1086.9652
+offset_bottom = 45.021076
+rotation = 2.9326582
+color = Color(0.7882353, 0.29803923, 0.19607843, 1)
+
+[node name="ColorRect13" type="ColorRect" parent="GameOverUI/Panel/Art/gameOverTitle/Skull" unique_id=499085037]
+offset_left = 1089.6212
+offset_top = 43.26007
+offset_right = 1097.1074
+offset_bottom = 45.122635
+rotation = 3.1693985
+color = Color(0.7882353, 0.29803923, 0.19607843, 1)
+
+[node name="ColorRect14" type="ColorRect" parent="GameOverUI/Panel/Art/gameOverTitle/Skull" unique_id=2117237316]
+offset_left = 1089.5145
+offset_top = 41.362904
+offset_right = 1095.6927
+offset_bottom = 43.172962
+rotation = 6.5734415
+color = Color(0.7882353, 0.29803923, 0.19607843, 1)
+
+[node name="ColorRect15" type="ColorRect" parent="GameOverUI/Panel/Art/gameOverTitle/Skull" unique_id=840348733]
+offset_left = 1095.3566
+offset_top = 43.078888
+offset_right = 1100.8525
+offset_bottom = 45.03354
+rotation = 6.83166
+color = Color(0.7882353, 0.29803923, 0.19607843, 1)
+
+[node name="ColorRect16" type="ColorRect" parent="GameOverUI/Panel/Art/gameOverTitle/Skull" unique_id=1378246032]
+offset_left = 1099.9233
+offset_top = 45.77443
+offset_right = 1105.3907
+offset_bottom = 47.814957
+rotation = 7.173652
+color = Color(0.7882353, 0.29803923, 0.19607843, 1)
+
+[node name="ColorRect17" type="ColorRect" parent="GameOverUI/Panel/Art/gameOverTitle/Skull" unique_id=1277674944]
+offset_left = 1103.4183
+offset_top = 50.069424
+offset_right = 1107.789
+offset_bottom = 52.240383
+rotation = 7.4449425
+color = Color(0.7882353, 0.29803923, 0.19607843, 1)
+
+[node name="ColorRect18" type="ColorRect" parent="GameOverUI/Panel/Art/gameOverTitle/Skull" unique_id=551230304]
+offset_left = 1105.1422
+offset_top = 54.090195
+offset_right = 1108.8246
+offset_bottom = 56.214035
+rotation = 7.699443
+color = Color(0.7882353, 0.29803923, 0.19607843, 1)
+
+[node name="ColorRect19" type="ColorRect" parent="GameOverUI/Panel/Art/gameOverTitle/Skull" unique_id=933697293]
+offset_left = 1105.7438
+offset_top = 57.6548
+offset_right = 1113.8956
+offset_bottom = 59.792007
+rotation = 7.8540254
+color = Color(0.7882353, 0.29803923, 0.19607843, 1)
+
+[node name="ColorRect20" type="ColorRect" parent="GameOverUI/Panel/Art/gameOverTitle/Skull" unique_id=931095794]
+offset_left = 1105.7723
+offset_top = 65.8723
+offset_right = 1112.5983
+offset_bottom = 67.64574
+rotation = 8.545766
+color = Color(0.7882353, 0.29803923, 0.19607843, 1)
+
+[node name="ColorRect21" type="ColorRect" parent="GameOverUI/Panel/Art/gameOverTitle/Skull" unique_id=1482320929]
+offset_left = 1101.5104
+offset_top = 71.24635
+offset_right = 1106.737
+offset_bottom = 73.173355
+rotation = 8.860396
+color = Color(0.7882353, 0.29803923, 0.19607843, 1)
+
+[node name="ColorRect22" type="ColorRect" parent="GameOverUI/Panel/Art/gameOverTitle/Skull" unique_id=831526501]
+offset_left = 1098.1936
+offset_top = 72.58567
+offset_right = 1103.0292
+offset_bottom = 74.77683
+rotation = 7.9375577
+color = Color(0.7882353, 0.29803923, 0.19607843, 1)
+
+[node name="ColorRect23" type="ColorRect" parent="GameOverUI/Panel/Art/gameOverTitle/Skull" unique_id=1434736608]
+offset_left = 1097.8038
+offset_top = 77.378
+offset_right = 1104.9634
+offset_bottom = 79.75001
+rotation = 8.512356
+color = Color(0.7882353, 0.29803923, 0.19607843, 1)
+
+[node name="eye" type="Node2D" parent="GameOverUI/Panel/Art/gameOverTitle/Skull" unique_id=1110942549]
+position = Vector2(995, -133)
+scale = Vector2(0.739566, 0.87367463)
+
+[node name="ColorRect" type="ColorRect" parent="GameOverUI/Panel/Art/gameOverTitle/Skull/eye" unique_id=328757816]
+offset_left = 104.0
+offset_top = 219.0
+offset_right = 117.695
+offset_bottom = 223.0
+color = Color(0.7882353, 0.29803923, 0.19607843, 1)
+
+[node name="Node2D" type="Node2D" parent="GameOverUI/Panel/Art/gameOverTitle/Skull/eye" unique_id=1131006689]
+
+[node name="ColorRect7" type="ColorRect" parent="GameOverUI/Panel/Art/gameOverTitle/Skull/eye/Node2D" unique_id=831085819]
+offset_left = 107.0
+offset_top = 217.0
+offset_right = 116.0
+offset_bottom = 219.0
+color = Color(0.788, 0.298, 0.196, 1)
+
+[node name="ColorRect2" type="ColorRect" parent="GameOverUI/Panel/Art/gameOverTitle/Skull/eye/Node2D" unique_id=1029175454]
+offset_left = 106.10655
+offset_top = 215.82976
+offset_right = 109.10655
+offset_bottom = 219.75674
+rotation = 0.5591973
+color = Color(0.788, 0.298, 0.196, 1)
+
+[node name="ColorRect3" type="ColorRect" parent="GameOverUI/Panel/Art/gameOverTitle/Skull/eye/Node2D" unique_id=185956927]
+offset_left = 110.94382
+offset_top = 214.02747
+offset_right = 113.94382
+offset_bottom = 219.27408
+rotation = 1.2141461
+color = Color(0.788, 0.298, 0.196, 1)
+
+[node name="ColorRect4" type="ColorRect" parent="GameOverUI/Panel/Art/gameOverTitle/Skull/eye/Node2D" unique_id=2122526164]
+offset_left = 115.7796
+offset_top = 215.21664
+offset_right = 118.636215
+offset_bottom = 220.16988
+rotation = 1.8015293
+color = Color(0.788, 0.298, 0.196, 1)
+
+[node name="ColorRect5" type="ColorRect" parent="GameOverUI/Panel/Art/gameOverTitle/Skull/eye/Node2D" unique_id=534700290]
+offset_left = 117.537
+offset_top = 217.05106
+offset_right = 119.286674
+offset_bottom = 219.83826
+rotation = 2.339965
+color = Color(0.788, 0.298, 0.196, 1)
+
+[node name="ColorRect6" type="ColorRect" parent="GameOverUI/Panel/Art/gameOverTitle/Skull/eye/Node2D" unique_id=858619761]
+offset_left = 117.79682
+offset_top = 219.1227
+offset_right = 119.63197
+offset_bottom = 221.30646
+rotation = 3.0119748
+color = Color(0.788, 0.298, 0.196, 1)
+
+[node name="Node2D2" type="Node2D" parent="GameOverUI/Panel/Art/gameOverTitle/Skull/eye" unique_id=847886244]
+position = Vector2(221.715, 441.91)
+rotation = 3.1415927
+
+[node name="ColorRect7" type="ColorRect" parent="GameOverUI/Panel/Art/gameOverTitle/Skull/eye/Node2D2" unique_id=2032371546]
+offset_left = 107.0
+offset_top = 217.0
+offset_right = 116.0
+offset_bottom = 219.0
+color = Color(0.7882353, 0.29803923, 0.19607843, 1)
+
+[node name="ColorRect2" type="ColorRect" parent="GameOverUI/Panel/Art/gameOverTitle/Skull/eye/Node2D2" unique_id=604005162]
+offset_left = 106.10655
+offset_top = 215.82976
+offset_right = 109.10655
+offset_bottom = 219.75674
+rotation = 0.5591973
+color = Color(0.7882353, 0.29803923, 0.19607843, 1)
+
+[node name="ColorRect3" type="ColorRect" parent="GameOverUI/Panel/Art/gameOverTitle/Skull/eye/Node2D2" unique_id=1498274207]
+offset_left = 110.94382
+offset_top = 214.02747
+offset_right = 113.94382
+offset_bottom = 219.27408
+rotation = 1.2141461
+color = Color(0.7882353, 0.29803923, 0.19607843, 1)
+
+[node name="ColorRect4" type="ColorRect" parent="GameOverUI/Panel/Art/gameOverTitle/Skull/eye/Node2D2" unique_id=1981104525]
+offset_left = 115.7796
+offset_top = 215.21664
+offset_right = 118.636215
+offset_bottom = 220.16988
+rotation = 1.8015293
+color = Color(0.7882353, 0.29803923, 0.19607843, 1)
+
+[node name="ColorRect5" type="ColorRect" parent="GameOverUI/Panel/Art/gameOverTitle/Skull/eye/Node2D2" unique_id=543308593]
+offset_left = 117.537
+offset_top = 217.05106
+offset_right = 119.286674
+offset_bottom = 219.83826
+rotation = 2.339965
+color = Color(0.7882353, 0.29803923, 0.19607843, 1)
+
+[node name="ColorRect6" type="ColorRect" parent="GameOverUI/Panel/Art/gameOverTitle/Skull/eye/Node2D2" unique_id=265324511]
+offset_left = 117.79682
+offset_top = 219.1227
+offset_right = 119.63197
+offset_bottom = 221.30646
+rotation = 3.0119748
+color = Color(0.7882353, 0.29803923, 0.19607843, 1)
+
+[node name="eye2" type="Node2D" parent="GameOverUI/Panel/Art/gameOverTitle/Skull" unique_id=478336754]
+position = Vector2(1012, -134)
+scale = Vector2(0.739566, 0.87367463)
+
+[node name="ColorRect" type="ColorRect" parent="GameOverUI/Panel/Art/gameOverTitle/Skull/eye2" unique_id=1670021420]
+offset_left = 104.0
+offset_top = 219.0
+offset_right = 117.695
+offset_bottom = 223.0
+color = Color(0.7882353, 0.29803923, 0.19607843, 1)
+
+[node name="Node2D" type="Node2D" parent="GameOverUI/Panel/Art/gameOverTitle/Skull/eye2" unique_id=1434053022]
+
+[node name="ColorRect7" type="ColorRect" parent="GameOverUI/Panel/Art/gameOverTitle/Skull/eye2/Node2D" unique_id=167668815]
+offset_left = 107.0
+offset_top = 217.0
+offset_right = 116.0
+offset_bottom = 219.0
+color = Color(0.788, 0.298, 0.196, 1)
+
+[node name="ColorRect2" type="ColorRect" parent="GameOverUI/Panel/Art/gameOverTitle/Skull/eye2/Node2D" unique_id=2086651543]
+offset_left = 106.10655
+offset_top = 215.82976
+offset_right = 109.10655
+offset_bottom = 219.75674
+rotation = 0.5591973
+color = Color(0.788, 0.298, 0.196, 1)
+
+[node name="ColorRect3" type="ColorRect" parent="GameOverUI/Panel/Art/gameOverTitle/Skull/eye2/Node2D" unique_id=1565096728]
+offset_left = 110.94382
+offset_top = 214.02747
+offset_right = 113.94382
+offset_bottom = 219.27408
+rotation = 1.2141461
+color = Color(0.788, 0.298, 0.196, 1)
+
+[node name="ColorRect4" type="ColorRect" parent="GameOverUI/Panel/Art/gameOverTitle/Skull/eye2/Node2D" unique_id=1934877053]
+offset_left = 115.7796
+offset_top = 215.21664
+offset_right = 118.636215
+offset_bottom = 220.16988
+rotation = 1.8015293
+color = Color(0.788, 0.298, 0.196, 1)
+
+[node name="ColorRect5" type="ColorRect" parent="GameOverUI/Panel/Art/gameOverTitle/Skull/eye2/Node2D" unique_id=597740824]
+offset_left = 117.537
+offset_top = 217.05106
+offset_right = 119.286674
+offset_bottom = 219.83826
+rotation = 2.339965
+color = Color(0.788, 0.298, 0.196, 1)
+
+[node name="ColorRect6" type="ColorRect" parent="GameOverUI/Panel/Art/gameOverTitle/Skull/eye2/Node2D" unique_id=1830572511]
+offset_left = 117.79682
+offset_top = 219.1227
+offset_right = 119.63197
+offset_bottom = 221.30646
+rotation = 3.0119748
+color = Color(0.788, 0.298, 0.196, 1)
+
+[node name="Node2D2" type="Node2D" parent="GameOverUI/Panel/Art/gameOverTitle/Skull/eye2" unique_id=396868375]
+position = Vector2(221.715, 441.91)
+rotation = 3.1415927
+
+[node name="ColorRect7" type="ColorRect" parent="GameOverUI/Panel/Art/gameOverTitle/Skull/eye2/Node2D2" unique_id=684151780]
+offset_left = 107.0
+offset_top = 217.0
+offset_right = 116.0
+offset_bottom = 219.0
+color = Color(0.7882353, 0.29803923, 0.19607843, 1)
+
+[node name="ColorRect2" type="ColorRect" parent="GameOverUI/Panel/Art/gameOverTitle/Skull/eye2/Node2D2" unique_id=304050376]
+offset_left = 106.10655
+offset_top = 215.82976
+offset_right = 109.10655
+offset_bottom = 219.75674
+rotation = 0.5591973
+color = Color(0.7882353, 0.29803923, 0.19607843, 1)
+
+[node name="ColorRect3" type="ColorRect" parent="GameOverUI/Panel/Art/gameOverTitle/Skull/eye2/Node2D2" unique_id=1094951444]
+offset_left = 110.94382
+offset_top = 214.02747
+offset_right = 113.94382
+offset_bottom = 219.27408
+rotation = 1.2141461
+color = Color(0.7882353, 0.29803923, 0.19607843, 1)
+
+[node name="ColorRect4" type="ColorRect" parent="GameOverUI/Panel/Art/gameOverTitle/Skull/eye2/Node2D2" unique_id=1884582611]
+offset_left = 115.7796
+offset_top = 215.21664
+offset_right = 118.636215
+offset_bottom = 220.16988
+rotation = 1.8015293
+color = Color(0.7882353, 0.29803923, 0.19607843, 1)
+
+[node name="ColorRect5" type="ColorRect" parent="GameOverUI/Panel/Art/gameOverTitle/Skull/eye2/Node2D2" unique_id=1205175617]
+offset_left = 117.537
+offset_top = 217.05106
+offset_right = 119.286674
+offset_bottom = 219.83826
+rotation = 2.339965
+color = Color(0.7882353, 0.29803923, 0.19607843, 1)
+
+[node name="ColorRect6" type="ColorRect" parent="GameOverUI/Panel/Art/gameOverTitle/Skull/eye2/Node2D2" unique_id=765294177]
+offset_left = 117.79682
+offset_top = 219.1227
+offset_right = 119.63197
+offset_bottom = 221.30646
+rotation = 3.0119748
+color = Color(0.7882353, 0.29803923, 0.19607843, 1)
+
+[node name="gameover" type="Label" parent="GameOverUI/Panel/Art/gameOverTitle" unique_id=116254745]
+offset_left = 353.0
+offset_top = 20.0
+offset_right = 809.0
+offset_bottom = 105.0
+theme_override_colors/font_color = Color(0.6, 0.19607843, 0.16078432, 1)
+theme_override_fonts/font = ExtResource("3_h2yge")
+theme_override_font_sizes/font_size = 85
+text = "GAME OVER"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="gameover2" type="Label" parent="GameOverUI/Panel/Art/gameOverTitle" unique_id=1105909412]
+offset_left = 353.0
+offset_top = 106.0
+offset_right = 809.0
+offset_bottom = 142.0
+theme_override_colors/font_color = Color(0.5647059, 0.50980395, 0.44313726, 1)
+theme_override_fonts/font = ExtResource("3_h2yge")
+theme_override_font_sizes/font_size = 21
+text = "The authorities have shut you down."
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Button" type="Button" parent="GameOverUI/Panel/Art" unique_id=611423290]
+offset_left = 117.0
+offset_top = 522.0
+offset_right = 376.0
+offset_bottom = 589.0
+theme_override_fonts/font = ExtResource("3_h2yge")
+theme_override_font_sizes/font_size = 24
+text = "TRY AGAIN"
+
+[node name="Retry" type="Sprite2D" parent="GameOverUI/Panel/Art" unique_id=215940548]
+position = Vector2(219, 695.00006)
+scale = Vector2(0.07819383, 0.07819383)
+texture = ExtResource("5_lquwl")
+
+[node name="retryIcon" type="Node2D" parent="GameOverUI/Panel/Art" unique_id=1019045099]
+position = Vector2(-56, -141)
+
+[node name="ColorRect" type="ColorRect" parent="GameOverUI/Panel/Art/retryIcon" unique_id=822205996]
+offset_left = 224.0
+offset_top = 690.0
+offset_right = 241.15411
+offset_bottom = 691.07477
+rotation = -0.78253776
+color = Color(0.6313726, 0.6313726, 0.61960787, 1)
+
+[node name="ColorRect15" type="ColorRect" parent="GameOverUI/Panel/Art/retryIcon" unique_id=1111670985]
+offset_left = 226.17368
+offset_top = 683.588
+offset_right = 230.80319
+offset_bottom = 687.67706
+rotation = -0.80438757
+color = Color(0.6313726, 0.6313726, 0.61960787, 1)
+
+[node name="ColorRect16" type="ColorRect" parent="GameOverUI/Panel/Art/retryIcon" unique_id=1663076560]
+offset_left = 223.64876
+offset_top = 682.4649
+offset_right = 228.24507
+offset_bottom = 686.57587
+rotation = -1.0790789
+color = Color(0.6313726, 0.6313726, 0.61960787, 1)
+
+[node name="ColorRect17" type="ColorRect" parent="GameOverUI/Panel/Art/retryIcon" unique_id=1357547194]
+offset_left = 225.94307
+offset_top = 678.38525
+offset_right = 230.58101
+offset_bottom = 684.13416
+rotation = 1.874287
+color = Color(0.6313726, 0.6313726, 0.61960787, 1)
+
+[node name="ColorRect18" type="ColorRect" parent="GameOverUI/Panel/Art/retryIcon" unique_id=55988791]
+offset_left = 220.5196
+offset_top = 676.68805
+offset_right = 225.33424
+offset_bottom = 683.7134
+rotation = 1.5127878
+color = Color(0.6313726, 0.6313726, 0.61960787, 1)
+
+[node name="ColorRect19" type="ColorRect" parent="GameOverUI/Panel/Art/retryIcon" unique_id=664373652]
+offset_left = 213.88168
+offset_top = 677.00476
+offset_right = 219.01028
+offset_bottom = 682.4411
+rotation = 1.2183312
+color = Color(0.6313726, 0.6313726, 0.61960787, 1)
+
+[node name="ColorRect20" type="ColorRect" parent="GameOverUI/Panel/Art/retryIcon" unique_id=1809118917]
+offset_left = 208.90695
+offset_top = 678.8008
+offset_right = 214.0336
+offset_bottom = 685.4209
+rotation = 0.73522556
+color = Color(0.6313726, 0.6313726, 0.61960787, 1)
+
+[node name="ColorRect21" type="ColorRect" parent="GameOverUI/Panel/Art/retryIcon" unique_id=994945307]
+offset_left = 204.49937
+offset_top = 683.71173
+offset_right = 209.60765
+offset_bottom = 689.5808
+rotation = 0.5994825
+color = Color(0.6313726, 0.6313726, 0.61960787, 1)
+
+[node name="ColorRect22" type="ColorRect" parent="GameOverUI/Panel/Art/retryIcon" unique_id=1072358080]
+offset_left = 201.22426
+offset_top = 688.55206
+offset_right = 205.93675
+offset_bottom = 694.2725
+rotation = 0.13897616
+color = Color(0.6313726, 0.6313726, 0.61960787, 1)
+
+[node name="ColorRect23" type="ColorRect" parent="GameOverUI/Panel/Art/retryIcon" unique_id=1952392399]
+offset_left = 200.48111
+offset_top = 694.1012
+offset_right = 205.13043
+offset_bottom = 699.5271
+rotation = -0.10310304
+color = Color(0.6313726, 0.6313726, 0.61960787, 1)
+
+[node name="ColorRect24" type="ColorRect" parent="GameOverUI/Panel/Art/retryIcon" unique_id=1458661660]
+offset_left = 201.00967
+offset_top = 699.36774
+offset_right = 205.66673
+offset_bottom = 705.89655
+rotation = -0.29025048
+color = Color(0.6313726, 0.6313726, 0.61960787, 1)
+
+[node name="ColorRect25" type="ColorRect" parent="GameOverUI/Panel/Art/retryIcon" unique_id=350198925]
+offset_left = 202.85065
+offset_top = 705.6207
+offset_right = 207.75066
+offset_bottom = 714.4919
+rotation = -0.8784561
+color = Color(0.6313726, 0.6313726, 0.61960787, 1)
+
+[node name="ColorRect26" type="ColorRect" parent="GameOverUI/Panel/Art/retryIcon" unique_id=956005303]
+offset_left = 209.59543
+offset_top = 711.25275
+offset_right = 214.21603
+offset_bottom = 719.9378
+rotation = -1.2495854
+color = Color(0.6313726, 0.6313726, 0.61960787, 1)
+
+[node name="ColorRect27" type="ColorRect" parent="GameOverUI/Panel/Art/retryIcon" unique_id=109693426]
+offset_left = 217.85226
+offset_top = 713.92596
+offset_right = 222.05411
+offset_bottom = 722.54456
+rotation = -1.6714036
+color = Color(0.6313726, 0.6313726, 0.61960787, 1)
+
+[node name="ColorRect28" type="ColorRect" parent="GameOverUI/Panel/Art/retryIcon" unique_id=1894229934]
+offset_left = 226.32034
+offset_top = 713.0719
+offset_right = 230.1896
+offset_bottom = 719.86597
+rotation = -2.0338862
+color = Color(0.6313726, 0.6313726, 0.61960787, 1)
+
+[node name="ColorRect29" type="ColorRect" parent="GameOverUI/Panel/Art/retryIcon" unique_id=260592088]
+offset_left = 232.21538
+offset_top = 710.17035
+offset_right = 235.6704
+offset_bottom = 715.91565
+rotation = -2.468252
+color = Color(0.6313726, 0.6313726, 0.61960787, 1)
+
+[node name="ColorRect30" type="ColorRect" parent="GameOverUI/Panel/Art/retryIcon" unique_id=1367557473]
+offset_left = 235.75421
+offset_top = 705.6881
+offset_right = 238.97089
+offset_bottom = 710.20465
+rotation = -2.785005
+color = Color(0.6313726, 0.6313726, 0.61960787, 1)
+
+[node name="ColorRect31" type="ColorRect" parent="GameOverUI/Panel/Art/retryIcon" unique_id=58508487]
+offset_left = 237.28345
+offset_top = 701.5779
+offset_right = 240.27072
+offset_bottom = 707.35126
+rotation = -3.1098204
+color = Color(0.6313726, 0.6313726, 0.61960787, 1)
+
+[node name="ColorRect4" type="ColorRect" parent="GameOverUI/Panel/Art/retryIcon" unique_id=205452514]
+offset_left = 230.03247
+offset_top = 685.4288
+offset_right = 232.19293
+offset_bottom = 692.8332
+rotation = -0.78253776
+color = Color(0.6313726, 0.6313726, 0.61960787, 1)
+
+[node name="ColorRect10" type="ColorRect" parent="GameOverUI/Panel/Art/retryIcon" unique_id=1589584312]
+offset_left = 225.38504
+offset_top = 690.0497
+offset_right = 234.09924
+offset_bottom = 691.2346
+rotation = -0.78253776
+color = Color(0.6313726, 0.6313726, 0.61960787, 1)
+
+[node name="ColorRect11" type="ColorRect" parent="GameOverUI/Panel/Art/retryIcon" unique_id=1852287474]
+offset_left = 226.84451
+offset_top = 689.939
+offset_right = 232.51923
+offset_bottom = 691.3383
+rotation = -0.78253776
+color = Color(0.6313726, 0.6313726, 0.61960787, 1)
+
+[node name="ColorRect12" type="ColorRect" parent="GameOverUI/Panel/Art/retryIcon" unique_id=1541040306]
+offset_left = 228.57382
+offset_top = 689.77905
+offset_right = 232.90942
+offset_bottom = 691.4972
+rotation = -0.78253776
+color = Color(0.6313726, 0.6313726, 0.61960787, 1)
+
+[node name="ColorRect13" type="ColorRect" parent="GameOverUI/Panel/Art/retryIcon" unique_id=2004423930]
+offset_left = 231.5157
+offset_top = 688.7687
+offset_right = 233.05269
+offset_bottom = 691.82495
+rotation = -0.78253776
+color = Color(0.6313726, 0.6313726, 0.61960787, 1)
+
+[node name="ColorRect14" type="ColorRect" parent="GameOverUI/Panel/Art/retryIcon" unique_id=441910345]
+offset_left = 230.54755
+offset_top = 689.7313
+offset_right = 233.44983
+offset_bottom = 691.4024
+rotation = -0.78253776
+color = Color(0.6313726, 0.6313726, 0.61960787, 1)
+
+[node name="ColorRect5" type="ColorRect" parent="GameOverUI/Panel/Art/retryIcon" unique_id=2113387179]
+offset_left = 231.36407
+offset_top = 684.10474
+offset_right = 233.09607
+offset_bottom = 690.103
+rotation = -0.78253776
+color = Color(0.6313726, 0.6313726, 0.61960787, 1)
+
+[node name="ColorRect6" type="ColorRect" parent="GameOverUI/Panel/Art/retryIcon" unique_id=218723404]
+offset_left = 232.53398
+offset_top = 682.9415
+offset_right = 234.00969
+offset_bottom = 687.5494
+rotation = -0.78253776
+color = Color(0.6313726, 0.6313726, 0.61960787, 1)
+
+[node name="ColorRect7" type="ColorRect" parent="GameOverUI/Panel/Art/retryIcon" unique_id=1978328927]
+offset_left = 233.53387
+offset_top = 681.9473
+offset_right = 236.88928
+offset_bottom = 683.37463
+rotation = -0.78253776
+color = Color(0.6313726, 0.6313726, 0.61960787, 1)
+
+[node name="ColorRect8" type="ColorRect" parent="GameOverUI/Panel/Art/retryIcon" unique_id=1698650478]
+offset_left = 233.53387
+offset_top = 681.9473
+offset_right = 234.72693
+offset_bottom = 685.2644
+rotation = -0.78253776
+color = Color(0.6313726, 0.6313726, 0.61960787, 1)
+
+[node name="ColorRect9" type="ColorRect" parent="GameOverUI/Panel/Art/retryIcon" unique_id=499813185]
+offset_left = 234.20903
+offset_top = 681.276
+offset_right = 235.4008
+offset_bottom = 683.7365
+rotation = -0.78253776
+color = Color(0.6313726, 0.6313726, 0.61960787, 1)
+
+[node name="ColorRect2" type="ColorRect" parent="GameOverUI/Panel/Art/retryIcon" unique_id=663305874]
+offset_left = 224.0
+offset_top = 690.0
+offset_right = 236.82999
+offset_bottom = 691.07477
+rotation = -0.00533247
+color = Color(0.6313726, 0.6313726, 0.61960787, 1)
+
+[node name="ColorRect3" type="ColorRect" parent="GameOverUI/Panel/Art/retryIcon" unique_id=1918601578]
+offset_left = 237.0056
+offset_top = 678.6463
+offset_right = 249.2932
+offset_bottom = 679.72107
+rotation = 1.586638
+color = Color(0.6313726, 0.6313726, 0.61960787, 1)
 
 [node name="FlashRect" type="ColorRect" parent="." unique_id=1038790194]
 visible = false

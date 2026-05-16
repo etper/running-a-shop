@@ -5,6 +5,7 @@ var can_input = true
 @onready var symptom_label = $Art/SpeechBubble/CustomerPanel/SymptomLabel
 @onready var money_label = $MoneyLabel
 @onready var suspicion_bar = $SuspicionBar
+@onready var GOsusbar = $GameOverUI/Panel/Art/finalStats/SuspicionBar2
 @onready var timer_label = $TimerLabel
 
 @export var customer_hidden_position := Vector2(0, 500)
@@ -78,7 +79,7 @@ var symptom_pool = [
 ]
 
 var money = 0
-var suspicion = 0
+var suspicion = 4
 
 func check_answer(selected_drug):
 	
@@ -184,6 +185,7 @@ func game_over(reason):
 
 	game_over_panel.visible = true
 	final_money_label.text = reason + "\nMoney Earned: $" + str(money)
+	GOsusbar.value = suspicion_bar.value
 
 func show_feedback(correct):
 	flash_rect.visible = true

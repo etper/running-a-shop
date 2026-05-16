@@ -1,14 +1,1256 @@
 [gd_scene format=3 uid="uid://dyv7trsemm0st"]
 
 [ext_resource type="Script" uid="uid://bed5gc53ljpou" path="res://main.gd" id="1_ig7tw"]
+[ext_resource type="Texture2D" uid="uid://cdicyyoytgkcl" path="res://uiMockup.png" id="2_0xm2m"]
+[ext_resource type="FontFile" uid="uid://dia843aiqe37u" path="res://VCR_OSD_MONO_1.001.ttf" id="3_h2yge"]
 
 [node name="Main" type="Node2D" unique_id=933541298]
 script = ExtResource("1_ig7tw")
+
+[node name="UiMockup" type="Sprite2D" parent="." unique_id=1030056684]
+position = Vector2(576, 324)
+scale = Vector2(0.75, 0.6328125)
+texture = ExtResource("2_0xm2m")
+metadata/_edit_lock_ = true
+
+[node name="Art" type="Node" parent="." unique_id=1672055207]
+
+[node name="Wall" type="Node2D" parent="Art" unique_id=969897018]
+
+[node name="ColorRect" type="ColorRect" parent="Art/Wall" unique_id=482457204]
+offset_left = 16.0
+offset_top = 100.0
+offset_right = 1139.0
+offset_bottom = 430.0
+color = Color(0.25882354, 0.22352941, 0.1764706, 1)
+
+[node name="Szafka" type="Node2D" parent="Art" unique_id=806998343]
+
+[node name="szafka szafka" type="Node2D" parent="Art/Szafka" unique_id=1484912237]
+
+[node name="ColorRect4" type="ColorRect" parent="Art/Szafka/szafka szafka" unique_id=389727824]
+offset_left = 888.0
+offset_top = 105.0
+offset_right = 1135.0
+offset_bottom = 410.0
+color = Color(0.17254902, 0.14901961, 0.1254902, 1)
+
+[node name="ColorRect2" type="ColorRect" parent="Art/Szafka/szafka szafka" unique_id=524575885]
+offset_left = 890.0
+offset_top = 206.0
+offset_right = 1133.0
+offset_bottom = 224.0
+color = Color(0.20392157, 0.16862746, 0.12941177, 1)
+
+[node name="ColorRect3" type="ColorRect" parent="Art/Szafka/szafka szafka" unique_id=592439265]
+offset_left = 890.0
+offset_top = 295.0
+offset_right = 1133.0
+offset_bottom = 311.0
+color = Color(0.20392157, 0.16862746, 0.12941177, 1)
+
+[node name="ColorRect" type="ColorRect" parent="Art/Szafka/szafka szafka" unique_id=654553005]
+offset_left = 870.0
+offset_top = 99.0
+offset_right = 891.0
+offset_bottom = 417.0
+color = Color(0.20392157, 0.16470589, 0.12941177, 1)
+
+[node name="butelki itd" type="Node2D" parent="Art/Szafka" unique_id=1238152034]
+
+[node name="ColorRect" type="ColorRect" parent="Art/Szafka/butelki itd" unique_id=1311693299]
+offset_left = 978.0
+offset_top = 133.0
+offset_right = 1006.0
+offset_bottom = 144.0
+color = Color(0.12156863, 0.14117648, 0.13333334, 1)
+
+[node name="ColorRect9" type="ColorRect" parent="Art/Szafka/butelki itd" unique_id=454453606]
+offset_left = 936.0
+offset_top = 165.0
+offset_right = 949.0
+offset_bottom = 173.0
+color = Color(0.12156863, 0.14509805, 0.14117648, 1)
+
+[node name="ColorRect10" type="ColorRect" parent="Art/Szafka/butelki itd" unique_id=669197406]
+offset_left = 939.0
+offset_top = 173.0
+offset_right = 946.0
+offset_bottom = 179.0
+color = Color(0.10980392, 0.13333334, 0.12941177, 1)
+
+[node name="ColorRect11" type="ColorRect" parent="Art/Szafka/butelki itd" unique_id=1541002566]
+offset_left = 932.0
+offset_top = 179.0
+offset_right = 953.0
+offset_bottom = 206.0
+color = Color(0.10980392, 0.13333334, 0.12941177, 1)
+
+[node name="ColorRect5" type="ColorRect" parent="Art/Szafka/butelki itd" unique_id=885262725]
+offset_left = 1039.0
+offset_top = 147.0
+offset_right = 1057.0
+offset_bottom = 158.0
+color = Color(0.13333334, 0.14901961, 0.14117648, 1)
+
+[node name="ColorRect6" type="ColorRect" parent="Art/Szafka/butelki itd" unique_id=240167678]
+offset_left = 1042.0
+offset_top = 158.0
+offset_right = 1054.0
+offset_bottom = 163.0
+color = Color(0.13333334, 0.14117648, 0.12941177, 1)
+
+[node name="ColorRect7" type="ColorRect" parent="Art/Szafka/butelki itd" unique_id=1330960740]
+offset_left = 1033.0
+offset_top = 163.0
+offset_right = 1062.0
+offset_bottom = 206.0
+color = Color(0.14117648, 0.15294118, 0.13333334, 1)
+
+[node name="ColorRect2" type="ColorRect" parent="Art/Szafka/butelki itd" unique_id=1455181866]
+offset_left = 982.0
+offset_top = 144.0
+offset_right = 1002.0
+offset_bottom = 149.0
+color = Color(0.11372549, 0.13725491, 0.13333334, 1)
+
+[node name="ColorRect3" type="ColorRect" parent="Art/Szafka/butelki itd" unique_id=1638382860]
+offset_left = 969.0
+offset_top = 149.0
+offset_right = 1015.0
+offset_bottom = 206.0
+color = Color(0.11372549, 0.13333334, 0.13333334, 1)
+
+[node name="ColorRect4" type="ColorRect" parent="Art/Szafka/butelki itd" unique_id=1923392973]
+offset_left = 974.0
+offset_top = 162.0
+offset_right = 1010.0
+offset_bottom = 195.0
+color = Color(0.3019608, 0.25882354, 0.20392157, 1)
+
+[node name="ColorRect12" type="ColorRect" parent="Art/Szafka/butelki itd" unique_id=658791026]
+offset_left = 935.0
+offset_top = 186.0
+offset_right = 950.0
+offset_bottom = 199.0
+color = Color(0.3019608, 0.25882354, 0.20392157, 1)
+
+[node name="ColorRect13" type="ColorRect" parent="Art/Szafka/butelki itd" unique_id=8014932]
+offset_left = 988.0
+offset_top = 254.0
+offset_right = 1001.0
+offset_bottom = 262.0
+color = Color(0.12156863, 0.14509805, 0.14117648, 1)
+
+[node name="ColorRect14" type="ColorRect" parent="Art/Szafka/butelki itd" unique_id=996642864]
+offset_left = 991.0
+offset_top = 262.0
+offset_right = 998.0
+offset_bottom = 268.0
+color = Color(0.10980392, 0.13333334, 0.12941177, 1)
+
+[node name="ColorRect15" type="ColorRect" parent="Art/Szafka/butelki itd" unique_id=1794124296]
+offset_left = 984.0
+offset_top = 268.0
+offset_right = 1005.0
+offset_bottom = 295.0
+color = Color(0.10980392, 0.13333334, 0.12941177, 1)
+
+[node name="ColorRect16" type="ColorRect" parent="Art/Szafka/butelki itd" unique_id=154661954]
+offset_left = 987.0
+offset_top = 275.0
+offset_right = 1002.0
+offset_bottom = 288.0
+color = Color(0.3019608, 0.25882354, 0.20392157, 1)
+
+[node name="ColorRect8" type="ColorRect" parent="Art/Szafka/butelki itd" unique_id=1461498386]
+offset_left = 1036.0
+offset_top = 174.0
+offset_right = 1059.0
+offset_bottom = 195.0
+color = Color(0.3019608, 0.25882354, 0.20392157, 1)
+
+[node name="ColorRect17" type="ColorRect" parent="Art/Szafka/butelki itd" unique_id=1089262552]
+offset_left = 1015.0
+offset_top = 236.0
+offset_right = 1033.0
+offset_bottom = 247.0
+color = Color(0.13333334, 0.14901961, 0.14117648, 1)
+
+[node name="ColorRect18" type="ColorRect" parent="Art/Szafka/butelki itd" unique_id=1987627260]
+offset_left = 1018.0
+offset_top = 247.0
+offset_right = 1030.0
+offset_bottom = 252.0
+color = Color(0.13333334, 0.14117648, 0.12941177, 1)
+
+[node name="ColorRect19" type="ColorRect" parent="Art/Szafka/butelki itd" unique_id=1401264202]
+offset_left = 1009.0
+offset_top = 252.0
+offset_right = 1038.0
+offset_bottom = 295.0
+color = Color(0.14117648, 0.15294118, 0.13333334, 1)
+
+[node name="ColorRect20" type="ColorRect" parent="Art/Szafka/butelki itd" unique_id=556444715]
+offset_left = 1012.0
+offset_top = 263.0
+offset_right = 1035.0
+offset_bottom = 284.0
+color = Color(0.3019608, 0.25882354, 0.20392157, 1)
+
+[node name="Borders" type="Node2D" parent="Art" unique_id=1555054117]
+
+[node name="bg1" type="ColorRect" parent="Art/Borders" unique_id=997326455]
+offset_right = 1152.0
+offset_bottom = 109.0
+color = Color(0.101960786, 0.105882354, 0.11764706, 1)
+
+[node name="bg4" type="ColorRect" parent="Art/Borders" unique_id=421032856]
+offset_left = 1.0
+offset_top = 470.0
+offset_right = 1153.0
+offset_bottom = 648.0
+color = Color(0.101960786, 0.105882354, 0.11764706, 1)
+
+[node name="bg5" type="ColorRect" parent="Art/Borders" unique_id=1526236575]
+offset_left = 1.0
+offset_top = 440.0
+offset_right = 1153.0
+offset_bottom = 470.0
+color = Color(0.1254902, 0.1254902, 0.13333334, 1)
+
+[node name="bg6" type="ColorRect" parent="Art/Borders" unique_id=1931126009]
+offset_left = 1.0
+offset_top = 403.0
+offset_right = 1153.0
+offset_bottom = 440.0
+color = Color(0.16078432, 0.14901961, 0.14509805, 1)
+
+[node name="bg2" type="ColorRect" parent="Art/Borders" unique_id=1598191055]
+offset_right = 22.0
+offset_bottom = 648.0
+color = Color(0.101960786, 0.105882354, 0.11764706, 1)
+
+[node name="bg3" type="ColorRect" parent="Art/Borders" unique_id=606396529]
+offset_left = 1130.0
+offset_right = 1152.0
+offset_bottom = 648.0
+color = Color(0.101960786, 0.105882354, 0.11764706, 1)
+
+[node name="Cashier" type="Node2D" parent="Art" unique_id=148653098]
+
+[node name="bg7" type="ColorRect" parent="Art/Cashier" unique_id=187527536]
+offset_left = 19.0
+offset_top = 405.0
+offset_right = 126.0
+offset_bottom = 430.0
+color = Color(0.101960786, 0.105882354, 0.11764706, 1)
+
+[node name="bg11" type="ColorRect" parent="Art/Cashier" unique_id=850470851]
+offset_left = 19.0
+offset_top = 340.0
+offset_right = 126.0
+offset_bottom = 405.0
+color = Color(0.105882354, 0.1254902, 0.14509805, 1)
+
+[node name="bg12" type="ColorRect" parent="Art/Cashier" unique_id=1640813819]
+offset_left = 34.0
+offset_top = 317.0
+offset_right = 126.0
+offset_bottom = 340.0
+color = Color(0.09411765, 0.11372549, 0.1254902, 1)
+
+[node name="bg13" type="ColorRect" parent="Art/Cashier" unique_id=1351469744]
+offset_left = 45.0
+offset_top = 325.0
+offset_right = 107.0
+offset_bottom = 336.0
+color = Color(0.12941177, 0.16862746, 0.13333334, 1)
+
+[node name="bg9" type="ColorRect" parent="Art/Cashier" unique_id=1365558796]
+offset_left = 126.0
+offset_top = 340.0
+offset_right = 149.0
+offset_bottom = 404.0
+color = Color(0.10980392, 0.12941177, 0.13725491, 1)
+
+[node name="bg10" type="ColorRect" parent="Art/Cashier" unique_id=1371345485]
+offset_left = 126.54747
+offset_top = 355.58188
+offset_right = 151.13062
+offset_bottom = 409.99197
+rotation = -0.50675803
+color = Color(0.10980392, 0.12941177, 0.13725491, 1)
+
+[node name="bg8" type="ColorRect" parent="Art/Cashier" unique_id=871289353]
+offset_left = 118.37274
+offset_top = 405.2575
+offset_right = 176.01125
+offset_bottom = 431.0407
+rotation = -0.28776252
+color = Color(0.101960786, 0.105882354, 0.11764706, 1)
+
+[node name="SpeechBubble" type="Node2D" parent="Art" unique_id=194925525]
+
+[node name="ColorRect" type="ColorRect" parent="Art/SpeechBubble" unique_id=1510794217]
+offset_left = 572.0
+offset_top = 148.0
+offset_right = 786.0
+offset_bottom = 187.0
+color = Color(0.8352941, 0.7764706, 0.6901961, 1)
+
+[node name="ColorRect5" type="ColorRect" parent="Art/SpeechBubble" unique_id=1176270330]
+offset_left = 576.0
+offset_top = 221.0
+offset_right = 790.0
+offset_bottom = 261.0
+color = Color(0.8352941, 0.7764706, 0.6901961, 1)
+
+[node name="ColorRect3" type="ColorRect" parent="Art/SpeechBubble" unique_id=373658250]
+offset_left = 783.0
+offset_top = 162.0
+offset_right = 805.0
+offset_bottom = 242.0
+color = Color(0.8352941, 0.7764706, 0.6901961, 1)
+
+[node name="ColorRect8" type="ColorRect" parent="Art/SpeechBubble" unique_id=1143646705]
+offset_left = 558.0
+offset_top = 166.0
+offset_right = 786.0
+offset_bottom = 246.0
+color = Color(0.8352941, 0.7764706, 0.6901961, 1)
+
+[node name="ColorRect2" type="ColorRect" parent="Art/SpeechBubble" unique_id=816504808]
+offset_left = 785.97064
+offset_top = 147.06116
+offset_right = 824.85284
+offset_bottom = 175.95346
+rotation = 0.66614103
+scale = Vector2(0.6273334, 0.62982166)
+color = Color(0.8352941, 0.7764706, 0.6901961, 1)
+
+[node name="ColorRect7" type="ColorRect" parent="Art/SpeechBubble" unique_id=1810111411]
+offset_left = 568.7268
+offset_top = 231.99927
+offset_right = 606.0592
+offset_bottom = 260.37204
+rotation = 0.66614103
+scale = Vector2(0.6273334, 0.62982166)
+color = Color(0.8352941, 0.7764706, 0.6901961, 1)
+
+[node name="ColorRect4" type="ColorRect" parent="Art/SpeechBubble" unique_id=1681746928]
+offset_left = 805.00006
+offset_top = 242.00002
+offset_right = 843.88226
+offset_bottom = 270.89233
+rotation = 2.2340214
+scale = Vector2(0.6273334, 0.62982166)
+color = Color(0.8352941, 0.7764706, 0.6901961, 1)
+
+[node name="ColorRect9" type="ColorRect" parent="Art/SpeechBubble" unique_id=157046289]
+offset_left = 613.00006
+offset_top = 261.00003
+offset_right = 665.7462
+offset_bottom = 289.89236
+rotation = 2.2340214
+scale = Vector2(0.6273334, 0.62982166)
+color = Color(0.8352941, 0.7764706, 0.6901961, 1)
+
+[node name="ColorRect10" type="ColorRect" parent="Art/SpeechBubble" unique_id=2139376288]
+offset_left = 592.48224
+offset_top = 286.88116
+offset_right = 623.32043
+offset_bottom = 311.82715
+rotation = 2.8009946
+scale = Vector2(0.6273334, 0.62982166)
+color = Color(0.8352941, 0.7764706, 0.6901961, 1)
+
+[node name="ColorRect6" type="ColorRect" parent="Art/SpeechBubble" unique_id=319098322]
+offset_left = 586.0
+offset_top = 158.00002
+offset_right = 623.90186
+offset_bottom = 185.25911
+rotation = 2.2340214
+scale = Vector2(0.6273334, 0.62982166)
+color = Color(0.8352941, 0.7764706, 0.6901961, 1)
+
+[node name="NoRefunds" type="Node2D" parent="Art" unique_id=1916521135]
+
+[node name="ColorRect17" type="ColorRect" parent="Art/NoRefunds" unique_id=827534593]
+offset_left = 1077.0
+offset_top = 372.00003
+offset_right = 1086.4407
+offset_bottom = 408.30026
+rotation = -0.34208432
+color = Color(0.08235294, 0.09019608, 0.105882354, 1)
+
+[node name="ColorRect18" type="ColorRect" parent="Art/NoRefunds" unique_id=2043627042]
+offset_left = 1088.9193
+offset_top = 404.41605
+offset_right = 1098.1556
+offset_bottom = 411.5657
+rotation = -0.13739115
+color = Color(0.08235294, 0.09019608, 0.105882354, 1)
+
+[node name="ColorRect19" type="ColorRect" parent="Art/NoRefunds" unique_id=1664312602]
+offset_left = 1089.8416
+offset_top = 410.80814
+offset_right = 1099.0779
+offset_bottom = 414.0504
+rotation = -0.07615234
+color = Color(0.08235294, 0.09019608, 0.105882354, 1)
+
+[node name="ColorRect20" type="ColorRect" parent="Art/NoRefunds" unique_id=1940467189]
+offset_left = 1080.7567
+offset_top = 389.44467
+offset_right = 1089.993
+offset_bottom = 414.24362
+rotation = -0.011287101
+color = Color(0.08235294, 0.09019608, 0.105882354, 1)
+
+[node name="ColorRect9" type="ColorRect" parent="Art/NoRefunds" unique_id=1658540124]
+offset_left = 903.25494
+offset_top = 321.18347
+offset_right = 1071.2549
+offset_bottom = 402.00677
+rotation = 0.05288158
+color = Color(0.09411765, 0.12941177, 0.11372549, 1)
+
+[node name="ColorRect11" type="ColorRect" parent="Art/NoRefunds/ColorRect9" unique_id=590437150]
+layout_mode = 0
+offset_left = 168.78644
+offset_top = 71.995636
+offset_right = 179.13214
+offset_bottom = 86.10245
+rotation = 0.33422005
+color = Color(0.08627451, 0.09411765, 0.105882354, 1)
+
+[node name="ColorRect12" type="ColorRect" parent="Art/NoRefunds/ColorRect9" unique_id=984640378]
+layout_mode = 0
+offset_left = 167.58025
+offset_top = 86.444496
+offset_right = 173.77446
+offset_bottom = 88.99531
+rotation = -0.0029233769
+color = Color(0.08627451, 0.09411765, 0.105882354, 1)
+
+[node name="ColorRect13" type="ColorRect" parent="Art/NoRefunds/ColorRect9" unique_id=1843389052]
+layout_mode = 0
+offset_left = 167.82341
+offset_top = -12.378267
+offset_right = 185.86064
+offset_bottom = -9.487551
+rotation = 0.47216132
+color = Color(0.08627451, 0.09411765, 0.105882354, 1)
+
+[node name="ColorRect14" type="ColorRect" parent="Art/NoRefunds/ColorRect9" unique_id=1503277494]
+layout_mode = 0
+offset_left = 179.15732
+offset_top = -8.671624
+offset_right = 185.5018
+offset_bottom = -6.703027
+rotation = 0.47216132
+color = Color(0.08627451, 0.09411765, 0.105882354, 1)
+
+[node name="ColorRect17" type="ColorRect" parent="Art/NoRefunds/ColorRect9" unique_id=1343533059]
+layout_mode = 0
+offset_left = 184.63548
+offset_top = -5.9074125
+offset_right = 187.00023
+offset_bottom = -4.0093718
+rotation = 0.85197324
+color = Color(0.08627451, 0.09411765, 0.105882354, 1)
+
+[node name="ColorRect15" type="ColorRect" parent="Art/NoRefunds/ColorRect9" unique_id=823968903]
+layout_mode = 0
+offset_left = 173.38683
+offset_top = -11.364059
+offset_right = 179.91747
+offset_bottom = -9.395462
+rotation = 0.47216132
+color = Color(0.08627451, 0.09411765, 0.105882354, 1)
+
+[node name="ColorRect16" type="ColorRect" parent="Art/NoRefunds/ColorRect9" unique_id=534246543]
+layout_mode = 0
+offset_left = 168.15245
+offset_top = -12.624743
+offset_right = 174.68309
+offset_bottom = -11.147479
+rotation = 0.27972245
+color = Color(0.08627451, 0.09411765, 0.105882354, 1)
+
+[node name="ColorRect" type="ColorRect" parent="Art/NoRefunds" unique_id=1188908104]
+offset_left = 906.0
+offset_top = 318.0
+offset_right = 1071.0
+offset_bottom = 330.0
+color = Color(0.10980392, 0.13333334, 0.14117648, 1)
+
+[node name="ColorRect6" type="ColorRect" parent="Art/NoRefunds" unique_id=2115279492]
+offset_left = 898.0
+offset_top = 402.0
+offset_right = 1066.0
+offset_bottom = 419.0
+color = Color(0.10980392, 0.13333334, 0.14117648, 1)
+
+[node name="ColorRect4" type="ColorRect" parent="Art/NoRefunds" unique_id=2094737732]
+offset_left = 897.5944
+offset_top = 323.57373
+offset_right = 907.03503
+offset_bottom = 403.22775
+rotation = 0.08574531
+color = Color(0.10980392, 0.13333334, 0.14117648, 1)
+
+[node name="ColorRect7" type="ColorRect" parent="Art/NoRefunds" unique_id=582640107]
+offset_left = 1071.0
+offset_top = 324.00003
+offset_right = 1080.099
+offset_bottom = 403.65405
+rotation = 0.08574531
+color = Color(0.10980392, 0.13333334, 0.14117648, 1)
+
+[node name="ColorRect10" type="ColorRect" parent="Art/NoRefunds" unique_id=829393007]
+offset_left = 1079.6448
+offset_top = 325.96948
+offset_right = 1089.4421
+offset_bottom = 419.19238
+rotation = 0.08574531
+color = Color(0.08627451, 0.09411765, 0.105882354, 1)
+
+[node name="ColorRect2" type="ColorRect" parent="Art/NoRefunds" unique_id=1941028800]
+offset_left = 897.3994
+offset_top = 323.7583
+offset_right = 908.3274
+offset_bottom = 335.7583
+rotation = -0.5829825
+color = Color(0.10980392, 0.13333334, 0.14117648, 1)
+
+[node name="ColorRect5" type="ColorRect" parent="Art/NoRefunds" unique_id=1594277303]
+offset_left = 890.86444
+offset_top = 403.08942
+offset_right = 901.9548
+offset_bottom = 415.60046
+rotation = -0.5829825
+color = Color(0.10980392, 0.13333334, 0.14117648, 1)
+
+[node name="ColorRect11" type="ColorRect" parent="Art/NoRefunds" unique_id=1058954075]
+offset_left = 889.0
+offset_top = 411.00003
+offset_right = 895.22205
+offset_bottom = 414.60764
+rotation = -0.7620495
+color = Color(0.10980392, 0.13333334, 0.14117648, 1)
+
+[node name="ColorRect13" type="ColorRect" parent="Art/NoRefunds" unique_id=2104665720]
+offset_left = 891.00757
+offset_top = 412.9927
+offset_right = 897.21906
+offset_bottom = 420.92703
+rotation = -0.7620495
+color = Color(0.10980392, 0.13333334, 0.14117648, 1)
+
+[node name="ColorRect14" type="ColorRect" parent="Art/NoRefunds" unique_id=1830251740]
+offset_left = 896.13745
+offset_top = 418.4985
+offset_right = 897.7035
+offset_bottom = 420.53415
+rotation = -1.3031908
+color = Color(0.10980392, 0.13333334, 0.14117648, 1)
+
+[node name="ColorRect12" type="ColorRect" parent="Art/NoRefunds" unique_id=1905512521]
+offset_left = 887.8667
+offset_top = 408.05362
+offset_right = 894.2324
+offset_bottom = 411.53305
+rotation = -0.38273373
+color = Color(0.10980392, 0.13333334, 0.14117648, 1)
+
+[node name="ColorRect15" type="ColorRect" parent="Art/NoRefunds" unique_id=1727523709]
+offset_left = 887.7213
+offset_top = 405.02408
+offset_right = 894.3667
+offset_bottom = 408.5035
+rotation = -0.08626446
+color = Color(0.10980392, 0.13333334, 0.14117648, 1)
+
+[node name="ColorRect16" type="ColorRect" parent="Art/NoRefunds" unique_id=2140146059]
+offset_left = 892.00964
+offset_top = 389.67953
+offset_right = 897.99426
+offset_bottom = 406.09857
+rotation = 0.26361626
+color = Color(0.10980392, 0.13333334, 0.14117648, 1)
+
+[node name="ColorRect8" type="ColorRect" parent="Art/NoRefunds" unique_id=1389546492]
+offset_left = 1065.0
+offset_top = 397.99997
+offset_right = 1074.688
+offset_bottom = 416.81247
+rotation = 0.48106068
+color = Color(0.10980392, 0.13333334, 0.14117648, 1)
+
+[node name="ColorRect3" type="ColorRect" parent="Art/NoRefunds" unique_id=236199005]
+offset_left = 1064.0
+offset_top = 327.00003
+offset_right = 1075.4475
+offset_bottom = 339.00003
+rotation = 5.351209
+color = Color(0.10980392, 0.13333334, 0.14117648, 1)
+
+[node name="Label" type="Label" parent="Art/NoRefunds" unique_id=1968972715]
+offset_left = 920.0
+offset_top = 333.0
+offset_right = 1062.0137
+offset_bottom = 397.90875
+rotation = 0.014501132
+theme_override_colors/font_color = Color(0.25882354, 0.34901962, 0.2627451, 1)
+theme_override_fonts/font = ExtResource("3_h2yge")
+theme_override_font_sizes/font_size = 18
+text = "CASH ONLY
+NO REFUNDS
+NO QUESTIONS"
+vertical_alignment = 1
+
+[node name="Poster" type="Node2D" parent="Art" unique_id=974391827]
+
+[node name="ColorRect" type="ColorRect" parent="Art/Poster" unique_id=1591510169]
+offset_left = 46.0
+offset_top = 141.0
+offset_right = 176.0
+offset_bottom = 300.0
+color = Color(0.32941177, 0.28627452, 0.22352941, 1)
+
+[node name="eyebg" type="Node2D" parent="Art/Poster" unique_id=206823235]
+
+[node name="ColorRect2" type="ColorRect" parent="Art/Poster/eyebg" unique_id=1448590359]
+offset_left = 76.0
+offset_top = 220.0
+offset_right = 92.0
+offset_bottom = 223.0
+rotation = -0.5860979
+color = Color(0.28235295, 0.24705882, 0.33333334, 1)
+
+[node name="ColorRect17" type="ColorRect" parent="Art/Poster/eyebg" unique_id=235886880]
+offset_left = 78.84759
+offset_top = 219.25345
+offset_right = 141.85373
+offset_bottom = 223.51956
+rotation = -0.034876287
+color = Color(0.28235295, 0.24705882, 0.33333334, 1)
+
+[node name="ColorRect21" type="ColorRect" parent="Art/Poster/eyebg" unique_id=517896525]
+offset_left = 82.00001
+offset_top = 223.00002
+offset_right = 143.59216
+offset_bottom = 225.76251
+rotation = -0.034876287
+color = Color(0.28235295, 0.24705882, 0.33333334, 1)
+
+[node name="ColorRect22" type="ColorRect" parent="Art/Poster/eyebg" unique_id=638000223]
+offset_left = 85.87126
+offset_top = 222.86494
+offset_right = 141.85004
+offset_bottom = 227.85716
+rotation = -0.034876287
+color = Color(0.28235295, 0.24705882, 0.33333334, 1)
+
+[node name="ColorRect23" type="ColorRect" parent="Art/Poster/eyebg" unique_id=873570077]
+offset_left = 89.4083
+offset_top = 222.74153
+offset_right = 137.9743
+offset_bottom = 230.19556
+rotation = -0.034876287
+color = Color(0.28235295, 0.24705882, 0.33333334, 1)
+
+[node name="ColorRect24" type="ColorRect" parent="Art/Poster/eyebg" unique_id=1219169762]
+offset_left = 94.40257
+offset_top = 229.16457
+offset_right = 134.20119
+offset_bottom = 231.91823
+rotation = -0.034876287
+color = Color(0.28235295, 0.24705882, 0.33333334, 1)
+
+[node name="ColorRect25" type="ColorRect" parent="Art/Poster/eyebg" unique_id=1554797307]
+offset_left = 98.61851
+offset_top = 229.01747
+offset_right = 130.47894
+offset_bottom = 234.2329
+rotation = -0.034876287
+color = Color(0.28235295, 0.24705882, 0.33333334, 1)
+
+[node name="ColorRect18" type="ColorRect" parent="Art/Poster/eyebg" unique_id=77130244]
+offset_left = 82.453606
+offset_top = 216.33824
+offset_right = 136.12433
+offset_bottom = 220.46298
+rotation = -0.034876287
+color = Color(0.28235295, 0.24705882, 0.33333334, 1)
+
+[node name="ColorRect19" type="ColorRect" parent="Art/Poster/eyebg" unique_id=534690450]
+offset_left = 86.95932
+offset_top = 214.00243
+offset_right = 131.79149
+offset_bottom = 217.20477
+rotation = -0.034876287
+color = Color(0.28235295, 0.24705882, 0.33333334, 1)
+
+[node name="ColorRect20" type="ColorRect" parent="Art/Poster/eyebg" unique_id=2134465552]
+offset_left = 91.89631
+offset_top = 210.6952
+offset_right = 127.774124
+offset_bottom = 217.03061
+rotation = -0.034876287
+color = Color(0.28235295, 0.24705882, 0.33333334, 1)
+
+[node name="ColorRect9" type="ColorRect" parent="Art/Poster/eyebg" unique_id=1381488779]
+offset_left = 76.148224
+offset_top = 220.08461
+offset_right = 95.70227
+offset_bottom = 222.33827
+rotation = 0.51869935
+color = Color(0.28235295, 0.24705882, 0.33333334, 1)
+
+[node name="ColorRect10" type="ColorRect" parent="Art/Poster/eyebg" unique_id=688961864]
+offset_left = 92.875046
+offset_top = 229.32051
+offset_right = 101.70668
+offset_bottom = 231.83983
+rotation = 0.36772555
+color = Color(0.28235295, 0.24705882, 0.33333334, 1)
+
+[node name="ColorRect11" type="ColorRect" parent="Art/Poster/eyebg" unique_id=1800839942]
+offset_left = 100.60566
+offset_top = 232.4715
+offset_right = 105.89423
+offset_bottom = 234.89537
+rotation = 0.14393859
+color = Color(0.28235295, 0.24705882, 0.33333334, 1)
+
+[node name="ColorRect12" type="ColorRect" parent="Art/Poster/eyebg" unique_id=1993276317]
+offset_left = 105.38396
+offset_top = 233.22165
+offset_right = 119.9119
+offset_bottom = 235.64552
+rotation = 0.009855926
+color = Color(0.28235295, 0.24705882, 0.33333334, 1)
+
+[node name="ColorRect13" type="ColorRect" parent="Art/Poster/eyebg" unique_id=891992570]
+offset_left = 119.54996
+offset_top = 233.2931
+offset_right = 125.98021
+offset_bottom = 235.79405
+rotation = -0.11714344
+color = Color(0.28235295, 0.24705882, 0.33333334, 1)
+
+[node name="ColorRect14" type="ColorRect" parent="Art/Poster/eyebg" unique_id=1463479692]
+offset_left = 125.061424
+offset_top = 232.8681
+offset_right = 134.18144
+offset_bottom = 235.19705
+rotation = -0.3850968
+color = Color(0.28235295, 0.24705882, 0.33333334, 1)
+
+[node name="ColorRect15" type="ColorRect" parent="Art/Poster/eyebg" unique_id=1750972254]
+offset_left = 132.64928
+offset_top = 229.78065
+offset_right = 141.754
+offset_bottom = 232.21178
+rotation = -0.6081629
+color = Color(0.28235295, 0.24705882, 0.33333334, 1)
+
+[node name="ColorRect16" type="ColorRect" parent="Art/Poster/eyebg" unique_id=1823582812]
+offset_left = 138.79556
+offset_top = 225.50168
+offset_right = 148.0437
+offset_bottom = 227.9328
+rotation = -0.6081629
+color = Color(0.28235295, 0.24705882, 0.33333334, 1)
+
+[node name="ColorRect3" type="ColorRect" parent="Art/Poster/eyebg" unique_id=1830096915]
+offset_left = 89.208336
+offset_top = 211.16154
+offset_right = 99.45486
+offset_bottom = 214.61075
+rotation = -0.2962237
+color = Color(0.28235295, 0.24705882, 0.33333334, 1)
+
+[node name="ColorRect4" type="ColorRect" parent="Art/Poster/eyebg" unique_id=51358604]
+offset_left = 98.95376
+offset_top = 208.1821
+offset_right = 110.708664
+offset_bottom = 211.68329
+rotation = -0.10313809
+color = Color(0.28235295, 0.24705882, 0.33333334, 1)
+
+[node name="ColorRect5" type="ColorRect" parent="Art/Poster/eyebg" unique_id=1329010736]
+offset_left = 110.54612
+offset_top = 206.98222
+offset_right = 121.53445
+offset_bottom = 210.48341
+rotation = 0.015455246
+color = Color(0.28235295, 0.24705882, 0.33333334, 1)
+
+[node name="ColorRect6" type="ColorRect" parent="Art/Poster/eyebg" unique_id=1447268752]
+offset_left = 121.44346
+offset_top = 207.15067
+offset_right = 131.74545
+offset_bottom = 210.65186
+rotation = 0.31175017
+color = Color(0.28235295, 0.24705882, 0.33333334, 1)
+
+[node name="ColorRect7" type="ColorRect" parent="Art/Poster/eyebg" unique_id=1612158794]
+offset_left = 131.00792
+offset_top = 210.2329
+offset_right = 142.9002
+offset_bottom = 213.73409
+rotation = 0.5309807
+color = Color(0.28235295, 0.24705882, 0.33333334, 1)
+
+[node name="ColorRect8" type="ColorRect" parent="Art/Poster/eyebg" unique_id=243038943]
+offset_left = 140.99585
+offset_top = 216.09988
+offset_right = 147.90958
+offset_bottom = 219.52307
+rotation = 0.6550571
+color = Color(0.28235295, 0.24705882, 0.33333334, 1)
+
+[node name="Label" type="Label" parent="Art/Poster" unique_id=2088692500]
+offset_left = 38.999996
+offset_top = 142.0
+offset_right = 181.01367
+offset_bottom = 206.90875
+rotation = 0.014501132
+theme_override_colors/font_color = Color(0.09019608, 0.09019608, 0.09803922, 1)
+theme_override_fonts/font = ExtResource("3_h2yge")
+theme_override_font_sizes/font_size = 23
+text = "TRUST
+NO ONE"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label2" type="Label" parent="Art/Poster" unique_id=562046918]
+offset_left = 42.0
+offset_top = 230.0
+offset_right = 184.01367
+offset_bottom = 294.90875
+rotation = 0.014501132
+theme_override_colors/font_color = Color(0.09019608, 0.09019608, 0.09803922, 1)
+theme_override_fonts/font = ExtResource("3_h2yge")
+theme_override_font_sizes/font_size = 23
+text = "CURE
+EVERYONE"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="eyeZrenica" type="Node2D" parent="Art/Poster" unique_id=1984175028]
+
+[node name="ColorRect" type="ColorRect" parent="Art/Poster/eyeZrenica" unique_id=1034248930]
+offset_left = 95.0
+offset_top = 217.0
+offset_right = 128.0
+offset_bottom = 225.0
+color = Color(0.19215687, 0.17254902, 0.2627451, 1)
+
+[node name="zrenicatop" type="Node2D" parent="Art/Poster/eyeZrenica" unique_id=259013497]
+
+[node name="ColorRect9" type="ColorRect" parent="Art/Poster/eyeZrenica/zrenicatop" unique_id=990249549]
+offset_left = 101.0
+offset_top = 211.0
+offset_right = 124.0
+offset_bottom = 217.0
+color = Color(0.19215687, 0.17254902, 0.2627451, 1)
+
+[node name="ColorRect10" type="ColorRect" parent="Art/Poster/eyeZrenica/zrenicatop" unique_id=1358672036]
+offset_left = 101.0
+offset_top = 209.0
+offset_right = 121.0
+offset_bottom = 211.0
+color = Color(0.19215687, 0.17254902, 0.2627451, 1)
+
+[node name="ColorRect2" type="ColorRect" parent="Art/Poster/eyeZrenica/zrenicatop" unique_id=1130163708]
+offset_left = 98.467964
+offset_top = 210.23087
+offset_right = 103.946144
+offset_bottom = 218.23087
+rotation = 0.4582851
+color = Color(0.19215687, 0.17254902, 0.2627451, 1)
+
+[node name="ColorRect3" type="ColorRect" parent="Art/Poster/eyeZrenica/zrenicatop" unique_id=1236740795]
+offset_left = 102.19258
+offset_top = 207.14806
+offset_right = 107.50427
+offset_bottom = 212.15324
+rotation = 0.84395635
+color = Color(0.19215687, 0.17254902, 0.2627451, 1)
+
+[node name="ColorRect4" type="ColorRect" parent="Art/Poster/eyeZrenica/zrenicatop" unique_id=430680329]
+offset_left = 107.12691
+offset_top = 205.94891
+offset_right = 110.71057
+offset_bottom = 211.21513
+rotation = 1.3304403
+color = Color(0.19215687, 0.17254902, 0.2627451, 1)
+
+[node name="ColorRect5" type="ColorRect" parent="Art/Poster/eyeZrenica/zrenicatop" unique_id=905496171]
+offset_left = 118.22482
+offset_top = 206.45555
+offset_right = 121.58905
+offset_bottom = 217.76599
+rotation = 1.6133612
+color = Color(0.19215687, 0.17254902, 0.2627451, 1)
+
+[node name="ColorRect6" type="ColorRect" parent="Art/Poster/eyeZrenica/zrenicatop" unique_id=594899205]
+offset_left = 124.36462
+offset_top = 211.09247
+offset_right = 127.6646
+offset_bottom = 218.83907
+rotation = 2.2176936
+color = Color(0.19215687, 0.17254902, 0.2627451, 1)
+
+[node name="ColorRect7" type="ColorRect" parent="Art/Poster/eyeZrenica/zrenicatop" unique_id=603531959]
+offset_left = 127.03364
+offset_top = 214.3172
+offset_right = 130.83203
+offset_bottom = 218.72948
+rotation = 2.476281
+color = Color(0.19215687, 0.17254902, 0.2627451, 1)
+
+[node name="ColorRect8" type="ColorRect" parent="Art/Poster/eyeZrenica/zrenicatop" unique_id=1944285778]
+offset_left = 128.1536
+offset_top = 217.41933
+offset_right = 132.0151
+offset_bottom = 220.92632
+rotation = 2.7514813
+color = Color(0.19215687, 0.17254902, 0.2627451, 1)
+
+[node name="ColorRect11" type="ColorRect" parent="Art/Poster/eyeZrenica/zrenicatop" unique_id=899834948]
+offset_left = 101.0
+offset_top = 211.0
+offset_right = 124.0
+offset_bottom = 217.0
+color = Color(0.19215687, 0.17254902, 0.2627451, 1)
+
+[node name="ColorRect12" type="ColorRect" parent="Art/Poster/eyeZrenica/zrenicatop" unique_id=31888919]
+offset_left = 101.0
+offset_top = 209.0
+offset_right = 121.0
+offset_bottom = 211.0
+color = Color(0.19215687, 0.17254902, 0.2627451, 1)
+
+[node name="ColorRect13" type="ColorRect" parent="Art/Poster/eyeZrenica/zrenicatop" unique_id=665317298]
+offset_left = 98.467964
+offset_top = 210.23087
+offset_right = 103.946144
+offset_bottom = 218.23087
+rotation = 0.4582851
+color = Color(0.19215687, 0.17254902, 0.2627451, 1)
+
+[node name="ColorRect14" type="ColorRect" parent="Art/Poster/eyeZrenica/zrenicatop" unique_id=149074903]
+offset_left = 102.19258
+offset_top = 207.14806
+offset_right = 107.50427
+offset_bottom = 212.15324
+rotation = 0.84395635
+color = Color(0.19215687, 0.17254902, 0.2627451, 1)
+
+[node name="ColorRect15" type="ColorRect" parent="Art/Poster/eyeZrenica/zrenicatop" unique_id=890519231]
+offset_left = 107.12691
+offset_top = 205.94891
+offset_right = 110.71057
+offset_bottom = 211.21513
+rotation = 1.3304403
+color = Color(0.19215687, 0.17254902, 0.2627451, 1)
+
+[node name="ColorRect16" type="ColorRect" parent="Art/Poster/eyeZrenica/zrenicatop" unique_id=1525472404]
+offset_left = 118.22482
+offset_top = 206.45555
+offset_right = 121.58905
+offset_bottom = 217.76599
+rotation = 1.6133612
+color = Color(0.19215687, 0.17254902, 0.2627451, 1)
+
+[node name="ColorRect17" type="ColorRect" parent="Art/Poster/eyeZrenica/zrenicatop" unique_id=1306768261]
+offset_left = 124.36462
+offset_top = 211.09247
+offset_right = 127.6646
+offset_bottom = 218.83907
+rotation = 2.2176936
+color = Color(0.19215687, 0.17254902, 0.2627451, 1)
+
+[node name="ColorRect18" type="ColorRect" parent="Art/Poster/eyeZrenica/zrenicatop" unique_id=690085921]
+offset_left = 127.03364
+offset_top = 214.3172
+offset_right = 130.83203
+offset_bottom = 218.72948
+rotation = 2.476281
+color = Color(0.19215687, 0.17254902, 0.2627451, 1)
+
+[node name="ColorRect19" type="ColorRect" parent="Art/Poster/eyeZrenica/zrenicatop" unique_id=1529313705]
+offset_left = 128.1536
+offset_top = 217.41933
+offset_right = 132.0151
+offset_bottom = 220.92632
+rotation = 2.7514813
+color = Color(0.19215687, 0.17254902, 0.2627451, 1)
+
+[node name="zrenicatop2" type="Node2D" parent="Art/Poster/eyeZrenica" unique_id=1220924590]
+position = Vector2(221.505, 442.375)
+rotation = 3.1485877
+
+[node name="ColorRect9" type="ColorRect" parent="Art/Poster/eyeZrenica/zrenicatop2" unique_id=1362625663]
+offset_left = 101.0
+offset_top = 211.0
+offset_right = 124.0
+offset_bottom = 217.0
+color = Color(0.19215687, 0.17254902, 0.2627451, 1)
+
+[node name="ColorRect10" type="ColorRect" parent="Art/Poster/eyeZrenica/zrenicatop2" unique_id=2003777588]
+offset_left = 101.0
+offset_top = 209.0
+offset_right = 121.0
+offset_bottom = 211.0
+color = Color(0.19215687, 0.17254902, 0.2627451, 1)
+
+[node name="ColorRect2" type="ColorRect" parent="Art/Poster/eyeZrenica/zrenicatop2" unique_id=1173397301]
+offset_left = 98.467964
+offset_top = 210.23087
+offset_right = 103.946144
+offset_bottom = 218.23087
+rotation = 0.4582851
+color = Color(0.19215687, 0.17254902, 0.2627451, 1)
+
+[node name="ColorRect3" type="ColorRect" parent="Art/Poster/eyeZrenica/zrenicatop2" unique_id=658229705]
+offset_left = 102.19258
+offset_top = 207.14806
+offset_right = 107.50427
+offset_bottom = 212.15324
+rotation = 0.84395635
+color = Color(0.19215687, 0.17254902, 0.2627451, 1)
+
+[node name="ColorRect4" type="ColorRect" parent="Art/Poster/eyeZrenica/zrenicatop2" unique_id=1977097253]
+offset_left = 107.12691
+offset_top = 205.94891
+offset_right = 110.71057
+offset_bottom = 211.21513
+rotation = 1.3304403
+color = Color(0.19215687, 0.17254902, 0.2627451, 1)
+
+[node name="ColorRect5" type="ColorRect" parent="Art/Poster/eyeZrenica/zrenicatop2" unique_id=2138278412]
+offset_left = 118.22482
+offset_top = 206.45555
+offset_right = 121.58905
+offset_bottom = 217.76599
+rotation = 1.6133612
+color = Color(0.19215687, 0.17254902, 0.2627451, 1)
+
+[node name="ColorRect6" type="ColorRect" parent="Art/Poster/eyeZrenica/zrenicatop2" unique_id=1903736985]
+offset_left = 124.36462
+offset_top = 211.09247
+offset_right = 127.6646
+offset_bottom = 218.83907
+rotation = 2.2176936
+color = Color(0.19215687, 0.17254902, 0.2627451, 1)
+
+[node name="ColorRect7" type="ColorRect" parent="Art/Poster/eyeZrenica/zrenicatop2" unique_id=85253111]
+offset_left = 127.03364
+offset_top = 214.3172
+offset_right = 130.83203
+offset_bottom = 218.72948
+rotation = 2.476281
+color = Color(0.19215687, 0.17254902, 0.2627451, 1)
+
+[node name="ColorRect8" type="ColorRect" parent="Art/Poster/eyeZrenica/zrenicatop2" unique_id=1299559704]
+offset_left = 128.1536
+offset_top = 217.41933
+offset_right = 132.0151
+offset_bottom = 220.92632
+rotation = 2.7514813
+color = Color(0.19215687, 0.17254902, 0.2627451, 1)
+
+[node name="ColorRect11" type="ColorRect" parent="Art/Poster/eyeZrenica/zrenicatop2" unique_id=1524319822]
+offset_left = 101.0
+offset_top = 211.0
+offset_right = 124.0
+offset_bottom = 217.0
+color = Color(0.19215687, 0.17254902, 0.2627451, 1)
+
+[node name="ColorRect12" type="ColorRect" parent="Art/Poster/eyeZrenica/zrenicatop2" unique_id=553954512]
+offset_left = 101.0
+offset_top = 209.0
+offset_right = 121.0
+offset_bottom = 211.0
+color = Color(0.19215687, 0.17254902, 0.2627451, 1)
+
+[node name="ColorRect13" type="ColorRect" parent="Art/Poster/eyeZrenica/zrenicatop2" unique_id=653714795]
+offset_left = 98.467964
+offset_top = 210.23087
+offset_right = 103.946144
+offset_bottom = 218.23087
+rotation = 0.4582851
+color = Color(0.19215687, 0.17254902, 0.2627451, 1)
+
+[node name="ColorRect14" type="ColorRect" parent="Art/Poster/eyeZrenica/zrenicatop2" unique_id=1273759222]
+offset_left = 102.19258
+offset_top = 207.14806
+offset_right = 107.50427
+offset_bottom = 212.15324
+rotation = 0.84395635
+color = Color(0.19215687, 0.17254902, 0.2627451, 1)
+
+[node name="ColorRect15" type="ColorRect" parent="Art/Poster/eyeZrenica/zrenicatop2" unique_id=1494229245]
+offset_left = 107.12691
+offset_top = 205.94891
+offset_right = 110.71057
+offset_bottom = 211.21513
+rotation = 1.3304403
+color = Color(0.19215687, 0.17254902, 0.2627451, 1)
+
+[node name="ColorRect16" type="ColorRect" parent="Art/Poster/eyeZrenica/zrenicatop2" unique_id=1629282139]
+offset_left = 118.22482
+offset_top = 206.45555
+offset_right = 121.58905
+offset_bottom = 217.76599
+rotation = 1.6133612
+color = Color(0.19215687, 0.17254902, 0.2627451, 1)
+
+[node name="ColorRect17" type="ColorRect" parent="Art/Poster/eyeZrenica/zrenicatop2" unique_id=1372641820]
+offset_left = 124.36462
+offset_top = 211.09247
+offset_right = 127.6646
+offset_bottom = 218.83907
+rotation = 2.2176936
+color = Color(0.19215687, 0.17254902, 0.2627451, 1)
+
+[node name="ColorRect18" type="ColorRect" parent="Art/Poster/eyeZrenica/zrenicatop2" unique_id=1108820465]
+offset_left = 127.03364
+offset_top = 214.3172
+offset_right = 130.83203
+offset_bottom = 218.72948
+rotation = 2.476281
+color = Color(0.19215687, 0.17254902, 0.2627451, 1)
+
+[node name="ColorRect19" type="ColorRect" parent="Art/Poster/eyeZrenica/zrenicatop2" unique_id=198652890]
+offset_left = 128.1536
+offset_top = 217.41933
+offset_right = 132.0151
+offset_bottom = 220.92632
+rotation = 2.7514813
+color = Color(0.19215687, 0.17254902, 0.2627451, 1)
+
+[node name="eyeBlack" type="Node2D" parent="Art/Poster" unique_id=1835068464]
+
+[node name="ColorRect" type="ColorRect" parent="Art/Poster/eyeBlack" unique_id=1026940488]
+offset_left = 104.0
+offset_top = 219.0
+offset_right = 117.695
+offset_bottom = 223.0
+color = Color(0, 0, 0, 1)
+
+[node name="Node2D" type="Node2D" parent="Art/Poster/eyeBlack" unique_id=1319928906]
+
+[node name="ColorRect7" type="ColorRect" parent="Art/Poster/eyeBlack/Node2D" unique_id=1094768076]
+offset_left = 107.0
+offset_top = 217.0
+offset_right = 116.0
+offset_bottom = 219.0
+color = Color(0, 0, 0, 1)
+
+[node name="ColorRect2" type="ColorRect" parent="Art/Poster/eyeBlack/Node2D" unique_id=724194925]
+offset_left = 106.10655
+offset_top = 215.82976
+offset_right = 109.10655
+offset_bottom = 219.75674
+rotation = 0.5591973
+color = Color(0, 0, 0, 1)
+
+[node name="ColorRect3" type="ColorRect" parent="Art/Poster/eyeBlack/Node2D" unique_id=1704457670]
+offset_left = 110.94382
+offset_top = 214.02747
+offset_right = 113.94382
+offset_bottom = 219.27408
+rotation = 1.2141461
+color = Color(0, 0, 0, 1)
+
+[node name="ColorRect4" type="ColorRect" parent="Art/Poster/eyeBlack/Node2D" unique_id=110402719]
+offset_left = 115.7796
+offset_top = 215.21664
+offset_right = 118.636215
+offset_bottom = 220.16988
+rotation = 1.8015293
+color = Color(0, 0, 0, 1)
+
+[node name="ColorRect5" type="ColorRect" parent="Art/Poster/eyeBlack/Node2D" unique_id=1644766941]
+offset_left = 117.537
+offset_top = 217.05106
+offset_right = 119.286674
+offset_bottom = 219.83826
+rotation = 2.339965
+color = Color(0, 0, 0, 1)
+
+[node name="ColorRect6" type="ColorRect" parent="Art/Poster/eyeBlack/Node2D" unique_id=813259932]
+offset_left = 117.79682
+offset_top = 219.1227
+offset_right = 119.63197
+offset_bottom = 221.30646
+rotation = 3.0119748
+color = Color(0, 0, 0, 1)
+
+[node name="Node2D2" type="Node2D" parent="Art/Poster/eyeBlack" unique_id=1789930727]
+position = Vector2(221.715, 441.91)
+rotation = 3.1415927
+
+[node name="ColorRect7" type="ColorRect" parent="Art/Poster/eyeBlack/Node2D2" unique_id=1813796706]
+offset_left = 107.0
+offset_top = 217.0
+offset_right = 116.0
+offset_bottom = 219.0
+color = Color(0, 0, 0, 1)
+
+[node name="ColorRect2" type="ColorRect" parent="Art/Poster/eyeBlack/Node2D2" unique_id=716177204]
+offset_left = 106.10655
+offset_top = 215.82976
+offset_right = 109.10655
+offset_bottom = 219.75674
+rotation = 0.5591973
+color = Color(0, 0, 0, 1)
+
+[node name="ColorRect3" type="ColorRect" parent="Art/Poster/eyeBlack/Node2D2" unique_id=12655883]
+offset_left = 110.94382
+offset_top = 214.02747
+offset_right = 113.94382
+offset_bottom = 219.27408
+rotation = 1.2141461
+color = Color(0, 0, 0, 1)
+
+[node name="ColorRect4" type="ColorRect" parent="Art/Poster/eyeBlack/Node2D2" unique_id=1619036643]
+offset_left = 115.7796
+offset_top = 215.21664
+offset_right = 118.636215
+offset_bottom = 220.16988
+rotation = 1.8015293
+color = Color(0, 0, 0, 1)
+
+[node name="ColorRect5" type="ColorRect" parent="Art/Poster/eyeBlack/Node2D2" unique_id=1794235372]
+offset_left = 117.537
+offset_top = 217.05106
+offset_right = 119.286674
+offset_bottom = 219.83826
+rotation = 2.339965
+color = Color(0, 0, 0, 1)
+
+[node name="ColorRect6" type="ColorRect" parent="Art/Poster/eyeBlack/Node2D2" unique_id=1274875418]
+offset_left = 117.79682
+offset_top = 219.1227
+offset_right = 119.63197
+offset_bottom = 221.30646
+rotation = 3.0119748
+color = Color(0, 0, 0, 1)
 
 [node name="Timer" type="Timer" parent="." unique_id=479170890]
 autostart = true
 
 [node name="Button" type="Button" parent="." unique_id=850283024]
+visible = false
 offset_left = 390.0
 offset_top = 500.0
 offset_right = 429.0
@@ -16,6 +1258,7 @@ offset_bottom = 531.0
 text = "RED"
 
 [node name="Button2" type="Button" parent="." unique_id=914549573]
+visible = false
 offset_left = 465.0
 offset_top = 500.0
 offset_right = 514.0
@@ -23,6 +1266,7 @@ offset_bottom = 531.0
 text = "BLUE"
 
 [node name="Button3" type="Button" parent="." unique_id=838713607]
+visible = false
 offset_left = 563.0
 offset_top = 500.0
 offset_right = 624.0
@@ -30,24 +1274,28 @@ offset_bottom = 531.0
 text = "GREEN"
 
 [node name="MoneyLabel" type="Label" parent="." unique_id=1027178338]
+visible = false
 offset_left = 785.0
 offset_top = 54.0
 offset_right = 964.0
 offset_bottom = 117.0
 
 [node name="SuspicionBar" type="ProgressBar" parent="." unique_id=335654908]
+visible = false
 offset_left = 732.0
 offset_top = 143.0
 offset_right = 921.0
 offset_bottom = 182.0
 
 [node name="TimerLabel" type="Label" parent="." unique_id=484767092]
+visible = false
 offset_left = 446.0
 offset_top = 21.0
 offset_right = 625.0
 offset_bottom = 84.0
 
 [node name="GameOverUI" type="CanvasLayer" parent="." unique_id=1344264373]
+visible = false
 
 [node name="Panel" type="Panel" parent="GameOverUI" unique_id=865646321]
 visible = false
@@ -82,6 +1330,7 @@ offset_bottom = 512.0
 text = "RESTART"
 
 [node name="CustomerPanel" type="Panel" parent="." unique_id=1546804177]
+visible = false
 offset_left = 359.0
 offset_top = 214.0
 offset_right = 680.0
@@ -112,6 +1361,7 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="ReactionLabel" type="Label" parent="." unique_id=373616697]
+visible = false
 offset_left = 359.0
 offset_top = 333.0
 offset_right = 682.0
@@ -122,6 +1372,7 @@ wait_time = 0.25
 one_shot = true
 
 [node name="Vignette" type="ColorRect" parent="." unique_id=823007928]
+visible = false
 offset_right = 1151.0
 offset_bottom = 649.0
 mouse_filter = 2
